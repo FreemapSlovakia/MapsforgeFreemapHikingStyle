@@ -1,4 +1,4 @@
-# MapsforgeHikingStyle - generator
+# MapsforgeFreemapHikingStyle - generator
 
 ## how to run
 * dowload JAVA - https://www.java.com/en/download/

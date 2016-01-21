@@ -1,4 +1,4 @@
-# MapsforgeHikingStyle
+# MapsforgeFreemapHikingStyle
 Custom style for Locus Map
 
 ## installation

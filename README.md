@@ -1,7 +1,7 @@
 # client
 Style for Locus Map app
 
-# genetator
+# generator
 XML files for map generation
 
 
