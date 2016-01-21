@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<translations>
+	<translation>
+		<name>tunnel layer</name>
+		<description>zamen vsetky tunnel layer na layer=0</description>
+		<match type="way" mode="or">
+			<match>
+				<tag k="highway" v=".*"/>
+				<tag k="tunnel" v="yes"/>
+			</match>
+			<match>
+				<tag k="railway" v=".*"/>
+				<tag k="tunnel" v="yes"/>
+			</match>
+			<match>
+				<tag k="waterway" v=".*"/>
+				<!--				<tag k="tunnel" v="yes|culvert"/> -->
+			</match>
+		</match>
+		<output>
+			<copy-all/>
+			<tag k="layer" v="0"/>
+		</output>
+	</translation>
+</translations>
