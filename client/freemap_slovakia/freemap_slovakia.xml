@@ -570,15 +570,15 @@
 					<rule e="way" k="bridge" v="~|no|false">
 						<!-- highway casings -->
 						<rule e="way" k="highway" v="steps">
-							<line stroke="#707070" stroke-width="0.6" />
+							<line stroke="#707070" stroke-width="0.6dp" />
 						</rule>
 						<rule e="way" k="highway" v="footway|path">
-							<line stroke="#c2b5a3" stroke-width="0.5dp" />
+							<line stroke="#c2b5a3" stroke-width="0.4dp" />
 						</rule>
 						<rule e="way" k="highway" v="track">
-							<line stroke="#c2b5a3" stroke-width="0.8dp" />
+							<line stroke="#c2b5a3" stroke-width="0.6dp" />
 						</rule>
-						<rule e="way" k="highway" v="cycleway|bridleway|service" zoom-min="12">
+						<rule e="way" k="highway" v="cycleway|bridleway|service">
 							<line stroke="#707070" stroke-width="0.7dp" />
 						</rule>
 						<rule e="way" k="highway" v="byway">
@@ -611,7 +611,7 @@
 					<rule e="way" k="bridge" v="yes|true" zoom-min="15">
 						<!-- highway casings -->
 						<rule e="way" k="highway" v="steps|footway|path">
-							<line stroke="#000000" stroke-width="0.5" stroke-linecap="butt" />
+							<line stroke="#000000" stroke-width="0.5dp" stroke-linecap="butt" />
 						</rule>
 						<rule e="way" k="highway" v="track|cycleway|bridleway|service">
 							<line stroke="#000000" stroke-width="0.6dp" stroke-linecap="butt" />
@@ -669,44 +669,44 @@
 						</rule>
 					</rule>
 					<rule e="way" k="highway" v="path">
-						<line stroke="#6A5B47" stroke-width="0.4dp" stroke-dasharray="5,5" stroke-linecap="butt" />
+						<line stroke="#6A5B47" stroke-width="0.3dp" stroke-dasharray="5,5" stroke-linecap="butt" />
 						<rule e="way" k="*" v="*" zoom-min="15">
 							<pathText k="name" font-style="bold" font-size="10dp" stroke="#d0d0d0" stroke-width="2.0dp" />
 						</rule>
 					</rule>
 					<rule e="way" k="highway" v="track">
 						<rule e="way" k="tracktype" v="grade1">
-							<line stroke="#6A5B47" stroke-width="0.6dp" />
+							<line stroke="#6A5B47" stroke-width="0.5dp" />
 							<rule e="way" k="*" v="*" zoom-min="15">
 								<pathText k="name" font-style="bold" font-size="10dp" stroke="#fffaf2" stroke-width="2.0dp" />
 							</rule>
 						</rule>
 						<rule e="way" k="tracktype" v="grade2">
-							<line stroke="#6A5B47" stroke-width="0.6dp" stroke-dasharray="18,4" stroke-linecap="butt" />
+							<line stroke="#6A5B47" stroke-width="0.5dp" stroke-dasharray="18,4" stroke-linecap="butt" />
 							<rule e="way" k="*" v="*" zoom-min="15">
 								<pathText k="name" font-style="bold" font-size="10dp" stroke="#fff2de" stroke-width="2.0dp" />
 							</rule>
 						</rule>
 						<rule e="way" k="tracktype" v="grade3">
-							<line stroke="#6A5B47" stroke-width="0.6dp" stroke-dasharray="12,8" stroke-linecap="butt" />
+							<line stroke="#6A5B47" stroke-width="0.5dp" stroke-dasharray="12,8" stroke-linecap="butt" />
 							<rule e="way" k="*" v="*" zoom-min="15">
 								<pathText k="name" font-style="bold" font-size="10dp" stroke="#fff2de" stroke-width="2.0dp" />
 							</rule>
 						</rule>
 						<rule e="way" k="tracktype" v="grade4">
-							<line stroke="#6A5B47" stroke-width="0.6dp" stroke-dasharray="8,12" stroke-linecap="butt" />
+							<line stroke="#6A5B47" stroke-width="0.5dp" stroke-dasharray="8,12" stroke-linecap="butt" />
 							<rule e="way" k="*" v="*" zoom-min="15">
 								<pathText k="name" font-style="bold" font-size="10dp" stroke="#fff2de" stroke-width="2.0dp" />
 							</rule>
 						</rule>
 						<rule e="way" k="tracktype" v="grade5">
-							<line stroke="#6A5B47" stroke-width="0.6dp" stroke-dasharray="4,16" stroke-linecap="butt" />
+							<line stroke="#6A5B47" stroke-width="0.5dp" stroke-dasharray="4,16" stroke-linecap="butt" />
 							<rule e="way" k="*" v="*" zoom-min="15">
 								<pathText k="name" font-style="bold" font-size="10dp" stroke="#fff2de" stroke-width="2.0dp" />
 							</rule>
 						</rule>
 						<rule e="way" k="tracktype" v="~|no|false">
-							<line stroke="#6A5B47" stroke-width="0.6dp" stroke-dasharray="18,4,8,12" stroke-linecap="butt" />
+							<line stroke="#6A5B47" stroke-width="0.5dp" stroke-dasharray="18,4,8,12" stroke-linecap="butt" />
 							<rule e="way" k="*" v="*" zoom-min="15">
 								<pathText k="name" font-style="bold" font-size="10dp" stroke="#fff2de" stroke-width="2.0dp" />
 							</rule>
