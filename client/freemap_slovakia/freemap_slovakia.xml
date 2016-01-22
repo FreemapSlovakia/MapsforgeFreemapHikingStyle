@@ -971,7 +971,7 @@
 					<area fill="#55505050" stroke="#55505050" stroke-width="5.0dp" />
 				</rule>
 				<rule e="way" k="*" v="*" zoom-min="16">
-					<caption k="name" font-style="bold" font-size="10" fill="#000000" stroke="#ffffff" stroke-width="2.0dp" />
+					<caption k="name" font-style="bold" font-size="10dp" fill="#000000" stroke="#ffffff" stroke-width="2.0dp" />
 				</rule>
 			</rule>
 			<!-- piste ways -->
@@ -998,7 +998,7 @@
 					<line stroke="#55505050" stroke-width="5.0dp" />
 				</rule>
 				<rule e="way" k="*" v="*" zoom-min="14">
-					<pathText k="name" font-style="bold" font-size="10" fill="#000000" stroke="#ffffff" stroke-width="2.0dp" />
+					<pathText k="name" font-style="bold" font-size="10dp" fill="#000000" stroke="#ffffff" stroke-width="2.0dp" />
 				</rule>
 			</rule>
 			<rule e="way" k="piste:type" v="sled">
@@ -1022,7 +1022,7 @@
 				<lineSymbol src="file:/symbols/gondola.png" />
 			</rule>
 			<rule e="way" k="*" v="*" zoom-min="14">
-				<pathText k="name" font-style="bold" font-size="10" fill="#606060" stroke="#ffffff" stroke-width="2.0dp" />
+				<pathText k="name" font-style="bold" font-size="10dp" fill="#606060" stroke="#ffffff" stroke-width="2.0dp" />
 			</rule>
 		</rule>
 		<!-- railway (no tunnel) -->
@@ -1348,13 +1348,13 @@
 			<rule e="node" k="natural" v="tree" zoom-min="16">
 				<symbol src="file:/symbols/tree.png" />
 				<rule e="node" k="*" v="*" zoom-min="17">
-					<caption k="name" font-style="bold" font-size="10" fill="#000000" stroke="#ffffff" stroke-width="2.0dp" />
+					<caption k="name" font-style="bold" font-size="10dp" fill="#000000" stroke="#ffffff" stroke-width="2.0dp" />
 				</rule>
 			</rule>
 			<rule e="node" k="natural" v="volcano" zoom-min="12">
 				<symbol src="file:/symbols/vulcan.png" />
 				<rule e="node" k="*" v="*" zoom-min="17">
-					<caption k="name" font-style="bold" font-size="10" fill="#000000" stroke="#ffffff" stroke-width="2.0dp" />
+					<caption k="name" font-style="bold" font-size="10dp" fill="#000000" stroke="#ffffff" stroke-width="2.0dp" />
 				</rule>
 			</rule>
 		</rule>
@@ -1393,10 +1393,10 @@
 				<caption k="name" priority="-5" font-style="bold" font-size="8dp" fill="#666666" stroke="#ffffff" stroke-width="2.0dp" />
 			</rule>
 			<rule e="node" k="place" v="island" zoom-min="10">
-				<caption k="name" font-style="bold" font-size="20" fill="#000000" stroke="#ffffff" stroke-width="3.0dp" />
+				<caption k="name" font-style="bold" font-size="20dp" fill="#000000" stroke="#ffffff" stroke-width="3.0dp" />
 			</rule>
 			<rule e="node" k="place" v="country" zoom-max="6">
-				<caption k="name" font-style="bold" font-size="35" fill="#000000" stroke="#ffffff" stroke-width="4.0dp" />
+				<caption k="name" font-style="bold" font-size="35dp" fill="#000000" stroke="#ffffff" stroke-width="4.0dp" />
 			</rule>
 		</rule>
 		<!-- railway -->
@@ -1407,7 +1407,7 @@
 			<rule e="node" k="railway" v="level_crossing" zoom-min="16">
 				<symbol src="file:/symbols/railway-crossing.png" symbol-width="16dp" />
 				<rule e="node" k="*" v="*" zoom-min="18">
-					<caption k="ref" dy="15" font-style="bold" font-size="8" fill="#000000" stroke="#ffffff" stroke-width="2.0dp" />
+					<caption k="ref" dy="15" font-style="bold" font-size="8dp" fill="#000000" stroke="#ffffff" stroke-width="2.0dp" />
 				</rule>
 			</rule>
 			<rule e="node" k="railway" v="station" zoom-min="14">
