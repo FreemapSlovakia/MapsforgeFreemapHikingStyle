@@ -55,7 +55,7 @@
 				<area fill="#b5d6f1" />
 			</rule>
 			<rule e="way" k="*" v="*" zoom-min="16">
-				<caption k="name" font-style="bold" font-size="9dp" fill="#808080" stroke="#ffffff" stroke-width="2.0dp" />
+				<caption k="name" font-style="bold" font-size="10dp" fill="#808080" stroke="#ffffff" stroke-width="2.0dp" />
 			</rule>
 		</rule>
 		<!-- landuse -->
@@ -518,11 +518,11 @@
 		<!-- historic -->
 		<rule e="any" k="historic" v="ruins" zoom-min="16">
 			<symbol src="file:/symbols/ruins.png" symbol-width="16dp" force-draw="true" />
-			<caption dy="25" k="name" font-style="bold" font-size="10dp" fill="#000000" stroke="#ffffff" stroke-width="2dp" />
+			<caption dy="12dp" k="name" font-style="bold" font-size="10dp" fill="#000000" stroke="#ffffff" stroke-width="2dp" />
 		</rule>
 		<rule e="any" k="ruins" v="yes" zoom-min="16">
 			<symbol src="file:/symbols/ruins.png" symbol-width="16dp" force-draw="true" />
-			<caption dy="25" k="name" font-style="bold" font-size="10dp" fill="#000000" stroke="#ffffff" stroke-width="2dp" />
+			<caption dy="12dp" k="name" font-style="bold" font-size="10dp" fill="#000000" stroke="#ffffff" stroke-width="2dp" />
 		</rule>
 		<rule e="any" k="historic" v="castle" zoom-min="15">
 			<rule e="any" k="ruins" v="~" zoom-min="15">
@@ -1133,20 +1133,9 @@
 	<rule e="node" k="*" v="*">
 		<rule e="node" k="tourism" v="information">
 			<rule e="node" k="information" v="guidepost" zoom-min="14">
-				<rule e="node" k="hiking" v="yes" zoom-min="14">
-					<symbol src="file:/symbols/guidepost.png" symbol-width="12dp" force-draw="true" />
-					<caption dy="-20" k="name" font-style="bold" font-size="7dp" fill="#000000" stroke="#ffffff" stroke-width="2dp" force-draw="true"/>
-					<caption dy="30" k="ele" font-style="normal" font-size="6dp" fill="#000000" stroke="#ffffff" stroke-width="1dp" />
-				</rule>
-				<rule e="node" k="hiking" v="~">
-					<rule e="node" k="ski" v="~" zoom-min="14">
-						<rule e="node" k="bicycle" v="~" zoom-min="14">
-							<symbol src="file:/symbols/guidepost.png" symbol-width="12dp" />
-							<caption dy="-20" k="name" font-style="bold" font-size="6dp" fill="#000000" stroke="#ffffff" stroke-width="1dp" />
-							<caption dy="30" k="ele" font-style="normal" font-size="5dp" fill="#000000" stroke="#ffffff" stroke-width="1dp" />
-						</rule>
-					</rule>
-				</rule>
+				<symbol src="file:/symbols/guidepost.png" symbol-width="12dp" force-draw="true" />
+				<caption dy="-8dp" k="name" font-style="bold" font-size="10dp" fill="#000000" stroke="#ffffff" stroke-width="2dp" force-draw="true"/>
+				<caption dy="15dp" k="ele" font-style="normal" font-size="10dp" fill="#000000" stroke="#ffffff" stroke-width="1dp" />
 			</rule>
 		</rule>
 		<!-- aeroway -->
@@ -1281,7 +1270,7 @@
 		<rule e="node" k="historic" v="*">
 			<circle r="3" fill="#4040ff" stroke="#606060" stroke-width="1.5dp" />
 			<rule e="node" k="*" v="*" zoom-min="17">
-				<caption k="name" dy="-10" font-style="bold" font-size="10dp" fill="#4040ff" stroke="#ffffff" stroke-width="2.0dp" />
+				<caption k="name" dy="-10dp" font-style="bold" font-size="10dp" fill="#4040ff" stroke="#ffffff" stroke-width="2.0dp" />
 			</rule>
 		</rule>
 		<!-- house numbers -->
@@ -1327,23 +1316,15 @@
 			<rule e="node" k="natural" v="spring" zoom-min="14">
 				<symbol src="file:/symbols/spring.png" symbol-width="16dp" force-draw="true" />
 				<rule e="node" k="*" v="*" zoom-min="16">
-					<caption k="name" dy="12dp" font-style="bold" font-size="8dp" fill="#0092da" stroke="#ffffff" stroke-width="2dp" />
+					<caption k="name" dy="12dp" font-style="bold" font-size="10dp" fill="#0092da" stroke="#ffffff" stroke-width="2dp" />
 				</rule>
 			</rule>
 			<rule e="node" k="natural" v="peak" zoom-min="11">
 				<symbol src="file:/symbols/peak.png" symbol-width="12dp" force-draw="true"/>
 			</rule>
-			<rule e="node" k="natural" v="peak" zoom-min="12" zoom-max="14">
-				<caption k="ele" dy="10dp" font-style="italic" font-size="6dp" fill="#000000" stroke="#ffffff" stroke-width="1dp" />
-				<caption k="name" dy="-6dp" font-style="bold_italic" font-family="serif" font-size="7dp" fill="#760000" stroke="#e9dca2" stroke-width="1.5dp" />
-			</rule>
-			<rule e="node" k="natural" v="peak" zoom-min="14" zoom-max="16">
-				<caption k="ele" dy="10dp" font-style="italic" font-size="7dp" fill="#000000" stroke="#ffffff" stroke-width="1dp" />
-				<caption k="name" dy="-7dp" font-style="bold_italic" font-family="serif" font-size="8dp" fill="#760000" stroke="#e9dca2" stroke-width="1.5dp" />
-			</rule>
-			<rule e="node" k="natural" v="peak" zoom-min="16">
-				<caption k="ele" dy="10dp" font-style="italic" font-size="7dp" fill="#000000" stroke="#ffffff" stroke-width="1dp" />
-				<caption k="name" dy="-8dp" font-style="bold_italic" font-family="serif" font-size="9dp" fill="#760000" stroke="#e9dca2" stroke-width="2dp" />
+			<rule e="node" k="natural" v="peak" zoom-min="12">
+				<caption k="name" dy="-8dp" font-style="bold_italic" font-family="serif" font-size="10dp" fill="#760000" stroke="#e9dca2" stroke-width="1.5dp" />
+				<caption k="ele" dy="12dp" font-style="italic" font-size="10dp" fill="#000000" stroke="#ffffff" stroke-width="1dp" />
 			</rule>
 			<rule e="node" k="natural" v="tree" zoom-min="16">
 				<symbol src="file:/symbols/tree.png" />
@@ -1375,22 +1356,22 @@
 		<!-- place -->
 		<rule e="node" k="place" v="*">
 			<rule e="node" k="place" v="city" zoom-max="14">
-				<caption k="name" font-style="bold" font-size="14dp" fill="#000000" stroke="#ffffff" stroke-width="3dp" />
+				<caption k="name" font-style="bold" font-size="16dp" fill="#000000" stroke="#ffffff" stroke-width="3dp" />
 			</rule>
 			<rule e="node" k="place" v="town" zoom-min="10" zoom-max="15">
-				<caption k="name" priority="20" font-style="bold" font-size="12dp" fill="#000000" stroke="#ffffff" stroke-width="2dp" />
+				<caption k="name" priority="20" font-style="bold" font-size="14dp" fill="#000000" stroke="#ffffff" stroke-width="2dp" />
 			</rule>
 			<rule e="node" k="place" v="suburb" zoom-min="12" zoom-max="16">
-				<caption k="name" font-style="bold" font-size="9dp" fill="#6C6C6C" stroke="#ffffff" stroke-width="2dp" />
+				<caption k="name" font-style="bold" font-size="12dp" fill="#6C6C6C" stroke="#ffffff" stroke-width="2dp" />
 			</rule>
 			<rule e="node" k="place" v="village" zoom-min="12" zoom-max="18">
-				<caption k="name" priority="10" font-style="normal" font-size="9dp" fill="#000000" stroke="#ffffff" stroke-width="2dp" />
+				<caption k="name" priority="10" font-style="normal" font-size="12dp" fill="#000000" stroke="#ffffff" stroke-width="2dp" />
 			</rule>
 			<rule e="node" k="place" v="hamlet" zoom-min="13" zoom-max="18">
-				<caption k="name" priority="5" font-style="normal" font-size="8dp" fill="#000000" stroke="#ffffff" stroke-width="1dp" />
+				<caption k="name" priority="5" font-style="normal" font-size="11dp" fill="#000000" stroke="#ffffff" stroke-width="1dp" />
 			</rule>
 			<rule e="node" k="place" v="locality" zoom-min="17">
-				<caption k="name" priority="-5" font-style="bold" font-size="8dp" fill="#666666" stroke="#ffffff" stroke-width="2.0dp" />
+				<caption k="name" priority="-5" font-style="bold" font-size="10dp" fill="#666666" stroke="#ffffff" stroke-width="2.0dp" />
 			</rule>
 			<rule e="node" k="place" v="island" zoom-min="10">
 				<caption k="name" font-style="bold" font-size="20dp" fill="#000000" stroke="#ffffff" stroke-width="3.0dp" />
@@ -1407,16 +1388,16 @@
 			<rule e="node" k="railway" v="level_crossing" zoom-min="16">
 				<symbol src="file:/symbols/railway-crossing.png" symbol-width="16dp" />
 				<rule e="node" k="*" v="*" zoom-min="18">
-					<caption k="ref" dy="15" font-style="bold" font-size="8dp" fill="#000000" stroke="#ffffff" stroke-width="2.0dp" />
+					<caption k="ref" dy="10dp" font-style="bold" font-size="8dp" fill="#000000" stroke="#ffffff" stroke-width="2.0dp" />
 				</rule>
 			</rule>
 			<rule e="node" k="railway" v="station" zoom-min="14">
 				<circle r="6" fill="#ec2d2d" stroke="#606060" stroke-width="1.5dp" />
-				<caption k="name" dy="-10" font-style="bold" font-size="9dp" fill="#ec2d2d" stroke="#ffffff" stroke-width="2dp" />
+				<caption k="name" dy="-10dp" font-style="bold" font-size="10dp" fill="#ec2d2d" stroke="#ffffff" stroke-width="2dp" />
 			</rule>
 			<rule e="node" k="railway" v="halt|tram_stop" zoom-min="17">
 				<circle r="4" fill="#ec2d2d" stroke="#606060" stroke-width="1.5dp" />
-				<caption k="name" dy="-15" font-style="bold" font-size="8dp" fill="#ec2d2d" stroke="#ffffff" stroke-width="1.5dp" />
+				<caption k="name" dy="-10dp" font-style="bold" font-size="10dp" fill="#ec2d2d" stroke="#ffffff" stroke-width="1.5dp" />
 			</rule>
 		</rule>
 		<!-- shop -->
