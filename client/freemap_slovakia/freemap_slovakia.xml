@@ -209,111 +209,178 @@
 			<line stroke="#DDDB8888" stroke-width="0.10dp" stroke-linecap="butt"  curve="cubic" /> <!-- stroke-dasharray="2,2" -->
 		</rule>
 		<rule e="way" k="highway" v="*">
-			<rule e="way" k="fmrelhikingyellow|fmrelhikinggreen|fmreleducation|fmrelhikingblue|fmrelhikingred" v="*" zoom-min="11" zoom-max="12">
-				<rule e="way" k="fmrelbicyclered" v="*">
-					<line stroke="#FF00FF" stroke-width="3dp" stroke-linecap="butt" />
-				</rule>
-				<rule e="way" k="fmrelbicyclegreen" v="*">
-					<line stroke="#FF00FF" stroke-width="3dp" stroke-linecap="butt" />
-				</rule>
-				<rule e="way" k="fmrelbicycleblue" v="*">
-					<line stroke="#FF00FF" stroke-width="3dp" stroke-linecap="butt" />
-				</rule>
-				<rule e="way" k="fmrelbicycleyellow" v="*">
-					<line stroke="#FF00FF" stroke-width="3dp" stroke-linecap="butt" />
-				</rule>
-				<rule e="way" k="fmrelbicyclewhite" v="*">
-					<line stroke="#FF00FF" stroke-width="3dp" stroke-linecap="butt" />
-				</rule>
-				<rule e="way" k="fmrelbicycledefault" v="*">
-					<line stroke="#FF00FF" stroke-width="3dp" stroke-linecap="butt" />
-				</rule>
-			</rule>
-			<rule e="way" k="fmrelhikingyellow|fmrelhikinggreen|fmreleducation|fmrelhikingblue|fmrelhikingred" v="*" zoom-min="13" >
-				<rule e="way" k="fmrelbicyclered" v="*">
-					<line stroke="#FF00FF" stroke-width="4dp" stroke-linecap="butt" />
-				</rule>
-				<rule e="way" k="fmrelbicyclegreen" v="*">
-					<line stroke="#FF00FF" stroke-width="4dp" stroke-linecap="butt" />
-				</rule>
-				<rule e="way" k="fmrelbicycleblue" v="*">
-					<line stroke="#FF00FF" stroke-width="4dp" stroke-linecap="butt" />
-				</rule>
-				<rule e="way" k="fmrelbicycleyellow" v="*">
-					<line stroke="#FF00FF" stroke-width="4dp" stroke-linecap="butt" />
-				</rule>
-				<rule e="way" k="fmrelbicyclewhite" v="*">
-					<line stroke="#FF00FF" stroke-width="4dp" stroke-linecap="butt" />
-				</rule>
-				<rule e="way" k="fmrelbicycledefault" v="*">
-					<line stroke="#FF00FF" stroke-width="4dp" stroke-linecap="butt" />
-				</rule>
-			</rule>
-			<rule e="way" k="fmrelhikingyellow|fmrelhikinggreen|fmreleducation|fmrelhikingblue|fmrelhikingred" v="~" zoom-min="11" zoom-max="12">
-				<rule e="way" k="fmrelbicyclered" v="*">
-					<line stroke="#FF00FF" stroke-width="2dp" stroke-linecap="butt" />
-				</rule>
-				<rule e="way" k="fmrelbicyclegreen" v="*">
-					<line stroke="#FF00FF" stroke-width="2dp" stroke-linecap="butt" />
-				</rule>
-				<rule e="way" k="fmrelbicycleblue" v="*">
-					<line stroke="#FF00FF" stroke-width="2dp" stroke-linecap="butt" />
-				</rule>
-				<rule e="way" k="fmrelbicycleyellow" v="*">
-					<line stroke="#FF00FF" stroke-width="2dp" stroke-linecap="butt" />
-				</rule>
-				<rule e="way" k="fmrelbicyclewhite" v="*">
-					<line stroke="#FF00FF" stroke-width="2dp" stroke-linecap="butt" />
-				</rule>
-				<rule e="way" k="fmrelbicycledefault" v="*">
-					<line stroke="#FF00FF" stroke-width="2dp" stroke-linecap="butt" />
-				</rule>
-			</rule>
-			<rule e="way" k="fmrelhikingyellow|fmrelhikinggreen|fmreleducation|fmrelhikingblue|fmrelhikingred" v="~" zoom-min="13">
-				<rule e="way" k="fmrelbicyclered" v="*">
-					<line stroke="#FF00FF" stroke-width="3dp" stroke-linecap="butt" />
-				</rule>
-				<rule e="way" k="fmrelbicyclegreen" v="*">
-					<line stroke="#FF00FF" stroke-width="3dp" stroke-linecap="butt" />
-				</rule>
-				<rule e="way" k="fmrelbicycleblue" v="*">
-					<line stroke="#FF00FF" stroke-width="3dp" stroke-linecap="butt" />
-				</rule>
-				<rule e="way" k="fmrelbicycleyellow" v="*">
-					<line stroke="#FF00FF" stroke-width="3dp" stroke-linecap="butt" />
-				</rule>
-				<rule e="way" k="fmrelbicyclewhite" v="*">
-					<line stroke="#FF00FF" stroke-width="3dp" stroke-linecap="butt" />
-				</rule>
-				<rule e="way" k="fmrelbicycledefault" v="*">
-					<line stroke="#FF00FF" stroke-width="3dp" stroke-linecap="butt" />
-				</rule>
-			</rule>
-			<rule e="way" k="fmrelhikingred" v="*" zoom-min="11">
-				<line stroke="#FE0000" stroke-width="6" stroke-linecap="butt" />
-			</rule>
-			<rule e="way" k="fmrelhikingblue" v="*" zoom-min="11">
+			<rule e="way" k="fmrelbicyclered|fmrelbicycleblue|fmrelbicyclegreen|fmrelbicycleyellow|fmrelbicyclewhite|fmrelbicycleblack|fmrelbicycledefault" v="*">
 				<rule e="way" k="fmrelhikingred" v="*">
-					<line stroke="#3233FF" stroke-width="5" stroke-linecap="butt" />
+					<rule e="way" k="fmrelhikingblue" v="*">
+						<rule e="way" k="fmrelhikinggreen|fmreleducation" v="*">
+							<rule e="way" k="fmrelhikingyellow" v="*">
+								<line stroke="#FF00FF" stroke-width="6dp" stroke-linecap="butt" />
+							</rule>
+							<rule e="way" k="fmrelhikingyellow" v="~">
+								<line stroke="#FF00FF" stroke-width="5dp" stroke-linecap="butt" />
+							</rule>
+						</rule>
+						<rule e="way" k="fmrelhikinggreen|fmreleducation" v="~">
+							<rule e="way" k="fmrelhikingyellow" v="*">
+								<line stroke="#FF00FF" stroke-width="5dp" stroke-linecap="butt" />
+							</rule>
+							<rule e="way" k="fmrelhikingyellow" v="~">
+								<line stroke="#FF00FF" stroke-width="4dp" stroke-linecap="butt" />
+							</rule>
+						</rule>
+					</rule>
+					<rule e="way" k="fmrelhikingblue" v="~">
+						<rule e="way" k="fmrelhikinggreen|fmreleducation" v="*">
+							<rule e="way" k="fmrelhikingyellow" v="*">
+								<line stroke="#FF00FF" stroke-width="5dp" stroke-linecap="butt" />
+							</rule>
+							<rule e="way" k="fmrelhikingyellow" v="~">
+								<line stroke="#FF00FF" stroke-width="4dp" stroke-linecap="butt" />
+							</rule>
+						</rule>
+						<rule e="way" k="fmrelhikinggreen|fmreleducation" v="~">
+							<rule e="way" k="fmrelhikingyellow" v="*">
+								<line stroke="#FF00FF" stroke-width="4dp" stroke-linecap="butt" />
+							</rule>
+							<rule e="way" k="fmrelhikingyellow" v="~">
+								<line stroke="#FF00FF" stroke-width="3dp" stroke-linecap="butt" />
+							</rule>
+						</rule>
+					</rule>
 				</rule>
-				<rule e="way" k="fmrelhikingred" v="~" zoom-min="11">
-					<line stroke="#3233FF" stroke-width="6" stroke-linecap="butt" />
+				<rule e="way" k="fmrelhikingred" v="~">
+					<rule e="way" k="fmrelhikingblue" v="*">
+						<rule e="way" k="fmrelhikinggreen|fmreleducation" v="*">
+							<rule e="way" k="fmrelhikingyellow" v="*">
+								<line stroke="#FF00FF" stroke-width="5dp" stroke-linecap="butt" />
+							</rule>
+							<rule e="way" k="fmrelhikingyellow" v="~">
+								<line stroke="#FF00FF" stroke-width="4dp" stroke-linecap="butt" />
+							</rule>
+						</rule>
+						<rule e="way" k="fmrelhikinggreen|fmreleducation" v="~">
+							<rule e="way" k="fmrelhikingyellow" v="*">
+								<line stroke="#FF00FF" stroke-width="4dp" stroke-linecap="butt" />
+							</rule>
+							<rule e="way" k="fmrelhikingyellow" v="~">
+								<line stroke="#FF00FF" stroke-width="3dp" stroke-linecap="butt" />
+							</rule>
+						</rule>
+					</rule>
+					<rule e="way" k="fmrelhikingblue" v="~">
+						<rule e="way" k="fmrelhikinggreen|fmreleducation" v="*">
+							<rule e="way" k="fmrelhikingyellow" v="*">
+								<line stroke="#FF00FF" stroke-width="4dp" stroke-linecap="butt" />
+							</rule>
+							<rule e="way" k="fmrelhikingyellow" v="~">
+								<line stroke="#FF00FF" stroke-width="3dp" stroke-linecap="butt" />
+							</rule>
+						</rule>
+						<rule e="way" k="fmrelhikinggreen|fmreleducation" v="~">
+							<rule e="way" k="fmrelhikingyellow" v="*">
+								<line stroke="#FF00FF" stroke-width="3dp" stroke-linecap="butt" />
+							</rule>
+							<rule e="way" k="fmrelhikingyellow" v="~">
+								<line stroke="#FF00FF" stroke-width="2dp" stroke-linecap="butt" />
+							</rule>
+						</rule>
+					</rule>
 				</rule>
 			</rule>
-			<rule e="way" k="fmrelhikinggreen|fmreleducation" v="*" zoom-min="11">
-				<line stroke="#009900" stroke-width="4" stroke-linecap="butt" />
-				<rule e="way" k="fmrelhikingred|fmrelhikingblue" v="~">
-					<line stroke="#009900" stroke-width="6" stroke-linecap="butt" />
+
+			<rule e="way" k="fmrelhikingred" v="*">
+				<rule e="way" k="fmrelhikingblue" v="*">
+					<rule e="way" k="fmrelhikinggreen|fmreleducation" v="*">
+						<rule e="way" k="fmrelhikingyellow" v="*">
+							<line stroke="#FE0000" stroke-width="5dp" stroke-linecap="butt" />
+							<line stroke="#3233FF" stroke-width="4dp" stroke-linecap="butt" />
+							<line stroke="#009900" stroke-width="3dp" stroke-linecap="butt" />
+							<line stroke="#FFCC00" stroke-width="2dp" stroke-linecap="butt" />
+						</rule>
+						<rule e="way" k="fmrelhikingyellow" v="~">
+							<line stroke="#FE0000" stroke-width="4dp" stroke-linecap="butt" />
+							<line stroke="#3233FF" stroke-width="3dp" stroke-linecap="butt" />
+							<line stroke="#009900" stroke-width="2dp" stroke-linecap="butt" />
+						</rule>
+					</rule>
+					<rule e="way" k="fmrelhikinggreen|fmreleducation" v="~">
+						<rule e="way" k="fmrelhikingyellow" v="*">
+							<line stroke="#FE0000" stroke-width="4dp" stroke-linecap="butt" />
+							<line stroke="#3233FF" stroke-width="3dp" stroke-linecap="butt" />
+							<line stroke="#FFCC00" stroke-width="2dp" stroke-linecap="butt" />
+						</rule>
+						<rule e="way" k="fmrelhikingyellow" v="~">
+							<line stroke="#FE0000" stroke-width="3dp" stroke-linecap="butt" />
+							<line stroke="#3233FF" stroke-width="2dp" stroke-linecap="butt" />
+						</rule>
+					</rule>
+				</rule>
+				<rule e="way" k="fmrelhikingblue" v="~">
+					<rule e="way" k="fmrelhikinggreen|fmreleducation" v="*">
+						<rule e="way" k="fmrelhikingyellow" v="*">
+							<line stroke="#FE0000" stroke-width="4dp" stroke-linecap="butt" />
+							<line stroke="#009900" stroke-width="3dp" stroke-linecap="butt" />
+							<line stroke="#FFCC00" stroke-width="2dp" stroke-linecap="butt" />
+						</rule>
+						<rule e="way" k="fmrelhikingyellow" v="~">
+							<line stroke="#FE0000" stroke-width="3dp" stroke-linecap="butt" />
+							<line stroke="#009900" stroke-width="2dp" stroke-linecap="butt" />
+						</rule>
+					</rule>
+					<rule e="way" k="fmrelhikinggreen|fmreleducation" v="~">
+						<rule e="way" k="fmrelhikingyellow" v="*">
+							<line stroke="#FE0000" stroke-width="3dp" stroke-linecap="butt" />
+							<line stroke="#FFCC00" stroke-width="2dp" stroke-linecap="butt" />
+						</rule>
+						<rule e="way" k="fmrelhikingyellow" v="~">
+							<line stroke="#FE0000" stroke-width="2dp" stroke-linecap="butt" />
+						</rule>
+					</rule>
 				</rule>
 			</rule>
-			<rule e="way" k="fmrelhikingyellow" v="*" zoom-min="11">
-				<line stroke="#FFCC00" stroke-width="3" stroke-linecap="butt" />
-				<rule e="way" k="fmrelhikingred|fmrelhikingblue|fmrelhikinggreen|fmreleducation" v="~">
-					<line stroke="#FFCC00" stroke-width="6" stroke-linecap="butt" />
+			<rule e="way" k="fmrelhikingred" v="~">
+				<rule e="way" k="fmrelhikingblue" v="*">
+					<rule e="way" k="fmrelhikinggreen|fmreleducation" v="*">
+						<rule e="way" k="fmrelhikingyellow" v="*">
+							<line stroke="#3233FF" stroke-width="4dp" stroke-linecap="butt" />
+							<line stroke="#009900" stroke-width="3dp" stroke-linecap="butt" />
+							<line stroke="#FFCC00" stroke-width="2dp" stroke-linecap="butt" />
+						</rule>
+						<rule e="way" k="fmrelhikingyellow" v="~">
+							<line stroke="#3233FF" stroke-width="3dp" stroke-linecap="butt" />
+							<line stroke="#009900" stroke-width="2dp" stroke-linecap="butt" />
+						</rule>
+					</rule>
+					<rule e="way" k="fmrelhikinggreen|fmreleducation" v="~">
+						<rule e="way" k="fmrelhikingyellow" v="*">
+							<line stroke="#3233FF" stroke-width="3dp" stroke-linecap="butt" />
+							<line stroke="#FFCC00" stroke-width="2dp" stroke-linecap="butt" />
+						</rule>
+						<rule e="way" k="fmrelhikingyellow" v="~">
+							<line stroke="#3233FF" stroke-width="2dp" stroke-linecap="butt" />
+						</rule>
+					</rule>
+				</rule>
+				<rule e="way" k="fmrelhikingblue" v="~">
+					<rule e="way" k="fmrelhikinggreen|fmreleducation" v="*">
+						<rule e="way" k="fmrelhikingyellow" v="*">
+							<line stroke="#009900" stroke-width="3dp" stroke-linecap="butt" />
+							<line stroke="#FFCC00" stroke-width="2dp" stroke-linecap="butt" />
+						</rule>
+						<rule e="way" k="fmrelhikingyellow" v="~">
+							<line stroke="#009900" stroke-width="2dp" stroke-linecap="butt" />
+						</rule>
+					</rule>
+					<rule e="way" k="fmrelhikinggreen|fmreleducation" v="~">
+						<rule e="way" k="fmrelhikingyellow" v="*">
+							<line stroke="#FFCC00" stroke-width="2dp" stroke-linecap="butt" />
+						</rule>
+						<rule e="way" k="fmrelhikingyellow" v="~">
+						</rule>
+					</rule>
 				</rule>
 			</rule>
 		</rule>
-
 
 		<!-- tunnel -->
 		<rule e="way" k="tunnel" v="true|yes" zoom-min="12">
