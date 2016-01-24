@@ -1315,7 +1315,7 @@
 				</rule>
 			</rule>
 			<rule e="node" k="natural" v="spring" zoom-min="14">
-				<symbol src="file:/symbols/spring.png" symbol-width="16dp" />
+				<symbol src="file:/symbols/spring.svg" symbol-width="9dp" />
 				<rule e="node" k="*" v="*" zoom-min="16">
 					<caption k="name" dy="12dp" font-style="bold" font-size="10dp" fill="#0092da" stroke="#ffffff" stroke-width="2dp" />
 				</rule>
@@ -1341,7 +1341,7 @@
 			</rule>
 		</rule>
 		<rule e="node" k="amenity" v="hunting_stand" zoom-min="14">
-			<symbol src="file:/symbols/hunting_stand.png" symbol-width="14dp" />
+			<symbol src="file:/symbols/hunting_stand.svg" symbol-width="14dp" />
 		</rule>
 		<rule e="node" k="man_made" v="mast" zoom-min="14">
 			<symbol src="file:/symbols/tower_comm.svg" symbol-width="14dp" />
@@ -1350,7 +1350,7 @@
 			<rule e="node" k="tower:type" v="communication">
 				<symbol src="file:/symbols/tower_comm.svg" symbol-width="14dp" />
 			</rule>
-			<rule e="node" k="tower:type" v="observation">
+			<rule e="node" k="tower:type" v="observation" zoom-min="14">
 				<symbol src="file:/symbols/tower_obs.svg" symbol-width="14dp" />
 			</rule>
 		</rule>
