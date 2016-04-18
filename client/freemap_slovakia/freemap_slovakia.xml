@@ -155,7 +155,7 @@
 			<rule e="way" k="leisure" v="playground|playing_fields|pitch|dog_park">
 				<area fill="#BDE3CB" stroke="#6FC18E" stroke-width="0.2dp" />
 				<rule e="way" k="*" v="playground" zoom-min="17">
-					<symbol src="file:/symbols/playground.png" />
+					<symbol src="file:/symbols/playground.png" symbol-width="12dp" />
 				</rule>
 			</rule>
 			<rule e="way" k="leisure" v="nature_reserve">
@@ -1169,13 +1169,13 @@
 				<symbol src="file:/symbols/bank.png" symbol-width="12dp" />
 			</rule>
 			<rule e="node" k="amenity" v="bench" zoom-min="17">
-				<symbol src="file:/symbols/bench.svg" symbol-width="12dp" scale-icon-size="18,1.5" />
+				<symbol src="file:/symbols/bench.svg" symbol-width="12dp" scale-icon-size="18,1.2" />
 			</rule>
 			<rule e="node" k="amenity" v="bicycle_rental" zoom-min="17">
 				<symbol src="file:/symbols/bicycle_rental.png" symbol-width="12dp" />
 			</rule>
 			<rule e="node" k="amenity" v="bus_station" zoom-min="14">
-				<symbol src="file:/symbols/bus_station.png" symbol-width="26dp" />
+				<symbol src="file:/symbols/bus_station.png" symbol-width="22dp" />
 			</rule>
 			<rule e="node" k="railway" v="station" zoom-min="14">
 				<symbol src="file:/symbols/bus_station.png" symbol-width="12dp" />
@@ -1202,7 +1202,7 @@
 				<symbol src="file:/symbols/hospital.png" symbol-width="12dp" />
 			</rule>
 			<rule e="node" k="amenity" v="kindergarten" zoom-min="17">
-				<symbol src="file:/symbols/kindergarten.png" />
+				<symbol src="file:/symbols/kindergarten.png" symbol-width="12dp" />
 			</rule>
 			<rule e="node" k="amenity" v="library" zoom-min="17">
 				<symbol src="file:/symbols/library.png" symbol-width="12dp" />
@@ -1292,7 +1292,7 @@
 		</rule>
 		<!-- leisure -->
 		<rule e="node" k="leisure" v="playground" zoom-min="17">
-			<symbol src="file:/symbols/playground.png" />
+			<symbol src="file:/symbols/playground.png" symbol-width="12dp" />
 		</rule>
 		<!-- man_made -->
 		<rule e="node" k="man_made" v="windmill" zoom-min="17">
@@ -1416,7 +1416,7 @@
 		<!-- shop -->
 		<rule e="node" k="shop" v="*">
 			<rule e="node" k="shop" v="bakery" zoom-min="17">
-				<symbol src="file:/symbols/bakery.png" />
+				<symbol src="file:/symbols/bakery.png" symbol-width="12dp" />
 			</rule>
 			<rule e="node" k="shop" v="florist" zoom-min="17">
 				<symbol src="file:/symbols/florist.png" symbol-width="12dp" />
