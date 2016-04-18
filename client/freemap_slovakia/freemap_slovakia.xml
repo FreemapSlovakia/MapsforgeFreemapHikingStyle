@@ -95,7 +95,7 @@
 					<area src="file:/patterns/access-private.png" />
 				</rule>
 				<rule e="way" k="*" v="*" zoom-min="17">
-					<symbol src="file:/symbols/parking.png" symbol-width="12dp"/>
+					<symbol src="file:/symbols/parking.svg" symbol-width="12dp"/>
 				</rule>
 			</rule>
 			<rule e="way" k="amenity" v="fountain" closed="yes">
@@ -450,7 +450,7 @@
 		<!-- waterways -->
 		<rule e="way" k="waterway" v="*">
 			<!-- waterway casings -->
-			<rule e="way" k="waterway" v="drain">
+			<rule e="way" k="waterway" v="drain" zoom-min="13">
 				<rule e="way" k="tunnel" v="yes|culvert">
 					<line stroke="#647FC5" stroke-dasharray="5,5" stroke-width="1.0dp" />
 				</rule>
@@ -458,18 +458,27 @@
 					<line stroke="#647FC5" stroke-width="1.0dp" />
 				</rule>
 			</rule>
-			<rule e="way" k="waterway" v="canal">
+			<rule e="way" k="waterway" v="canal" zoom-min="13">
 				<line stroke="#647FC5" stroke-width="1.0dp" />
 			</rule>
 			<!-- waterway cores -->
 			<rule e="way" k="waterway" v="ditch">
-				<line stroke="#8DB0DD" stroke-width="0.1dp" />
+				<line stroke="#8DB0DD" stroke-width="0.1dp" zoom-min="13" />
+				<rule e="way" k="*" v="*" zoom-min="16">
+					<lineSymbol src="file:/symbols/waterflow.svg" align-center="true" repeat="true" symbol-width="7dp" repeat-gap="50dp" />
+				</rule>
 			</rule>
 			<rule e="way" k="waterway" v="drain">
-				<line stroke="#8DB0DD" stroke-width="0.8dp" />
+				<line stroke="#8DB0DD" stroke-width="0.8dp" zoom-min="13" />
+				<rule e="way" k="*" v="*" zoom-min="16">
+					<lineSymbol src="file:/symbols/waterflow.svg" align-center="true" repeat="true" symbol-width="7dp" repeat-gap="50dp" />
+				</rule>
 			</rule>
 			<rule e="way" k="waterway" v="canal">
-				<line stroke="#8DB0DD" stroke-width="0.8dp" />
+				<line stroke="#8DB0DD" stroke-width="0.8dp" zoom-min="13" />
+				<rule e="way" k="*" v="*" zoom-min="16">
+					<lineSymbol src="file:/symbols/waterflow.svg" align-center="true" repeat="true" symbol-width="7dp" repeat-gap="50dp" />
+				</rule>
 			</rule>
 			<rule e="way" k="waterway" v="stream" zoom-min="14">
 				<pathText k="name" font-style="bold_italic" font-size="8dp" fill="#8DB0DD" stroke="#ffffff" stroke-width="2dp" />
@@ -943,6 +952,9 @@
 					<rule e="way" k="oneway" v="yes|true" zoom-min="16">
 						<lineSymbol src="file:/symbols/oneway.svg" align-center="true" repeat="true" symbol-width="16dp" />
 					</rule>
+					<rule e="way" k="junction" v="roundabout" zoom-min="16">
+						<lineSymbol src="file:/symbols/oneway.svg" align-center="true" repeat="true" symbol-width="16dp" />
+					</rule>
 				</rule>
 			</rule>
 		</rule>
@@ -1365,7 +1377,7 @@
 			<rule e="node" k="place" v="suburb" zoom-min="12" zoom-max="16">
 				<caption k="name" font-style="bold" font-size="12dp" fill="#6C6C6C" stroke="#ffffff" stroke-width="2dp" />
 			</rule>
-			<rule e="node" k="place" v="village" zoom-min="12" zoom-max="18">
+			<rule e="node" k="place" v="village" zoom-min="13" zoom-max="18">
 				<caption k="name" font-style="normal" font-size="12dp" fill="#000000" stroke="#ffffff" stroke-width="2dp" />
 			</rule>
 			<rule e="node" k="place" v="hamlet" zoom-min="13" zoom-max="18">
@@ -1435,9 +1447,6 @@
 			</rule>
 			<rule e="node" k="tourism" v="viewpoint" zoom-min="15">
 				<symbol src="file:/symbols/viewpoint.png" symbol-width="12dp" />
-			</rule>
-			<rule e="node" k="hiking" v="~" zoom-min="17">
-				<caption k="name" dy="12dp" font-style="bold" font-size="10dp" fill="#4040ff" stroke="#ffffff" stroke-width="2dp" />
 			</rule>
 		</rule>
 	</rule>
