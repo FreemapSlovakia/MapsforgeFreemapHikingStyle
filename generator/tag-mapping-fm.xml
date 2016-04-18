@@ -289,7 +289,7 @@
 		<osm-tag key="man_made" value="dyke|dike|levee|embankment" zoom-appear="16" />
 		<osm-tag key="embankment" value="yes" equivalent-values="1,true" renderable="false" />
 		<osm-tag key="cutting" value="yes" equivalent-values="1,true" renderable="false" />
-
+		<osm-tag key="junction" value="roundabout" renderable="false" />
 		</ways>
 
 	<!-- NATURAL / WATERWAY TAGS -->

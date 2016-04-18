@@ -35,7 +35,7 @@
 				<area fill="#d6d6e4" />
 			</rule>
 			<rule e="way" k="landuse" v="landfill|quarry">
-				<area fill="#80e1e1e1" />
+				<area fill="#A0e1e1e1" />
 				<area src="file:/patterns/quarry.png" />
 			</rule>
 			<rule e="way" k="landuse" v="cemetery">
@@ -43,13 +43,13 @@
 				<area src="file:/patterns/cemetery.png" />
 			</rule>
 			<rule e="way" k="landuse" v="field|farm|farmland">
-				<area fill="#80FAFAF0" />
+				<area fill="#A0FAFAF0" />
 			</rule>
 			<rule e="way" k="landuse" v="village_green|meadow|grass|recreation_ground|grassland">
-				<area fill="#80E7FAD7" />
+				<area fill="#A0E7FAD7" />
 			</rule>
 			<rule e="way" k="landuse" v="allotments">
-				<area fill="#80FAF1D7" />
+				<area fill="#FAF1D7" />
 			</rule>
 			<rule e="way" k="landuse" v="reservoir|basin">
 				<area fill="#b5d6f1" />
@@ -479,8 +479,8 @@
 				<rule e="way" k="tunnel" v="~|no">
 					<line stroke="#8DB0DD" stroke-width="0.3dp" />
 				</rule>
-				<rule e="way" k="*" v="*" zoom-min="15">
-					<lineSymbol src="file:/symbols/waterflow.svg" align-center="true" repeat="true" />
+				<rule e="way" k="*" v="*" zoom-min="16">
+					<lineSymbol src="file:/symbols/waterflow.svg" align-center="true" repeat="true" symbol-width="7dp" repeat-gap="50dp" />
 				</rule>
 			</rule>
 			<rule e="way" k="waterway" v="river">
@@ -491,8 +491,8 @@
 				<rule e="way" k="tunnel" v="~|no">
 					<line stroke="#8DB0DD" stroke-width="1.5dp" />
 				</rule>
-				<rule e="way" k="*" v="*" zoom-min="12">
-					<lineSymbol src="file:/symbols/waterflow.svg" align-center="true" repeat="true" />
+				<rule e="way" k="*" v="*" zoom-min="13">
+					<lineSymbol src="file:/symbols/waterflow.svg" align-center="true" repeat="true" symbol-width="7dp" scale-icon-size="16,1.1" repeat-gap="50dp"/>
 				</rule>
 			</rule>
 			<rule e="way" k="waterway" v="dock">
@@ -941,7 +941,7 @@
 			<rule e="way" k="area" v="~|false|no">
 				<rule e="way" k="highway" v="*">
 					<rule e="way" k="oneway" v="yes|true" zoom-min="16">
-						<lineSymbol src="file:/symbols/oneway.png" align-center="true" repeat="true" />
+						<lineSymbol src="file:/symbols/oneway.svg" align-center="true" repeat="true" symbol-width="16dp" />
 					</rule>
 				</rule>
 			</rule>
@@ -1134,7 +1134,7 @@
 	<rule e="node" k="*" v="*">
 		<rule e="node" k="tourism" v="information">
 			<rule e="node" k="information" v="guidepost" zoom-min="14">
-				<symbol src="file:/symbols/guidepost.png" symbol-width="12dp" />
+				<symbol src="file:/symbols/guidepost.svg" symbol-width="18dp" force-draw="1" />
 				<caption dy="-8dp" k="name" font-style="bold" font-size="10dp" fill="#000000" stroke="#ffffff" stroke-width="2dp" />
 				<caption dy="15dp" k="ele" font-style="normal" font-size="10dp" fill="#000000" stroke="#ffffff" stroke-width="1dp" />
 			</rule>
@@ -1157,7 +1157,7 @@
 				<symbol src="file:/symbols/bank.png" symbol-width="12dp" />
 			</rule>
 			<rule e="node" k="amenity" v="bench" zoom-min="17">
-				<symbol src="file:/symbols/bench.png" symbol-width="12dp" />
+				<symbol src="file:/symbols/bench.svg" symbol-width="12dp" scale-icon-size="18,1.5" />
 			</rule>
 			<rule e="node" k="amenity" v="bicycle_rental" zoom-min="17">
 				<symbol src="file:/symbols/bicycle_rental.png" symbol-width="12dp" />
@@ -1196,10 +1196,10 @@
 				<symbol src="file:/symbols/library.png" symbol-width="12dp" />
 			</rule>
 			<rule e="node" k="amenity" v="parking" zoom-min="17">
-				<symbol src="file:/symbols/parking.png" symbol-width="12dp" />
+				<symbol src="file:/symbols/parking.svg" symbol-width="12dp" />
 			</rule>
 			<rule e="node" k="amenity" v="pharmacy" zoom-min="17">
-				<symbol src="file:/symbols/pharmacy.png" symbol-width="12dp" />
+				<symbol src="file:/symbols/pharmacy.svg" symbol-width="12dp" />
 			</rule>
 			<rule e="node" k="amenity" v="place_of_worship" zoom-min="17">
 				<rule e="node" k="denomination|religion" v="jewish">
