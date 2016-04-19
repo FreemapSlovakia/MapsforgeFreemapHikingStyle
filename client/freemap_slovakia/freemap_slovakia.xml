@@ -835,7 +835,7 @@
 						</rule>
 					</rule>
 					<rule e="way" k="highway" v="tertiary" zoom-min="9">
-						<line stroke="#FEF970" stroke-width="0.9dp" />
+						<line stroke="#FEF9B9" stroke-width="0.9dp" />
 						<rule e="way" k="*" v="*" zoom-min="15">
 							<caption k="ref" font-style="bold" font-size="6dp" fill="#000000" stroke="#ffff90" stroke-width="1dp" bg-rect-fill="#ffff90" bg-rect-over="2dp" />
 							<pathText k="name" font-style="bold" font-size="10dp" stroke="#ffff90" stroke-width="2.0dp" />
@@ -855,13 +855,13 @@
 						</rule>
 					</rule>
 					<rule e="way" k="highway" v="primary_link">
-						<line stroke="#FF7F73" stroke-width="1dp" />
+						<line stroke="#FF9988" stroke-width="1dp" />
 						<rule e="way" k="*" v="*" zoom-min="14">
 							<pathText k="name" font-style="bold" font-size="10dp" stroke="#e46d71" stroke-width="2.0dp" />
 						</rule>
 					</rule>
 					<rule e="way" k="highway" v="primary">
-						<line stroke="#FF7F73" stroke-width="1dp" />
+						<line stroke="#FF9988" stroke-width="1dp" />
 						<rule e="way" k="*" v="*" zoom-min="14">
 							<caption k="ref" font-style="bold" scale-font-size="17,1.1" font-size="6dp" fill="#ffffff" bg-rect-fill="#e46d71" bg-rect-over="2dp" />
 							<pathText k="name" font-style="bold" font-size="11dp" stroke="#ffffff" stroke-width="2.0dp" />
@@ -931,6 +931,7 @@
 		<rule e="way" k="barrier" v="*">
 			<rule e="way" k="barrier" v="fence|wall|city_wall">
 				<line stroke="#000000" stroke-width="0.1dp" stroke-linecap="butt" />
+				<lineSymbol src="file:/symbols/fence.svg" align-center="true" repeat="true" symbol-width="8dp" repeat-gap="8dp" scale-icon-size="14,1.1" />
 			</rule>
 			<rule e="way" k="barrier" v="retaining_wall">
 				<line stroke="#888888" stroke-width="0.1dp" stroke-linecap="butt" />
@@ -1446,17 +1447,15 @@
 		</rule>
 	</rule>
 	<rule e="way" k="power" v="*">
-		<rule e="way" k="power" v="line">
-			<rule e="any" k="*" v="*" zoom-min="13" zoom-max="15">
-				<line stroke="#A0555555" stroke-width="0.6dp" />
-			</rule>
-			<rule e="any" k="*" v="*" zoom-min="16">
-				<line stroke="#A0555555" stroke-width="0.5dp" />
-			</rule>
-			<lineSymbol src="file:/symbols/way_powerline.svg" align-center="true" repeat="true" repeat-gap="45dp" scale="1"/>
-		</rule>		<rule e="way" k="power" v="minor_line" zoom-min="17">
+		<rule e="way" k="power" v="line" zoom-min="13">
+			<line stroke="#80000000" stroke-width="0.2dp" />
+			<lineSymbol src="file:/symbols/way_powerline.svg" align-center="true" repeat="true" repeat-gap="35dp" />
+		</rule>
+<!--
+		<rule e="way" k="power" v="minor_line" zoom-min="17">
 			<line stroke="#80000000" stroke-width="0.4dp" />
 		</rule>
+-->
 	</rule>
 
 	<rule e="way" k="contour_ext" v="*">
