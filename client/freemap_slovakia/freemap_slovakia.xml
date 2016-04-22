@@ -209,182 +209,6 @@
 			<line stroke="#DDDB8888" stroke-width="0.10dp" stroke-linecap="butt"  curve="cubic" />
 		</rule>
 
-		<rule e="way" k="highway" v="*">
-
-			<rule e="way" k="fmrelbicyclered|fmrelbicycleblue|fmrelbicyclegreen|fmrelbicycleyellow|fmrelbicyclewhite|fmrelbicycleblack|fmrelbicycledefault" v="*">
-				<rule e="way" k="fmrelhikingred" v="*">
-					<rule e="way" k="fmrelhikingblue" v="*">
-						<rule e="way" k="fmrelhikinggreen|fmreleducation" v="*">
-							<rule e="way" k="fmrelhikingyellow" v="*">
-								<line stroke="#FF00FF" stroke-width="6dp" stroke-linecap="butt" />
-							</rule>
-							<rule e="way" k="fmrelhikingyellow" v="~">
-								<line stroke="#FF00FF" stroke-width="5dp" stroke-linecap="butt" />
-							</rule>
-						</rule>
-						<rule e="way" k="fmrelhikinggreen|fmreleducation" v="~">
-							<rule e="way" k="fmrelhikingyellow" v="*">
-								<line stroke="#FF00FF" stroke-width="5dp" stroke-linecap="butt" />
-							</rule>
-							<rule e="way" k="fmrelhikingyellow" v="~">
-								<line stroke="#FF00FF" stroke-width="4dp" stroke-linecap="butt" />
-							</rule>
-						</rule>
-					</rule>
-					<rule e="way" k="fmrelhikingblue" v="~">
-						<rule e="way" k="fmrelhikinggreen|fmreleducation" v="*">
-							<rule e="way" k="fmrelhikingyellow" v="*">
-								<line stroke="#FF00FF" stroke-width="5dp" stroke-linecap="butt" />
-							</rule>
-							<rule e="way" k="fmrelhikingyellow" v="~">
-								<line stroke="#FF00FF" stroke-width="4dp" stroke-linecap="butt" />
-							</rule>
-						</rule>
-						<rule e="way" k="fmrelhikinggreen|fmreleducation" v="~">
-							<rule e="way" k="fmrelhikingyellow" v="*">
-								<line stroke="#FF00FF" stroke-width="4dp" stroke-linecap="butt" />
-							</rule>
-							<rule e="way" k="fmrelhikingyellow" v="~">
-								<line stroke="#FF00FF" stroke-width="3dp" stroke-linecap="butt" />
-							</rule>
-						</rule>
-					</rule>
-				</rule>
-				<rule e="way" k="fmrelhikingred" v="~">
-					<rule e="way" k="fmrelhikingblue" v="*">
-						<rule e="way" k="fmrelhikinggreen|fmreleducation" v="*">
-							<rule e="way" k="fmrelhikingyellow" v="*">
-								<line stroke="#FF00FF" stroke-width="5dp" stroke-linecap="butt" />
-							</rule>
-							<rule e="way" k="fmrelhikingyellow" v="~">
-								<line stroke="#FF00FF" stroke-width="4dp" stroke-linecap="butt" />
-							</rule>
-						</rule>
-						<rule e="way" k="fmrelhikinggreen|fmreleducation" v="~">
-							<rule e="way" k="fmrelhikingyellow" v="*">
-								<line stroke="#FF00FF" stroke-width="4dp" stroke-linecap="butt" />
-							</rule>
-							<rule e="way" k="fmrelhikingyellow" v="~">
-								<line stroke="#FF00FF" stroke-width="3dp" stroke-linecap="butt" />
-							</rule>
-						</rule>
-					</rule>
-					<rule e="way" k="fmrelhikingblue" v="~">
-						<rule e="way" k="fmrelhikinggreen|fmreleducation" v="*">
-							<rule e="way" k="fmrelhikingyellow" v="*">
-								<line stroke="#FF00FF" stroke-width="4dp" stroke-linecap="butt" />
-							</rule>
-							<rule e="way" k="fmrelhikingyellow" v="~">
-								<line stroke="#FF00FF" stroke-width="3dp" stroke-linecap="butt" />
-							</rule>
-						</rule>
-						<rule e="way" k="fmrelhikinggreen|fmreleducation" v="~">
-							<rule e="way" k="fmrelhikingyellow" v="*">
-								<line stroke="#FF00FF" stroke-width="3dp" stroke-linecap="butt" />
-							</rule>
-							<rule e="way" k="fmrelhikingyellow" v="~">
-								<line stroke="#FF00FF" stroke-width="2dp" stroke-linecap="butt" />
-							</rule>
-						</rule>
-					</rule>
-				</rule>
-			</rule>
-
-			<rule e="way" k="fmrelhikingred" v="*">
-				<rule e="way" k="fmrelhikingblue" v="*">
-					<rule e="way" k="fmrelhikinggreen|fmreleducation" v="*">
-						<rule e="way" k="fmrelhikingyellow" v="*">
-							<line stroke="#FE0000" stroke-width="5dp" stroke-linecap="butt" />
-							<line stroke="#3233FF" stroke-width="4dp" stroke-linecap="butt" />
-							<line stroke="#009900" stroke-width="3dp" stroke-linecap="butt" />
-							<line stroke="#FFCC00" stroke-width="2dp" stroke-linecap="butt" />
-						</rule>
-						<rule e="way" k="fmrelhikingyellow" v="~">
-							<line stroke="#FE0000" stroke-width="4dp" stroke-linecap="butt" />
-							<line stroke="#3233FF" stroke-width="3dp" stroke-linecap="butt" />
-							<line stroke="#009900" stroke-width="2dp" stroke-linecap="butt" />
-						</rule>
-					</rule>
-					<rule e="way" k="fmrelhikinggreen|fmreleducation" v="~">
-						<rule e="way" k="fmrelhikingyellow" v="*">
-							<line stroke="#FE0000" stroke-width="4dp" stroke-linecap="butt" />
-							<line stroke="#3233FF" stroke-width="3dp" stroke-linecap="butt" />
-							<line stroke="#FFCC00" stroke-width="2dp" stroke-linecap="butt" />
-						</rule>
-						<rule e="way" k="fmrelhikingyellow" v="~">
-							<line stroke="#FE0000" stroke-width="3dp" stroke-linecap="butt" />
-							<line stroke="#3233FF" stroke-width="2dp" stroke-linecap="butt" />
-						</rule>
-					</rule>
-				</rule>
-				<rule e="way" k="fmrelhikingblue" v="~">
-					<rule e="way" k="fmrelhikinggreen|fmreleducation" v="*">
-						<rule e="way" k="fmrelhikingyellow" v="*">
-							<line stroke="#FE0000" stroke-width="4dp" stroke-linecap="butt" />
-							<line stroke="#009900" stroke-width="3dp" stroke-linecap="butt" />
-							<line stroke="#FFCC00" stroke-width="2dp" stroke-linecap="butt" />
-						</rule>
-						<rule e="way" k="fmrelhikingyellow" v="~">
-							<line stroke="#FE0000" stroke-width="3dp" stroke-linecap="butt" />
-							<line stroke="#009900" stroke-width="2dp" stroke-linecap="butt" />
-						</rule>
-					</rule>
-					<rule e="way" k="fmrelhikinggreen|fmreleducation" v="~">
-						<rule e="way" k="fmrelhikingyellow" v="*">
-							<line stroke="#FE0000" stroke-width="3dp" stroke-linecap="butt" />
-							<line stroke="#FFCC00" stroke-width="2dp" stroke-linecap="butt" />
-						</rule>
-						<rule e="way" k="fmrelhikingyellow" v="~">
-							<line stroke="#FE0000" stroke-width="2dp" stroke-linecap="butt" />
-						</rule>
-					</rule>
-				</rule>
-			</rule>
-			<rule e="way" k="fmrelhikingred" v="~">
-				<rule e="way" k="fmrelhikingblue" v="*">
-					<rule e="way" k="fmrelhikinggreen|fmreleducation" v="*">
-						<rule e="way" k="fmrelhikingyellow" v="*">
-							<line stroke="#3233FF" stroke-width="4dp" stroke-linecap="butt" />
-							<line stroke="#009900" stroke-width="3dp" stroke-linecap="butt" />
-							<line stroke="#FFCC00" stroke-width="2dp" stroke-linecap="butt" />
-						</rule>
-						<rule e="way" k="fmrelhikingyellow" v="~">
-							<line stroke="#3233FF" stroke-width="3dp" stroke-linecap="butt" />
-							<line stroke="#009900" stroke-width="2dp" stroke-linecap="butt" />
-						</rule>
-					</rule>
-					<rule e="way" k="fmrelhikinggreen|fmreleducation" v="~">
-						<rule e="way" k="fmrelhikingyellow" v="*">
-							<line stroke="#3233FF" stroke-width="3dp" stroke-linecap="butt" />
-							<line stroke="#FFCC00" stroke-width="2dp" stroke-linecap="butt" />
-						</rule>
-						<rule e="way" k="fmrelhikingyellow" v="~">
-							<line stroke="#3233FF" stroke-width="2dp" stroke-linecap="butt" />
-						</rule>
-					</rule>
-				</rule>
-				<rule e="way" k="fmrelhikingblue" v="~">
-					<rule e="way" k="fmrelhikinggreen|fmreleducation" v="*">
-						<rule e="way" k="fmrelhikingyellow" v="*">
-							<line stroke="#009900" stroke-width="3dp" stroke-linecap="butt" />
-							<line stroke="#FFCC00" stroke-width="2dp" stroke-linecap="butt" />
-						</rule>
-						<rule e="way" k="fmrelhikingyellow" v="~">
-							<line stroke="#009900" stroke-width="2dp" stroke-linecap="butt" />
-						</rule>
-					</rule>
-					<rule e="way" k="fmrelhikinggreen|fmreleducation" v="~">
-						<rule e="way" k="fmrelhikingyellow" v="*">
-							<line stroke="#FFCC00" stroke-width="2dp" stroke-linecap="butt" />
-						</rule>
-						<rule e="way" k="fmrelhikingyellow" v="~">
-						</rule>
-					</rule>
-				</rule>
-			</rule>
-
-		</rule>
-
 		<!-- tunnel -->
 		<rule e="way" k="tunnel" v="true|yes" zoom-min="12">
 			<!-- highway tunnels -->
@@ -488,7 +312,7 @@
 				<rule e="way" k="tunnel" v="~|no">
 					<line stroke="#8DB0DD" stroke-width="0.3dp" />
 				</rule>
-				<rule e="way" k="*" v="*" zoom-min="16">
+				<rule e="way" k="*" v="*" zoom-min="15">
 					<lineSymbol src="file:/symbols/waterflow.svg" align-center="true" repeat="true" symbol-width="7dp" repeat-gap="50dp" />
 				</rule>
 			</rule>
@@ -612,7 +436,7 @@
 			</rule>
 		</rule>
 		<!-- runways casings and areas -->
-		<rule e="way" k="aeroway" v="*">
+		<rule e="way" k="aeroway" v="*" zoom-min="11">
 			<rule e="way" k="aeroway" v="aerodrome" closed="yes">
 				<area fill="#d8dcce" stroke="#000000" stroke-width="0.5dp" />
 			</rule>
@@ -648,25 +472,25 @@
 					<!-- no bridge -->
 					<rule e="way" k="bridge" v="~|no|false">
 						<!-- highway casings -->
-						<rule e="way" k="highway" v="steps">
+						<rule e="way" k="highway" v="steps" zoom-min="14">
 							<line stroke="#707070" stroke-width="0.6dp" />
 						</rule>
-						<rule e="way" k="highway" v="footway|path">
+						<rule e="way" k="highway" v="footway|path" zoom-min="13">
 							<line stroke="#c2b5a3" stroke-width="0.4dp" />
 						</rule>
-						<rule e="way" k="highway" v="track">
+						<rule e="way" k="highway" v="track" zoom-min="13">
 							<line stroke="#c2b5a3" stroke-width="0.7dp" />
 						</rule>
-						<rule e="way" k="highway" v="cycleway|bridleway|service">
+						<rule e="way" k="highway" v="cycleway|bridleway|service" zoom-min="12">
 							<line stroke="#707070" stroke-width="0.7dp" />
 						</rule>
-						<rule e="way" k="highway" v="byway">
+						<rule e="way" k="highway" v="byway" zoom-min="12">
 							<line stroke="#707070" stroke-width="1.5dp" stroke-dasharray="7,2" stroke-linecap="butt" />
 						</rule>
-						<rule e="way" k="highway" v="pedestrian|unclassified|residential|living_street">
+						<rule e="way" k="highway" v="pedestrian|unclassified|residential|living_street" zoom-min="12">
 							<line stroke="#707070" stroke-width="0.9dp" />
 						</rule>
-						<rule e="way" k="highway" v="tertiary|secondary_link|secondary">
+						<rule e="way" k="highway" v="tertiary|secondary_link|secondary" zoom-min="10">
 							<line stroke="#707070" stroke-width="1.1dp" stroke-linecap="butt" />
 						</rule>
 						<rule e="way" k="highway" v="primary_link|primary">
@@ -730,25 +554,25 @@
 				<!-- no area -->
 				<rule e="way" k="area" v="~|no|false">
 					<!-- highway cores -->
-					<rule e="way" k="highway" v="steps">
+					<rule e="way" k="highway" v="steps" zoom-min="14">
 						<line stroke="#e5e0c2" stroke-width="0.45dp" stroke-dasharray="3,1" stroke-linecap="butt" />
 						<rule e="way" k="*" v="*" zoom-min="15">
 							<pathText k="name" font-style="bold" font-size="10dp" stroke="#e5e0c2" stroke-width="2.0dp" />
 						</rule>
 					</rule>
-					<rule e="way" k="highway" v="footway">
+					<rule e="way" k="highway" v="footway" zoom-min="13">
 						<line stroke="#e5e0c2" stroke-width="0.4dp" />
 						<rule e="way" k="*" v="*" zoom-min="15">
 							<pathText k="name" font-style="bold" font-size="10dp" stroke="#e5e0c2" stroke-width="2.0dp" />
 						</rule>
 					</rule>
-					<rule e="way" k="highway" v="path">
+					<rule e="way" k="highway" v="path" zoom-min="13">
 						<line stroke="#6A5B47" stroke-width="0.3dp" stroke-dasharray="5,5" stroke-linecap="butt" />
 						<rule e="way" k="*" v="*" zoom-min="15">
 							<pathText k="name" font-style="bold" font-size="10dp" stroke="#d0d0d0" stroke-width="2.0dp" />
 						</rule>
 					</rule>
-					<rule e="way" k="highway" v="track">
+					<rule e="way" k="highway" v="track" zoom-min="11">
 						<rule e="way" k="tracktype" v="grade1">
 							<line stroke="#6A5B47" stroke-width="0.5dp" />
 							<rule e="way" k="*" v="*" zoom-min="15">
@@ -909,7 +733,7 @@
 			</rule>
 		</rule>
 		<!-- runways cores -->
-		<rule e="way" k="aeroway" v="*">
+		<rule e="way" k="aeroway" v="*" zoom-min="11">
 			<rule e="way" k="aeroway" v="runway">
 				<line stroke="#d4dcbd" stroke-width="5dp" stroke-linecap="square" />
 			</rule>
@@ -948,12 +772,12 @@
 					<lineSymbol src="file:/symbols/oneway.svg" align-center="true" repeat="true" symbol-width="16dp" />
 				</rule>
 				<rule e="way" k="junction" v="roundabout" zoom-min="16">
-					<lineSymbol src="file:/symbols/oneway.svg" align-center="true" repeat="true" symbol-width="16dp" />
+					<lineSymbol src="file:/symbols/oneway.svg" align-center="true" repeat="true" symbol-width="16dp" repeat-gap="16dp" />
 				</rule>
 			</rule>
 		</rule>
 		<!-- pistes -->
-		<rule e="way" k="piste:type" v="*">
+		<rule e="way" k="piste:type" v="*" zoom-min="11">
 			<!-- piste areas -->
 			<rule e="way" k="piste:type" v="downhill" closed="yes">
 				<rule e="way" k="piste:difficulty" v="novice">
@@ -1139,10 +963,35 @@
 	<!-- nodes -->
 	<rule e="node" k="*" v="*">
 		<rule e="node" k="tourism" v="information">
-			<rule e="node" k="information" v="guidepost" zoom-min="14">
-				<symbol src="file:/symbols/guidepost.svg" symbol-width="18dp" force-draw="1" />
-				<caption dy="-8dp" k="name" font-style="bold" font-size="10dp" fill="#000000" stroke="#ffffff" stroke-width="2dp" />
-				<caption dy="15dp" k="ele" font-style="normal" font-size="10dp" fill="#000000" stroke="#ffffff" stroke-width="1dp" />
+			<rule e="node" k="information" v="guidepost" zoom-min="13">
+				<rule e="node" k="bicycle" v="yes" zoom-min="13" zoom-max="13" style="cycle">
+					<caption dy="-8dp" k="name" font-style="bold" force-draw="1" font-size="8dp" fill="#000000" stroke="#90ffffff" stroke-width="2dp" />
+					<symbol src="file:/symbols/guidepost_cycle.svg" force-draw="1" symbol-width="12dp" />
+				</rule>
+				<rule e="node" k="bicycle" v="yes" zoom-min="14" style="cycle">
+					<caption dy="-11dp" k="name" font-style="bold" force-draw="1" font-size="10dp" fill="#000000" stroke="#90ffffff" stroke-width="3dp" />
+					<caption dy="18dp" k="ele" font-style="normal" force-draw="1" font-size="10dp" fill="#000000" stroke="#90ffffff" stroke-width="3dp" />
+					<symbol src="file:/symbols/guidepost_cycle.svg" force-draw="1" symbol-width="18dp" />
+				</rule>
+				<rule e="node" k="bicycle" v="~" zoom-min="14" style="cycle">
+					<caption dy="-8dp" k="name" font-style="bold" font-size="8dp" fill="#000000" stroke="#90ffffff" stroke-width="2dp" />
+					<caption dy="15dp" k="ele" font-style="normal" font-size="8dp" fill="#000000" stroke="#90ffffff" stroke-width="2dp" />
+					<symbol src="file:/symbols/guidepost.svg" symbol-width="18dp" />
+				</rule>
+				<rule e="node" k="hiking" v="yes" zoom-min="13" zoom-max="13" style="hiking">
+					<caption dy="-8dp" k="name" font-style="bold" force-draw="1" font-size="8dp" fill="#000000" stroke="#90ffffff" stroke-width="2dp" />
+					<symbol src="file:/symbols/guidepost_hiking.svg" force-draw="1" symbol-width="12dp" />
+				</rule>
+				<rule e="node" k="hiking" v="yes" zoom-min="14" style="hiking">
+					<caption dy="-11dp" k="name" font-style="bold" force-draw="1" font-size="10dp" fill="#000000" stroke="#90ffffff" stroke-width="3dp" />
+					<caption dy="18dp" k="ele" font-style="normal" force-draw="1" font-size="10dp" fill="#000000" stroke="#90ffffff" stroke-width="3dp" />
+					<symbol src="file:/symbols/guidepost_hiking.svg" force-draw="1" symbol-width="18dp" />
+				</rule>
+				<rule e="node" k="hiking" v="~" zoom-min="14" style="hiking">
+					<caption dy="-8dp" k="name" font-style="bold" font-size="8dp" fill="#000000" stroke="#90ffffff" stroke-width="2dp" />
+					<caption dy="15dp" k="ele" font-style="normal" font-size="8dp" fill="#000000" stroke="#90ffffff" stroke-width="2dp" />
+					<symbol src="file:/symbols/guidepost.svg" symbol-width="18dp" />
+				</rule>
 			</rule>
 		</rule>
 		<!-- aeroway -->
@@ -1367,11 +1216,17 @@
 			<rule e="node" k="place" v="city" zoom-max="14">
 				<caption k="name" font-style="bold" font-size="16dp" fill="#000000" stroke="#ffffff" stroke-width="3dp" />
 			</rule>
-			<rule e="node" k="place" v="town" zoom-min="10" zoom-max="15">
+			<rule e="node" k="place" v="town" zoom-min="8" zoom-max="10">
+				<caption k="name" font-style="bold" font-size="9dp" fill="#000000" stroke="#ffffff" stroke-width="2dp" />
+			</rule>
+			<rule e="node" k="place" v="town" zoom-min="11" zoom-max="15">
 				<caption k="name" font-style="bold" font-size="14dp" fill="#000000" stroke="#ffffff" stroke-width="2dp" />
 			</rule>
 			<rule e="node" k="place" v="suburb" zoom-min="12" zoom-max="16">
 				<caption k="name" font-style="bold" font-size="12dp" fill="#6C6C6C" stroke="#ffffff" stroke-width="2dp" />
+			</rule>
+			<rule e="node" k="place" v="village" zoom-min="11" zoom-max="12">
+				<caption k="name" font-style="normal" font-size="7dp" fill="#000000" stroke="#ffffff" stroke-width="2dp" />
 			</rule>
 			<rule e="node" k="place" v="village" zoom-min="13" zoom-max="18">
 				<caption k="name" font-style="normal" font-size="12dp" fill="#000000" stroke="#ffffff" stroke-width="2dp" />
@@ -1379,8 +1234,11 @@
 			<rule e="node" k="place" v="hamlet" zoom-min="13" zoom-max="18">
 				<caption k="name" font-style="normal" font-size="11dp" fill="#000000" stroke="#ffffff" stroke-width="1dp" />
 			</rule>
+			<rule e="node" k="place" v="locality" zoom-min="15" zoom-max="16">
+				<caption k="name" font-style="bold" font-size="7dp" fill="#A0666666" stroke="#ffffff" stroke-width="2.0dp" />
+			</rule>
 			<rule e="node" k="place" v="locality" zoom-min="17">
-				<caption k="name" font-style="bold" font-size="10dp" fill="#666666" stroke="#ffffff" stroke-width="2.0dp" />
+				<caption k="name" font-style="bold" font-size="10dp" fill="#A0666666" stroke="#ffffff" stroke-width="2.0dp" />
 			</rule>
 			<rule e="node" k="place" v="island" zoom-min="10">
 				<caption k="name" font-style="bold" font-size="20dp" fill="#000000" stroke="#ffffff" stroke-width="3.0dp" />
@@ -1404,7 +1262,7 @@
 				<circle r="6" fill="#ec2d2d" stroke="#606060" stroke-width="1.5dp" />
 				<caption k="name" dy="-10dp" font-style="bold" font-size="10dp" fill="#ec2d2d" stroke="#ffffff" stroke-width="2dp" />
 			</rule>
-			<rule e="node" k="railway" v="halt|tram_stop" zoom-min="17">
+			<rule e="node" k="railway" v="halt|tram_stop" zoom-min="16">
 				<circle r="4" fill="#ec2d2d" stroke="#606060" stroke-width="1.5dp" />
 				<caption k="name" dy="-10dp" font-style="bold" font-size="10dp" fill="#ec2d2d" stroke="#ffffff" stroke-width="1.5dp" />
 			</rule>
@@ -1449,7 +1307,7 @@
 	<rule e="way" k="power" v="*">
 		<rule e="way" k="power" v="line" zoom-min="13">
 			<line stroke="#80000000" stroke-width="0.2dp" />
-			<lineSymbol src="file:/symbols/way_powerline.svg" align-center="true" repeat="true" repeat-gap="35dp" />
+			<lineSymbol src="file:/symbols/way_powerline.svg" align-center="true" repeat="true" symbol-width="16dp" repeat-gap="35dp" />
 		</rule>
 <!--
 		<rule e="way" k="power" v="minor_line" zoom-min="17">
@@ -1469,4 +1327,271 @@
 			<pathText k="ele" font-size="5dp" font-style="bold" fill="#A86868" stroke="#FFFFFF" stroke-width="1dp" curve="cubic" />
 		</rule>
 	</rule>
+
+<!-- turistika -->	
+<rule e="way" k="highway" v="*" style="hiking" zoom-min="11">
+<!-- CZT -->
+<rule e="way" k="fmrelbicyclered|fmrelbicycleblue|fmrelbicyclegreen|fmrelbicycleyellow|fmrelbicyclewhite|fmrelbicycleblack|fmrelbicycledefault" v="*">
+	<line stroke="#70FF00FF" dy="-1.5dp" scale-dy-size="15,1.6" stroke-width="0.7dp" />
+</rule>
+
+<!-- TZT -->
+<rule e="way" k="fmrelhikingred" v="*">
+
+	<rule e="way" k="fmrelhikingblue" v="*">
+
+		<rule e="way" k="fmrelhikinggreen|fmreleducation" v="*">
+
+			<rule e="way" k="fmrelhikingyellow" v="*">
+				<line stroke="#C0FE0000" dy="1.5dp" scale-dy-size="15,1.6" stroke-width="0.95dp" />
+				<line stroke="#C03233FF" dy="3dp" scale-dy-size="15,1.6" stroke-width="0.95dp" />
+				<line stroke="#C0009900" dy="4.5dp" scale-dy-size="15,1.6" stroke-width="0.95dp" />
+				<line stroke="#C0FFCC00" dy="6dp" scale-dy-size="15,1.6" stroke-width="0.95dp" />
+			</rule>
+
+			<rule e="way" k="fmrelhikingyellow" v="~">
+				<line stroke="#C0FE0000" dy="1.5dp" scale-dy-size="15,1.6" stroke-width="0.95dp" />
+				<line stroke="#C03233FF" dy="3dp" scale-dy-size="15,1.6" stroke-width="0.95dp" />
+				<line stroke="#C0009900" dy="4.5dp" scale-dy-size="15,1.6" stroke-width="0.95dp" />
+			</rule>
+		</rule>
+
+		<rule e="way" k="fmrelhikinggreen|fmreleducation" v="~">
+
+			<rule e="way" k="fmrelhikingyellow" v="*">
+				<line stroke="#C0FE0000" dy="1.5dp" scale-dy-size="15,1.6" stroke-width="0.95dp" />
+				<line stroke="#C03233FF" dy="3dp" scale-dy-size="15,1.6" stroke-width="0.95dp" />
+				<line stroke="#C0FFCC00" dy="4.5dp" scale-dy-size="15,1.6" stroke-width="0.95dp" />
+			</rule>
+
+			<rule e="way" k="fmrelhikingyellow" v="~">
+				<line stroke="#C0FE0000" dy="1.5dp" scale-dy-size="15,1.6" stroke-width="0.95dp" />
+				<line stroke="#C03233FF" dy="3dp" scale-dy-size="15,1.6" stroke-width="0.95dp" />
+			</rule>
+
+		</rule>
+	</rule>
+
+	<rule e="way" k="fmrelhikingblue" v="~">
+
+		<rule e="way" k="fmrelhikinggreen|fmreleducation" v="*">
+
+			<rule e="way" k="fmrelhikingyellow" v="*">
+				<line stroke="#C0FE0000" dy="1.5dp" scale-dy-size="15,1.6" stroke-width="0.95dp" />
+				<line stroke="#C0009900" dy="3dp" scale-dy-size="15,1.6" stroke-width="0.95dp" />
+				<line stroke="#C0FFCC00" dy="4.5dp" scale-dy-size="15,1.6" stroke-width="0.95dp" />
+			</rule>
+
+			<rule e="way" k="fmrelhikingyellow" v="~">
+				<line stroke="#C0FE0000" dy="1.5dp" scale-dy-size="15,1.6" stroke-width="0.95dp" />
+				<line stroke="#C0009900" dy="3dp" scale-dy-size="15,1.6" stroke-width="0.95dp" />
+			</rule>
+
+		</rule>
+
+		<rule e="way" k="fmrelhikinggreen|fmreleducation" v="~">
+
+			<rule e="way" k="fmrelhikingyellow" v="*">
+				<line stroke="#C0FE0000" dy="1.5dp" scale-dy-size="15,1.6" stroke-width="0.95dp" />
+				<line stroke="#C0FFCC00" dy="3dp" scale-dy-size="15,1.6" stroke-width="0.95dp" />
+			</rule>
+
+			<rule e="way" k="fmrelhikingyellow" v="~">
+				<line stroke="#C0FF0000" dy="1.5dp" scale-dy-size="15,1.6" stroke-width="0.95dp" />
+			</rule>
+		</rule>
+	</rule>
+</rule>
+
+<rule e="way" k="fmrelhikingred" v="~">
+
+	<rule e="way" k="fmrelhikingblue" v="*">
+
+		<rule e="way" k="fmrelhikinggreen|fmreleducation" v="*">
+
+			<rule e="way" k="fmrelhikingyellow" v="*">
+				<line stroke="#C03233FF" dy="1.5dp" scale-dy-size="15,1.6" stroke-width="0.95dp" />
+				<line stroke="#C0009900" dy="3dp" scale-dy-size="15,1.6" stroke-width="0.95dp" />
+				<line stroke="#C0FFCC00" dy="4.5dp" scale-dy-size="15,1.6" stroke-width="0.95dp" />
+			</rule>
+
+			<rule e="way" k="fmrelhikingyellow" v="~">
+				<line stroke="#C03233FF" dy="1.5dp" scale-dy-size="15,1.6" stroke-width="0.95dp" />
+				<line stroke="#C0009900" dy="3dp" scale-dy-size="15,1.6" stroke-width="0.95dp" />
+			</rule>
+		</rule>
+
+		<rule e="way" k="fmrelhikinggreen|fmreleducation" v="~">
+			<rule e="way" k="fmrelhikingyellow" v="*">
+				<line stroke="#C03233FF" dy="1.5dp" scale-dy-size="15,1.6" stroke-width="0.95dp" />
+				<line stroke="#C0FFCC00" dy="3dp" scale-dy-size="15,1.6" stroke-width="0.95dp" />
+			</rule>
+
+			<rule e="way" k="fmrelhikingyellow" v="~">
+				<line stroke="#C03233FF" dy="1.5dp" scale-dy-size="15,1.6" stroke-width="0.95dp" />
+			</rule>
+
+		</rule>
+	</rule>
+
+	<rule e="way" k="fmrelhikingblue" v="~">
+
+		<rule e="way" k="fmrelhikinggreen|fmreleducation" v="*">
+
+			<rule e="way" k="fmrelhikingyellow" v="*">
+				<line stroke="#C0009900" dy="1.5dp" scale-dy-size="15,1.6" stroke-width="0.95dp" />
+				<line stroke="#C0FFCC00" dy="3dp" scale-dy-size="15,1.6" stroke-width="0.95dp" />
+			</rule>
+
+			<rule e="way" k="fmrelhikingyellow" v="~">
+				<line stroke="#C0009900" dy="1.5dp" scale-dy-size="15,1.6" stroke-width="0.95dp" />
+			</rule>
+		</rule>
+
+		<rule e="way" k="fmrelhikinggreen|fmreleducation" v="~">
+
+			<rule e="way" k="fmrelhikingyellow" v="*">
+				<line stroke="#C0FFCC00" dy="1.5dp" scale-dy-size="15,1.6" stroke-width="0.95dp" />
+			</rule>
+
+			<rule e="way" k="fmrelhikingyellow" v="~">
+			</rule>
+
+		</rule>
+	</rule>
+</rule>
+</rule>
+
+<!-- cyklistika -->	
+<rule e="way" k="highway" v="*" style="cycle" zoom-min="11">
+<!-- TZT -->
+<rule e="way" k="fmrelhikingred|fmrelhikingblue|fmrelhikinggreen|fmrelhikingyellow|fmrelhikingwhite|fmrelhikingblack|fmrelhikingdefault|fmreleducation" v="*">
+	<line stroke="#70FF00FF" dy="1.5dp" scale-dy-size="15,1.6" stroke-width="0.7dp" />
+</rule>
+<!-- CZT -->
+<rule e="way" k="fmrelbicyclered" v="*">
+ 
+	<rule e="way" k="fmrelbicycleblue" v="*">
+ 
+		<rule e="way" k="fmrelbicyclegreen" v="*">
+ 
+			<rule e="way" k="fmrelbicycleyellow" v="*">
+				<line stroke="#C0FE0000" dy="-1.5dp" scale-dy-size="15,1.6" stroke-width="0.95dp" />
+				<line stroke="#C03233FF" dy="-3dp" scale-dy-size="15,1.6" stroke-width="0.95dp" />
+				<line stroke="#C0009900" dy="-4.5dp" scale-dy-size="15,1.6" stroke-width="0.95dp" />
+				<line stroke="#C0FFCC00" dy="-6dp" scale-dy-size="15,1.6" stroke-width="0.95dp" />
+			</rule>
+ 
+			<rule e="way" k="fmrelbicycleyellow" v="~">
+				<line stroke="#C0FE0000" dy="-1.5dp" scale-dy-size="15,1.6" stroke-width="0.95dp" />
+				<line stroke="#C03233FF" dy="-3dp" scale-dy-size="15,1.6" stroke-width="0.95dp" />
+				<line stroke="#C0009900" dy="-4.5dp" scale-dy-size="15,1.6" stroke-width="0.95dp" />
+			</rule>
+		</rule>
+ 
+		<rule e="way" k="fmrelbicyclegreen" v="~">
+ 
+			<rule e="way" k="fmrelbicycleyellow" v="*">
+				<line stroke="#C0FE0000" dy="-1.5dp" scale-dy-size="15,1.6" stroke-width="0.95dp" />
+				<line stroke="#C03233FF" dy="-3dp" scale-dy-size="15,1.6" stroke-width="0.95dp" />
+				<line stroke="#C0FFCC00" dy="-4.5dp" scale-dy-size="15,1.6" stroke-width="0.95dp" />
+			</rule>
+ 
+			<rule e="way" k="fmrelbicycleyellow" v="~">
+				<line stroke="#C0FE0000" dy="-1.5dp" scale-dy-size="15,1.6" stroke-width="0.95dp" />
+				<line stroke="#C03233FF" dy="-3dp" scale-dy-size="15,1.6" stroke-width="0.95dp" />
+			</rule>
+ 
+		</rule>
+	</rule>
+ 
+	<rule e="way" k="fmrelbicycleblue" v="~">
+ 
+		<rule e="way" k="fmrelbicyclegreen" v="*">
+ 
+			<rule e="way" k="fmrelbicycleyellow" v="*">
+				<line stroke="#C0FE0000" dy="-1.5dp" scale-dy-size="15,1.6" stroke-width="0.95dp" />
+				<line stroke="#C0009900" dy="-3dp" scale-dy-size="15,1.6" stroke-width="0.95dp" />
+				<line stroke="#C0FFCC00" dy="-4.5dp" scale-dy-size="15,1.6" stroke-width="0.95dp" />
+			</rule>
+ 
+			<rule e="way" k="fmrelbicycleyellow" v="~">
+				<line stroke="#C0FE0000" dy="-1.5dp" scale-dy-size="15,1.6" stroke-width="0.95dp" />
+				<line stroke="#C0009900" dy="-3dp" scale-dy-size="15,1.6" stroke-width="0.95dp" />
+			</rule>
+ 
+		</rule>
+ 
+		<rule e="way" k="fmrelbicyclegreen" v="~">
+ 
+			<rule e="way" k="fmrelbicycleyellow" v="*">
+				<line stroke="#C0FE0000" dy="-1.5dp" scale-dy-size="15,1.6" stroke-width="0.95dp" />
+				<line stroke="#C0FFCC00" dy="-3dp" scale-dy-size="15,1.6" stroke-width="0.95dp" />
+			</rule>
+ 
+			<rule e="way" k="fmrelbicycleyellow" v="~">
+				<line stroke="#C0FF0000" dy="-1.5dp" scale-dy-size="15,1.6" stroke-width="0.95dp" />
+			</rule>
+		</rule>
+	</rule>
+</rule>
+ 
+<rule e="way" k="fmrelbicyclered" v="~">
+ 
+	<rule e="way" k="fmrelbicycleblue" v="*">
+ 
+		<rule e="way" k="fmrelbicyclegreen" v="*">
+ 
+			<rule e="way" k="fmrelbicycleyellow" v="*">
+				<line stroke="#C03233FF" dy="-1.5dp" scale-dy-size="15,1.6" stroke-width="0.95dp" />
+				<line stroke="#C0009900" dy="-3dp" scale-dy-size="15,1.6" stroke-width="0.95dp" />
+				<line stroke="#C0FFCC00" dy="-4.5dp" scale-dy-size="15,1.6" stroke-width="0.95dp" />
+			</rule>
+ 
+			<rule e="way" k="fmrelbicycleyellow" v="~">
+				<line stroke="#C03233FF" dy="-1.5dp" scale-dy-size="15,1.6" stroke-width="0.95dp" />
+				<line stroke="#C0009900" dy="-3dp" scale-dy-size="15,1.6" stroke-width="0.95dp" />
+			</rule>
+		</rule>
+ 
+		<rule e="way" k="fmrelbicyclegreen" v="~">
+			<rule e="way" k="fmrelbicycleyellow" v="*">
+				<line stroke="#C03233FF" dy="-1.5dp" scale-dy-size="15,1.6" stroke-width="0.95dp" />
+				<line stroke="#C0FFCC00" dy="-3dp" scale-dy-size="15,1.6" stroke-width="0.95dp" />
+			</rule>
+ 
+			<rule e="way" k="fmrelbicycleyellow" v="~">
+				<line stroke="#C03233FF" dy="-1.5dp" scale-dy-size="15,1.6" stroke-width="0.95dp" />
+			</rule>
+ 
+		</rule>
+	</rule>
+ 
+	<rule e="way" k="fmrelbicycleblue" v="~">
+ 
+		<rule e="way" k="fmrelbicyclegreen" v="*">
+ 
+			<rule e="way" k="fmrelbicycleyellow" v="*">
+				<line stroke="#C0009900" dy="-1.5dp" scale-dy-size="15,1.6" stroke-width="0.95dp" />
+				<line stroke="#C0FFCC00" dy="-3dp" scale-dy-size="15,1.6" stroke-width="0.95dp" />
+			</rule>
+ 
+			<rule e="way" k="fmrelbicycleyellow" v="~">
+				<line stroke="#C0009900" dy="-1.5dp" scale-dy-size="15,1.6" stroke-width="0.95dp" />
+			</rule>
+		</rule>
+ 
+		<rule e="way" k="fmrelbicyclegreen" v="~">
+			<rule e="way" k="fmrelbicycleyellow" v="*">
+				<line stroke="#C0FFCC00" dy="-1.5dp" scale-dy-size="15,1.6" stroke-width="0.95dp" />
+			</rule>
+ 
+			<rule e="way" k="fmrelbicycleyellow" v="~">
+			</rule>
+ 
+		</rule>
+	</rule>
+</rule>
+</rule>
+
 </rendertheme>
