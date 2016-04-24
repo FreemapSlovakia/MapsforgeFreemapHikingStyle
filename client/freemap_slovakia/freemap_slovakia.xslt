@@ -2,7 +2,7 @@
 
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns="http://mapsforge.org/renderTheme" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
-    <xsl:variable name="yellow">#C0FFCC00</xsl:variable>
+    <xsl:variable name="yellow">#C0FFEE00</xsl:variable>
     <xsl:variable name="green">#C0009900</xsl:variable>
     <xsl:variable name="blue">#C03233FF</xsl:variable>
     <xsl:variable name="red">#C0FE0000</xsl:variable>
@@ -15,7 +15,7 @@
     <xsl:variable name="offset4">6.5</xsl:variable>
 
     <xsl:variable name="markedTrailWidth">0.95dp</xsl:variable>
-    <xsl:variable name="scaleDySize">14,1.4</xsl:variable>
+    <xsl:variable name="scaleDySize">14,1.45</xsl:variable>
 
     <xsl:template match="/">
 
