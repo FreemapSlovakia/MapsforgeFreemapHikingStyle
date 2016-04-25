@@ -2,171 +2,31 @@
 
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns="http://mapsforge.org/renderTheme" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
-    <xsl:variable name="yellow">#C0FFEE00</xsl:variable>
-    <xsl:variable name="green">#C0009900</xsl:variable>
-    <xsl:variable name="blue">#C03233FF</xsl:variable>
-    <xsl:variable name="red">#C0FE0000</xsl:variable>
-    <xsl:variable name="alternative">#C0FF00FF</xsl:variable>
-    <xsl:variable name="fallback">#C0000000</xsl:variable>
-
-    <xsl:variable name="offset1">2.0</xsl:variable>
-    <xsl:variable name="offset2">3.5</xsl:variable>
-    <xsl:variable name="offset3">5.0</xsl:variable>
-    <xsl:variable name="offset4">6.5</xsl:variable>
-
-    <xsl:variable name="markedTrailWidth">0.95dp</xsl:variable>
-    <xsl:variable name="scaleDySize">14,1.45</xsl:variable>
+    <xsl:include href="marked_trails.xslt" />
+    <xsl:include href="contours.xslt" />
+    <xsl:include href="places.xslt" />
+    <xsl:include href="amenities.xslt" />
+    <xsl:include href="landuses.xslt" />
+    <xsl:include href="naturals.xslt" />
+    <xsl:include href="tourism.xslt" />
+    <xsl:include href="shops.xslt" />
+    <xsl:include href="railways.xslt" />
 
     <xsl:template match="/">
 
         <rendertheme version="4" map-background="#FBFBF9" map-background-outside="#dddddd">
             <!-- ways -->
             <rule e="way" k="*" v="*">
+
                 <!-- landuse -->
-                <rule e="way" k="landuse" v="*">
-                    <rule e="way" k="landuse" v="farmyard">
-                        <area fill="#80DFCFBC"/>
-                    </rule>
-                    <rule e="way" k="landuse" v="residential">
-                        <area fill="#80E5E1DC"/>
-                    </rule>
-                    <rule e="way" k="landuse" v="retail">
-                        <area fill="#FFEBEB"/>
-                    </rule>
-                    <rule e="way" k="landuse" v="industrial">
-                        <area fill="#80C0C0C0"/>
-                    </rule>
-                    <rule e="way" k="landuse" v="railway">
-                        <area fill="#C0C0C0"/>
-                    </rule>
-                    <rule e="way" k="landuse" v="brownfield">
-                        <area fill="#80B5988B"/>
-                    </rule>
-                    <rule e="way" k="landuse" v="commercial">
-                        <area fill="#80FCFFC9"/>
-                    </rule>
-                    <rule e="way" k="landuse" v="greenfield">
-                        <area fill="#C4E3B1"/>
-                    </rule>
-                    <rule e="way" k="landuse" v="construction">
-                        <area fill="#80d0d0d0"/>
-                    </rule>
-                    <rule e="way" k="landuse" v="garages">
-                        <area fill="#d6d6e4"/>
-                    </rule>
-                    <rule e="way" k="landuse" v="landfill|quarry">
-                        <area fill="#A0e1e1e1"/>
-                        <area src="file:/patterns/quarry.png"/>
-                    </rule>
-                    <rule e="way" k="landuse" v="cemetery">
-                        <area fill="#E9F6EE" stroke="#C0C0C0" stroke-width="0.2dp"/>
-                        <area src="file:/patterns/cemetery.png"/>
-                    </rule>
-                    <rule e="way" k="landuse" v="field|farm|farmland">
-                        <area fill="#A0FAFAF0"/>
-                    </rule>
-                    <rule e="way" k="landuse" v="village_green|meadow|grass|recreation_ground|grassland">
-                        <area fill="#A0E7FAD7"/>
-                    </rule>
-                    <rule e="way" k="landuse" v="allotments">
-                        <area fill="#FAF1D7"/>
-                    </rule>
-                    <rule e="way" k="landuse" v="reservoir|basin">
-                        <area fill="#b5d6f1"/>
-                    </rule>
-                    <rule e="way" k="*" v="*" zoom-min="16">
-                        <caption k="name" font-style="bold" font-size="10dp" fill="#808080" stroke="#ffffff" stroke-width="2.0dp"/>
-                    </rule>
-                </rule>
-                <!-- landuse -->
-                <rule e="way" k="natural|landuse" v="forest|wood|scrub">
-                    <rule e="way" k="wood|forest" v="*">
-                        <rule e="way" k="wood|forest" v="coniferous">
-                            <area fill="#B6D9BE"/>
-                        </rule>
-                        <rule e="way" k="wood|forest" v="deciduous">
-                            <area fill="#D1E5C0"/>
-                        </rule>
-                        <rule e="way" k="wood|forest" v="mixed">
-                            <area fill="#BFDEBA"/>
-                        </rule>
-                    </rule>
-                    <rule e="way" k="wood" v="~">
-                        <area fill="#C7DBBB"/>
-                    </rule>
-                    <rule e="way" k="*" v="*" zoom-min="16">
-                        <caption k="name" font-style="bold" font-size="10dp" fill="#40ff40" stroke="#ffffff" stroke-width="2.0dp"/>
-                    </rule>
-                </rule>
-                <rule e="way" k="landuse" v="military">
-                    <area src="file:/patterns/military.png"/>
-                </rule>
+                <xsl:call-template name="landuses"/>
+
                 <!-- amenity -->
-                <rule e="way" k="amenity" v="*">
-                    <rule e="way" k="amenity" v="kindergarten|school|college|university">
-                        <area fill="#DFAFDD" stroke="#e9dd72" stroke-width="0.2dp"/>
-                    </rule>
-                    <rule e="way" k="amenity" v="grave_yard">
-                        <area src="file:/patterns/cemetery.png" stroke="#e4e4e4" stroke-width="0.2dp"/>
-                    </rule>
-                    <rule e="way" k="amenity" v="parking">
-                        <area fill="#F7EFB7" stroke="#E9DD72" stroke-width="0.2dp"/>
-                        <rule e="way" k="access" v="private" zoom-min="15">
-                            <area src="file:/patterns/access-private.png"/>
-                        </rule>
-                        <rule e="way" k="*" v="*" zoom-min="17">
-                            <symbol src="file:/symbols/parking.svg" symbol-width="12dp"/>
-                        </rule>
-                    </rule>
-                    <rule e="way" k="amenity" v="fountain" closed="yes">
-                        <area fill="#b5d6f1" stroke="#000080" stroke-width="0.15dp"/>
-                        <rule e="way" k="*" v="*" zoom-min="17">
-                            <symbol src="file:/symbols/fountain.png" symbol-width="12dp"/>
-                        </rule>
-                    </rule>
-                    <rule e="way" k="amenity" v="hospital" zoom-min="15">
-                        <symbol src="file:/symbols/hospital.png" symbol-width="12dp"/>
-                    </rule>
-                    <rule e="way" k="amenity" v="theatre" zoom-min="17">
-                        <symbol src="file:/symbols/theatre.png" symbol-width="12dp"/>
-                    </rule>
-                    <rule e="way" k="amenity" v="toilets" zoom-min="17">
-                        <symbol src="file:/symbols/toilets.png" symbol-width="12dp"/>
-                    </rule>
-                    <rule e="way" k="*" v="*" zoom-min="17">
-                        <caption k="name" dy="14dp" font-style="bold" font-size="10dp" fill="#4040ff" stroke="#ffffff" stroke-width="2.0dp"/>
-                    </rule>
-                </rule>
+                <xsl:call-template name="amenity_ways"/>
+
                 <!-- natural -->
-                <rule e="way" k="natural" v="*">
-                    <rule e="way" k="natural" v="coastline">
-                        <rule e="way" k="*" v="*" closed="no">
-                            <line stroke="#708599" stroke-width="2.0dp"/>
-                        </rule>
-                        <rule e="way" k="*" v="*" closed="yes">
-                            <area fill="#b5d6f1" stroke="#b5d6f1" stroke-width="0.4dp"/>
-                        </rule>
-                    </rule>
-                    <rule e="way" k="natural" v="glacier">
-                        <area fill="#fafaff" stroke="#add8e6" stroke-width="0.8dp"/>
-                    </rule>
-                    <rule e="way" k="natural" v="land">
-                        <area fill="#f8f8f8" stroke="#e0e0e0" stroke-width="0.1dp"/>
-                    </rule>
-                    <rule e="way" k="natural" v="beach">
-                        <area fill="#eecc55"/>
-                    </rule>
-                    <rule e="way" k="natural" v="heath">
-                        <area fill="#ffffc0" stroke="#ffff90" stroke-width="0.2dp"/>
-                    </rule>
-                    <rule e="way" k="natural" v="marsh|wetland">
-                        <area src="file:/patterns/marsh.png"/>
-                    </rule>
-                    <rule e="way" k="natural" v="cliff" zoom-min="14">
-                        <line stroke="#555555" stroke-width="0.5dp"/>
-                        <lineSymbol src="file:/symbols/way_cliff.svg" align-center="false" repeat="true" repeat-gap="8dp" scale="0.7"/>
-                    </rule>
-                </rule>
+                <xsl:call-template name="natural_ways"/>
+
                 <!-- leisure -->
                 <rule e="way" k="leisure" v="*">
                     <rule e="way" k="leisure" v="park|garden|golf_course|common|green">
@@ -200,6 +60,7 @@
                         <caption k="name" font-style="bold" font-size="10dp" fill="#4040ff" stroke="#ffffff" stroke-width="2dp"/>
                     </rule>
                 </rule>
+
                 <rule e="way" k="admin_level" v="*">
                     <rule e="way" k="admin_level" v="2">
                         <line stroke="#70EDC2EC" stroke-width="8dp" stroke-linecap="butt"/>
@@ -209,25 +70,7 @@
                     </rule>
                 </rule>
 
-                <rule e="way" k="contour_ext" v="elevation_major" zoom-min="13" zoom-max="15">
-                    <line stroke="#DDA86868" stroke-width="0.13dp" stroke-linecap="butt" curve="cubic"/>
-                </rule>
-                <rule e="way" k="contour_ext" v="elevation_major" zoom-min="16">
-                    <line stroke="#DDA86868" stroke-width="0.15dp" stroke-linecap="butt" curve="cubic"/>
-                </rule>
-                <rule e="way" k="contour_ext" v="elevation_medium" zoom-min="13" zoom-max="15">
-                    <line stroke="#DDC27878" stroke-width="0.13dp" stroke-linecap="butt" curve="cubic"/>
-                </rule>
-                <rule e="way" k="contour_ext" v="elevation_medium" zoom-min="16">
-                    <line stroke="#DDC27878" stroke-width="0.13dp" stroke-linecap="butt" curve="cubic"/>
-                </rule>
-
-                <rule e="way" k="contour_ext" v="elevation_minor" zoom-min="14" zoom-max="15">
-                    <line stroke="#DDDB8888" stroke-width="0.08dp" stroke-linecap="butt" curve="cubic"/>
-                </rule>
-                <rule e="way" k="contour_ext" v="elevation_minor" zoom-min="16">
-                    <line stroke="#DDDB8888" stroke-width="0.10dp" stroke-linecap="butt" curve="cubic"/>
-                </rule>
+                <xsl:call-template name="contour_lines"/>
 
                 <!-- tunnel -->
                 <rule e="way" k="tunnel" v="true|yes" zoom-min="12">
@@ -281,15 +124,9 @@
                             <line stroke="#ffffff" stroke-width="1.7dp" stroke-dasharray="5,5" stroke-linecap="butt"/>
                         </rule>
                     </rule>
+
                     <!-- railway tunnel -->
-                    <rule e="way" k="railway" v="*">
-                        <rule e="way" k="railway" v="tram|subway|light_rail|narrow_gauge">
-                            <line stroke="#880f0f4c" stroke-width="0.25dp" stroke-dasharray="4,4" stroke-linecap="butt"/>
-                        </rule>
-                        <rule e="way" k="railway" v="rail">
-                            <line stroke="#aa333333" stroke-width="0.4dp" stroke-dasharray="4,4" stroke-linecap="butt"/>
-                        </rule>
-                    </rule>
+                    <xsl:call-template name="railway_tunnels"/>
                 </rule>
                 <!-- waterways -->
                 <rule e="way" k="waterway" v="*">
@@ -399,17 +236,8 @@
                     </rule>
                 </rule>
                 <!-- tourism areas -->
-                <rule e="way" k="tourism" v="*">
-                    <rule e="way" k="tourism" v="attraction">
-                        <area fill="#F2CAEA"/>
-                    </rule>
-                    <rule e="way" k="tourism" v="zoo|picnic_site|caravan_site|camp_site">
-                        <area fill="#90c7f1a3" stroke="#6fc18e" stroke-width="0.2dp"/>
-                    </rule>
-                    <rule e="way" k="*" v="*" zoom-min="16">
-                        <caption k="name" font-style="bold" font-size="10dp" fill="#4040ff" stroke="#ffffff" stroke-width="2.0dp"/>
-                    </rule>
-                </rule>
+                <xsl:call-template name="tourism_areas"/>
+
                 <rule e="way" k="natural" v="water">
                     <area fill="#8DB0DD"/>
                     <rule e="way" k="*" v="*" zoom-min="13">
@@ -588,7 +416,8 @@
                             </rule>
                             <rule e="way" k="highway" v="path" zoom-min="13">
                                 <line stroke="#6A5B47" stroke-width="0.3dp" stroke-dasharray="5,5" stroke-linecap="butt"/>
-                                <rule e="way" k="*" v="*" zoom-min="15">
+                                <rule e="way" k="*" v="*" zoom-min
+                                    ="15">
                                     <pathText k="name" font-style="bold" font-size="10dp" stroke="#d0d0d0" stroke-width="2.0dp"/>
                                 </rule>
                             </rule>
@@ -877,54 +706,8 @@
                     </rule>
                 </rule>
                 <!-- railway (no tunnel) -->
-                <rule e="way" k="railway" v="*">
-                    <rule e="way" k="tunnel" v="~|false|no">
-                        <rule e="way" k="railway" v="station">
-                            <area fill="#9b9b79" stroke="#707070" stroke-width="0.3dp"/>
-                        </rule>
-                        <!-- railway bridge casings -->
-                        <rule e="way" k="bridge" v="yes|true">
-                            <rule e="way" k="railway" v="tram">
-                                <line stroke="#000000" stroke-width="0.4dp" stroke-linecap="butt"/>
-                            </rule>
-                            <rule e="way" k="railway" v="subway|light_rail|narrow_gauge">
-                                <line stroke="#000000" stroke-width="0.6dp" stroke-linecap="butt"/>
-                            </rule>
-                            <rule e="way" k="railway" v="rail">
-                                <line stroke="#000000" stroke-width="0.8dp" stroke-linecap="butt"/>
-                            </rule>
-                        </rule>
-                        <!-- railway casings and cores -->
-                        <rule e="way" k="railway" v="tram">
-                            <line stroke="#e6b7e6" stroke-width="0.25dp" stroke-linecap="butt"/>
-                            <line stroke="#4c0f4c" stroke-width="0.25dp" stroke-dasharray="12,18" stroke-linecap="butt"/>
-                        </rule>
-                        <rule e="way" k="railway" v="subway">
-                            <line stroke="#0f0f4c" stroke-width="0.4dp" stroke-linecap="butt"/>
-                            <line stroke="#b7b7e6" stroke-width="0.25dp" stroke-dasharray="12,18" stroke-linecap="butt"/>
-                        </rule>
-                        <rule e="way" k="railway" v="light_rail">
-                            <line stroke="#0f4c0f" stroke-width="0.4dp" stroke-linecap="butt"/>
-                            <line stroke="#b7e6e6" stroke-width="0.25dp" stroke-linecap="butt"/>
-                            <line stroke="#0f4c0f" stroke-width="0.25dp" stroke-dasharray="12,18" stroke-linecap="butt"/>
-                        </rule>
-                        <rule e="way" k="railway" v="narrow_gauge">
-                            <line stroke="#333333" stroke-width="0.4dp" stroke-linecap="butt"/>
-                            <line stroke="#e6e6e6" stroke-width="0.25dp" stroke-linecap="butt"/>
-                            <line stroke="#333333" stroke-width="0.25dp" stroke-dasharray="18,18" stroke-linecap="butt"/>
-                        </rule>
-                        <rule e="way" k="railway" v="rail" zoom-max="16">
-                            <line stroke="#333333" stroke-width="0.55dp" stroke-linecap="butt"/>
-                            <line stroke="#e6e6e6" stroke-width="0.4dp" stroke-linecap="butt"/>
-                            <line stroke="#333333" stroke-width="0.4dp" stroke-dasharray="15,15" stroke-linecap="butt"/>
-                        </rule>
-                        <rule e="way" k="railway" v="rail" zoom-min="17">
-                            <line stroke="#333333" stroke-width="0.35dp" stroke-linecap="butt"/>
-                            <line stroke="#e6e6e6" stroke-width="0.25dp" stroke-linecap="butt"/>
-                            <line stroke="#333333" stroke-width="0.25dp" stroke-dasharray="25,25" stroke-linecap="butt"/>
-                        </rule>
-                    </rule>
-                </rule>
+                <xsl:call-template name="railways_no_tunnel"/>
+
                 <!-- non-physical boundaries -->
                 <rule e="way" k="boundary" v="protected_area">
                     <rule e="way" k="protect_class" v="2|5">
@@ -982,38 +765,8 @@
             </rule>
             <!-- nodes -->
             <rule e="node" k="*" v="*">
-                <rule e="node" k="tourism" v="information">
-                    <rule e="node" k="information" v="guidepost" zoom-min="13">
-                        <rule e="node" k="bicycle" v="yes" zoom-min="13" zoom-max="13" style="cycle">
-                            <caption dy="-8dp" k="name" font-style="bold" force-draw="1" font-size="8dp" fill="#000000" stroke="#90ffffff" stroke-width="2dp"/>
-                            <symbol src="file:/symbols/guidepost_cycle.svg" force-draw="1" symbol-width="12dp"/>
-                        </rule>
-                        <rule e="node" k="bicycle" v="yes" zoom-min="14" style="cycle">
-                            <caption dy="-11dp" k="name" font-style="bold" force-draw="1" font-size="10dp" fill="#000000" stroke="#90ffffff" stroke-width="3dp"/>
-                            <caption dy="18dp" k="ele" font-style="normal" force-draw="1" font-size="10dp" fill="#000000" stroke="#90ffffff" stroke-width="3dp"/>
-                            <symbol src="file:/symbols/guidepost_cycle.svg" force-draw="1" symbol-width="18dp"/>
-                        </rule>
-                        <rule e="node" k="bicycle" v="~" zoom-min="14" style="cycle">
-                            <caption dy="-8dp" k="name" font-style="bold" font-size="8dp" fill="#000000" stroke="#90ffffff" stroke-width="2dp"/>
-                            <caption dy="15dp" k="ele" font-style="normal" font-size="8dp" fill="#000000" stroke="#90ffffff" stroke-width="2dp"/>
-                            <symbol src="file:/symbols/guidepost.svg" symbol-width="18dp"/>
-                        </rule>
-                        <rule e="node" k="hiking" v="yes" zoom-min="13" zoom-max="13" style="hiking">
-                            <caption dy="-8dp" k="name" font-style="bold" force-draw="1" font-size="8dp" fill="#000000" stroke="#90ffffff" stroke-width="2dp"/>
-                            <symbol src="file:/symbols/guidepost_hiking.svg" force-draw="1" symbol-width="12dp"/>
-                        </rule>
-                        <rule e="node" k="hiking" v="yes" zoom-min="14" style="hiking">
-                            <caption dy="-11dp" k="name" font-style="bold" force-draw="1" font-size="10dp" fill="#000000" stroke="#90ffffff" stroke-width="3dp"/>
-                            <caption dy="18dp" k="ele" font-style="normal" force-draw="1" font-size="10dp" fill="#000000" stroke="#90ffffff" stroke-width="3dp"/>
-                            <symbol src="file:/symbols/guidepost_hiking.svg" force-draw="1" symbol-width="18dp"/>
-                        </rule>
-                        <rule e="node" k="hiking" v="~" zoom-min="14" style="hiking">
-                            <caption dy="-8dp" k="name" font-style="bold" font-size="8dp" fill="#000000" stroke="#90ffffff" stroke-width="2dp"/>
-                            <caption dy="15dp" k="ele" font-style="normal" font-size="8dp" fill="#000000" stroke="#90ffffff" stroke-width="2dp"/>
-                            <symbol src="file:/symbols/guidepost.svg" symbol-width="18dp"/>
-                        </rule>
-                    </rule>
-                </rule>
+                <xsl:call-template name="tourism_informations"/>
+
                 <!-- aeroway -->
                 <rule e="node" k="aeroway" v="*">
                     <rule e="node" k="aeroway" v="helipad" zoom-min="17">
@@ -1023,109 +776,10 @@
                         <symbol src="file:/symbols/airport.png"/>
                     </rule>
                 </rule>
+
                 <!-- amenity -->
-                <rule e="node" k="amenity" v="*">
-                    <rule e="node" k="amenity" v="atm" zoom-min="17">
-                        <symbol src="file:/symbols/atm.png" symbol-width="12dp"/>
-                    </rule>
-                    <rule e="node" k="amenity" v="bank" zoom-min="17">
-                        <symbol src="file:/symbols/bank.png" symbol-width="12dp"/>
-                    </rule>
-                    <rule e="node" k="amenity" v="bench" zoom-min="17">
-                        <symbol src="file:/symbols/bench.svg" symbol-width="12dp" scale-icon-size="18,1.2"/>
-                    </rule>
-                    <rule e="node" k="amenity" v="bicycle_rental" zoom-min="17">
-                        <symbol src="file:/symbols/bicycle_rental.png" symbol-width="12dp"/>
-                    </rule>
-                    <rule e="node" k="amenity" v="bus_station" zoom-min="14">
-                        <symbol src="file:/symbols/bus_station.png" symbol-width="22dp"/>
-                    </rule>
-                    <rule e="node" k="railway" v="station" zoom-min="14">
-                        <symbol src="file:/symbols/bus_station.png" symbol-width="12dp"/>
-                    </rule>
-                    <rule e="node" k="amenity" v="cafe" zoom-min="17">
-                        <symbol src="file:/symbols/cafe.png" symbol-width="12dp"/>
-                    </rule>
-                    <rule e="node" k="amenity" v="cinema" zoom-min="17">
-                        <symbol src="file:/symbols/cinema.png" symbol-width="12dp"/>
-                    </rule>
-                    <rule e="node" k="amenity" v="fast_food" zoom-min="17">
-                        <symbol src="file:/symbols/fastfood.png" symbol-width="12dp"/>
-                    </rule>
-                    <rule e="node" k="amenity" v="fire_station" zoom-min="17">
-                        <symbol src="file:/symbols/firebrigade.png" symbol-width="12dp"/>
-                    </rule>
-                    <rule e="node" k="amenity" v="fountain" zoom-min="17">
-                        <symbol src="file:/symbols/fountain.png" symbol-width="12dp"/>
-                    </rule>
-                    <rule e="node" k="amenity" v="fuel" zoom-min="17">
-                        <symbol src="file:/symbols/petrolStation.png" symbol-width="12dp"/>
-                    </rule>
-                    <rule e="node" k="amenity" v="hospital" zoom-min="15">
-                        <symbol src="file:/symbols/hospital.png" symbol-width="12dp"/>
-                    </rule>
-                    <rule e="node" k="amenity" v="kindergarten" zoom-min="17">
-                        <symbol src="file:/symbols/kindergarten.png" symbol-width="12dp"/>
-                    </rule>
-                    <rule e="node" k="amenity" v="library" zoom-min="17">
-                        <symbol src="file:/symbols/library.png" symbol-width="12dp"/>
-                    </rule>
-                    <rule e="node" k="amenity" v="parking" zoom-min="17">
-                        <symbol src="file:/symbols/parking.svg" symbol-width="12dp"/>
-                    </rule>
-                    <rule e="node" k="amenity" v="pharmacy" zoom-min="17">
-                        <symbol src="file:/symbols/pharmacy.svg" symbol-width="12dp"/>
-                    </rule>
-                    <rule e="node" k="amenity" v="place_of_worship" zoom-min="17">
-                        <rule e="node" k="denomination|religion" v="jewish">
-                            <symbol src="file:/symbols/synagogue.png" symbol-width="12dp"/>
-                        </rule>
-                        <rule e="node" k="denomination|religion" v="muslim|moslem">
-                            <symbol src="file:/symbols/mosque.png" symbol-width="12dp"/>
-                        </rule>
-                        <rule e="node" k="denomination|religion" v="christian">
-                            <symbol src="file:/symbols/church.png" symbol-width="12dp"/>
-                        </rule>
-                    </rule>
-                    <rule e="node" k="amenity" v="post_box" zoom-min="17">
-                        <symbol src="file:/symbols/postbox.png" symbol-width="12dp"/>
-                    </rule>
-                    <rule e="node" k="amenity" v="post_office" zoom-min="17">
-                        <symbol src="file:/symbols/postoffice.png" symbol-width="12dp"/>
-                    </rule>
-                    <rule e="node" k="amenity" v="pub|bar" zoom-min="17">
-                        <symbol src="file:/symbols/pub.png" symbol-width="12dp"/>
-                    </rule>
-                    <rule e="node" k="amenity" v="recycling" zoom-min="17">
-                        <symbol src="file:/symbols/recycling.png" symbol-width="12dp"/>
-                    </rule>
-                    <rule e="node" k="amenity" v="restaurant" zoom-min="17">
-                        <symbol src="file:/symbols/restaurant.png" symbol-width="12dp"/>
-                    </rule>
-                    <rule e="node" k="amenity" v="school" zoom-min="17">
-                        <symbol src="file:/symbols/school.png" symbol-width="12dp"/>
-                    </rule>
-                    <rule e="node" k="amenity" v="shelter" zoom-min="17">
-                        <symbol src="file:/symbols/shelter.png" symbol-width="12dp"/>
-                    </rule>
-                    <rule e="node" k="amenity" v="telephone" zoom-min="17">
-                        <symbol src="file:/symbols/telephone.png" symbol-width="12dp"/>
-                    </rule>
-                    <rule e="node" k="amenity" v="theatre" zoom-min="17">
-                        <symbol src="file:/symbols/theatre.png" symbol-width="12dp"/>
-                    </rule>
-                    <rule e="node" k="amenity" v="toilets" zoom-min="17">
-                        <symbol src="file:/symbols/toilets.png" symbol-width="12dp"/>
-                    </rule>
-                    <rule e="node" k="amenity" v="university|college" zoom-min="17">
-                        <symbol src="file:/symbols/university.png" symbol-width="12dp"/>
-                    </rule>
-                    <rule e="node" k="*" v="*" zoom-min="17">
-                        <rule e="node" k="information" v="~">
-                            <caption k="name" dy="12dp" font-style="bold" font-size="10dp" fill="#4040ff" stroke="#ffffff" stroke-width="3.0dp"/>
-                        </rule>
-                    </rule>
-                </rule>
+                <xsl:call-template name="amenity_nodes"/>
+
                 <!-- barrier -->
                 <rule e="node" k="barrier" v="bollard">
                     <circle r="1.5" fill="#707070"/>
@@ -1182,147 +836,19 @@
                     </rule>
                 </rule>
                 <!-- natural -->
-                <rule e="node" k="natural" v="*">
-                    <rule e="node" k="natural" v="cave_entrance" zoom-min="14">
-                        <symbol src="file:/symbols/cave_entrance.png" symbol-width="16dp"/>
-                        <rule e="node" k="*" v="*" zoom-min="16">
-                            <caption k="name" dy="12dp" font-style="bold" font-family="serif" font-size="8dp" fill="#000000" stroke="#ffffff" stroke-width="2dp"/>
-                        </rule>
-                    </rule>
-                    <rule e="node" k="natural" v="spring" zoom-min="14">
-                        <symbol src="file:/symbols/spring.svg" symbol-width="10dp"/>
-                        <rule e="node" k="*" v="*" zoom-min="16">
-                            <caption k="name" dy="12dp" font-style="bold" font-size="10dp" fill="#0092da" stroke="#ffffff" stroke-width="2dp"/>
-                        </rule>
-                    </rule>
-                    <rule e="node" k="natural" v="peak" zoom-min="11">
-                        <symbol src="file:/symbols/peak.png" symbol-width="12dp" force-draw="1"/>
-                        <rule e="any" k="*" v="*" zoom-min="12">
-                            <caption k="name" dy="-6dp" font-style="bold_italic" font-family="serif" font-size="8dp" scale-font-size="14,1.1" fill="#760000" stroke="#e9dca2" stroke-width="1.8dp"/>
-                            <rule e="any" k="*" v="*" zoom-min="15">
-                                <caption k="ele" dy="12dp" font-style="italic" font-size="9dp" scale-font-size="16,1.1" fill="#000000" stroke="#ffffff" stroke-width="1.4dp"/>
-                            </rule>
-                        </rule>
-                    </rule>
-                    <rule e="node" k="natural" v="tree" zoom-min="16">
-                        <symbol src="file:/symbols/tree.png"/>
-                        <rule e="node" k="*" v="*" zoom-min="17">
-                            <caption k="name" font-style="bold" font-size="10dp" fill="#000000" stroke="#ffffff" stroke-width="2.0dp"/>
-                        </rule>
-                    </rule>
-                    <rule e="node" k="natural" v="volcano" zoom-min="12">
-                        <symbol src="file:/symbols/vulcan.png"/>
-                        <rule e="node" k="*" v="*" zoom-min="17">
-                            <caption k="name" font-style="bold" font-size="10dp" fill="#000000" stroke="#ffffff" stroke-width="2.0dp"/>
-                        </rule>
-                    </rule>
-                </rule>
-                <rule e="node" k="amenity" v="hunting_stand" zoom-min="14">
-                    <symbol src="file:/symbols/hunting_stand.svg" symbol-width="14dp"/>
-                </rule>
-                <rule e="node" k="man_made" v="mast" zoom-min="14">
-                    <symbol src="file:/symbols/tower_comm.svg" symbol-width="14dp"/>
-                </rule>
-                <rule e="node" k="man_made" v="tower" zoom-min="14">
-                    <rule e="node" k="tower:type" v="communication">
-                        <symbol src="file:/symbols/tower_comm.svg" symbol-width="14dp"/>
-                    </rule>
-                    <rule e="node" k="tower:type" v="observation" zoom-min="14">
-                        <symbol src="file:/symbols/tower_obs.svg" symbol-width="14dp"/>
-                    </rule>
-                </rule>
+                <xsl:call-template name="natural_nodes"/>
+
                 <!-- place -->
-                <rule e="node" k="place" v="*">
-                    <rule e="node" k="place" v="city" zoom-max="14">
-                        <caption k="name" font-style="bold" font-size="16dp" fill="#000000" stroke="#ffffff" stroke-width="3dp"/>
-                    </rule>
-                    <rule e="node" k="place" v="town" zoom-min="8" zoom-max="10">
-                        <caption k="name" font-style="bold" font-size="9dp" fill="#000000" stroke="#ffffff" stroke-width="2dp"/>
-                    </rule>
-                    <rule e="node" k="place" v="town" zoom-min="11" zoom-max="15">
-                        <caption k="name" font-style="bold" font-size="14dp" fill="#000000" stroke="#ffffff" stroke-width="2dp"/>
-                    </rule>
-                    <rule e="node" k="place" v="suburb" zoom-min="12" zoom-max="16">
-                        <caption k="name" font-style="bold" font-size="12dp" fill="#6C6C6C" stroke="#ffffff" stroke-width="2dp"/>
-                    </rule>
-                    <rule e="node" k="place" v="village" zoom-min="11" zoom-max="12">
-                        <caption k="name" font-style="normal" font-size="7dp" fill="#000000" stroke="#ffffff" stroke-width="2dp"/>
-                    </rule>
-                    <rule e="node" k="place" v="village" zoom-min="13" zoom-max="18">
-                        <caption k="name" font-style="normal" font-size="12dp" fill="#000000" stroke="#ffffff" stroke-width="2dp"/>
-                    </rule>
-                    <rule e="node" k="place" v="hamlet" zoom-min="13" zoom-max="18">
-                        <caption k="name" font-style="normal" font-size="11dp" fill="#000000" stroke="#ffffff" stroke-width="1dp"/>
-                    </rule>
-                    <rule e="node" k="place" v="locality" zoom-min="15" zoom-max="16">
-                        <caption k="name" font-style="bold" font-size="7dp" fill="#A0666666" stroke="#ffffff" stroke-width="2.0dp"/>
-                    </rule>
-                    <rule e="node" k="place" v="locality" zoom-min="17">
-                        <caption k="name" font-style="bold" font-size="10dp" fill="#A0666666" stroke="#ffffff" stroke-width="2.0dp"/>
-                    </rule>
-                    <rule e="node" k="place" v="island" zoom-min="10">
-                        <caption k="name" font-style="bold" font-size="20dp" fill="#000000" stroke="#ffffff" stroke-width="3.0dp"/>
-                    </rule>
-                    <rule e="node" k="place" v="country" zoom-max="6">
-                        <caption k="name" font-style="bold" font-size="35dp" fill="#000000" stroke="#ffffff" stroke-width="4.0dp"/>
-                    </rule>
-                </rule>
+                <xsl:call-template name="places"/>
+
                 <!-- railway -->
-                <rule e="node" k="railway" v="*">
-                    <rule e="node" k="railway" v="crossing" zoom-min="16">
-                        <symbol src="file:/symbols/railway-crossing-small.png"/>
-                    </rule>
-                    <rule e="node" k="railway" v="level_crossing" zoom-min="16">
-                        <symbol src="file:/symbols/railway-crossing.png" symbol-width="16dp"/>
-                        <rule e="node" k="*" v="*" zoom-min="18">
-                            <caption k="ref" dy="10dp" font-style="bold" font-size="8dp" fill="#000000" stroke="#ffffff" stroke-width="2.0dp"/>
-                        </rule>
-                    </rule>
-                    <rule e="node" k="railway" v="station" zoom-min="14">
-                        <circle r="6" fill="#ec2d2d" stroke="#606060" stroke-width="1.5dp"/>
-                        <caption k="name" dy="-10dp" font-style="bold" font-size="10dp" fill="#ec2d2d" stroke="#ffffff" stroke-width="2dp"/>
-                    </rule>
-                    <rule e="node" k="railway" v="halt|tram_stop" zoom-min="16">
-                        <circle r="4" fill="#ec2d2d" stroke="#606060" stroke-width="1.5dp"/>
-                        <caption k="name" dy="-10dp" font-style="bold" font-size="10dp" fill="#ec2d2d" stroke="#ffffff" stroke-width="1.5dp"/>
-                    </rule>
-                </rule>
+                <xsl:call-template name="railway_nodes"/>
+
                 <!-- shop -->
-                <rule e="node" k="shop" v="*">
-                    <rule e="node" k="shop" v="bakery" zoom-min="17">
-                        <symbol src="file:/symbols/bakery.png" symbol-width="12dp"/>
-                    </rule>
-                    <rule e="node" k="shop" v="florist" zoom-min="17">
-                        <symbol src="file:/symbols/florist.png" symbol-width="12dp"/>
-                    </rule>
-                    <rule e="node" k="shop" v="supermarket|organic" zoom-min="17">
-                        <symbol src="file:/symbols/supermarket.png" symbol-width="12dp"/>
-                    </rule>
-                    <rule e="node" k="*" v="*" zoom-min="17">
-                        <caption k="name" dy="12dp" font-style="bold" font-size="10dp" fill="#4040ff" stroke="#ffffff" stroke-width="2.0dp"/>
-                    </rule>
-                </rule>
-                <rule e="way" k="shop" v="*" zoom-min="16">
-                    <caption k="name" dy="12dp" font-style="bold" font-size="10dp" fill="#4040ff" stroke="#ffffff" stroke-width="2.0dp"/>
-                </rule>
+                <xsl:call-template name="shops"/>
+
                 <!-- tourism -->
-                <rule e="node" k="tourism" v="*">
-                    <rule e="node" k="tourism" v="camp_site" zoom-min="17">
-                        <symbol src="file:/symbols/campSite.png" symbol-width="12dp"/>
-                    </rule>
-                    <rule e="node" k="tourism" v="hostel" zoom-min="17">
-                        <symbol src="file:/symbols/hostel.png" symbol-width="12dp"/>
-                    </rule>
-                    <rule e="node" k="tourism" v="hotel" zoom-min="17">
-                        <symbol src="file:/symbols/hotel.png" symbol-width="12dp"/>
-                    </rule>
-                    <rule e="node" k="tourism" v="information" zoom-min="17">
-                        <symbol src="file:/symbols/information.png" symbol-width="12dp"/>
-                    </rule>
-                    <rule e="node" k="tourism" v="viewpoint" zoom-min="15">
-                        <symbol src="file:/symbols/viewpoint.png" symbol-width="12dp"/>
-                    </rule>
-                </rule>
+                <xsl:call-template name="tourism_nodes"/>
             </rule>
             <rule e="way" k="power" v="*">
                 <rule e="way" k="power" v="line" zoom-min="13">
@@ -1336,181 +862,11 @@
     -->
             </rule>
 
-            <rule e="way" k="contour_ext" v="*">
-                <rule e="way" k="contour_ext" v="elevation_major" zoom-min="13">
-                    <pathText k="ele" font-size="8dp" font-style="bold" fill="#A86868" stroke="#FFFFFF" stroke-width="1dp" curve="cubic"/>
-                </rule>
-                <rule e="way" k="contour_ext" v="elevation_medium" zoom-min="14">
-                    <pathText k="ele" font-size="8dp" font-style="bold" fill="#A86868" stroke="#FFFFFF" stroke-width="1dp" curve="cubic"/>
-                </rule>
-                <rule e="way" k="contour_ext" v="elevation_minor" zoom-min="16">
-                    <pathText k="ele" font-size="5dp" font-style="bold" fill="#A86868" stroke="#FFFFFF" stroke-width="1dp" curve="cubic"/>
-                </rule>
-            </rule>
+            <xsl:call-template name="contour_labels"/>
 
-            <!-- turistika -->
-            <rule e="way" k="highway" v="*" style="hiking" zoom-min="11">
-                <!-- CZT -->
-                <rule e="way" k="fmrelbicyclered|fmrelbicycleblue|fmrelbicyclegreen|fmrelbicycleyellow|fmrelbicyclewhite|fmrelbicycleblack|fmrelbicycledefault" v="*">
-                    <line stroke="{$alternative}" dy="{concat(-1 * $offset1, 'dp')}" scale-dy-size="{$scaleDySize}" stroke-width="{$markedTrailWidth}"/>
-                </rule>
-
-                <!-- TZT -->
-                <xsl:call-template name="markedTrails">
-                    <xsl:with-param name="redKey" select="'fmrelhikingred'"/>
-                    <xsl:with-param name="blueKey" select="'fmrelhikingblue'"/>
-                    <xsl:with-param name="greenKey" select="'fmrelhikinggreen|fmreleducation'"/>
-                    <xsl:with-param name="yellowKey" select="'fmrelhikingyellow'"/>
-                    <xsl:with-param name="fallbackKey" select="'fmrelhikingwhite|fmrelhikingblack|fmrelhikingdefault'"/>
-                    <xsl:with-param name="side" select="1"/>
-                </xsl:call-template>
-            </rule>
-
-            <!-- cyklistika -->
-            <rule e="way" k="highway" v="*" style="cycle" zoom-min="11">
-                <!-- TZT -->
-                <rule e="way" k="fmrelhikingred|fmrelhikingblue|fmrelhikinggreen|fmrelhikingyellow|fmrelhikingwhite|fmrelhikingblack|fmrelhikingdefault|fmreleducation" v="*">
-                    <line stroke="{$alternative}" dy="{concat($offset1, 'dp')}" scale-dy-size="{$scaleDySize}" stroke-width="{$markedTrailWidth}"/>
-                </rule>
-
-                <!-- CZT -->
-                <xsl:call-template name="markedTrails">
-                    <xsl:with-param name="redKey" select="'fmrelbicyclered'"/>
-                    <xsl:with-param name="blueKey" select="'fmrelbicycleblue'"/>
-                    <xsl:with-param name="greenKey" select="'fmrelbicyclegreen'"/>
-                    <xsl:with-param name="yellowKey" select="'fmrelbicycleyellow'"/>
-                    <xsl:with-param name="fallbackKey" select="'fmrelbicyclewhite|fmrelbicycleblack|fmrelbicycledefault'"/>
-                    <xsl:with-param name="side" select="-1"/>
-                </xsl:call-template>
-            </rule>
+            <xsl:call-template name="markedTrailsAll"/>
 
         </rendertheme>
     </xsl:template>
 
-    <xsl:template name="markedTrails">
-        <xsl:param name="redKey" />
-        <xsl:param name="blueKey" />
-        <xsl:param name="greenKey" />
-        <xsl:param name="yellowKey" />
-        <xsl:param name="fallbackKey" />
-
-        <xsl:param name="side" />
-
-        <xsl:variable name="off1"><xsl:value-of select="concat($side * $offset1, 'dp')"/></xsl:variable>
-        <xsl:variable name="off2"><xsl:value-of select="concat($side * $offset2, 'dp')"/></xsl:variable>
-        <xsl:variable name="off3"><xsl:value-of select="concat($side * $offset3, 'dp')"/></xsl:variable>
-        <xsl:variable name="off4"><xsl:value-of select="concat($side * $offset4, 'dp')"/></xsl:variable>
-
-        <rule e="way" k="{$redKey}" v="*">
-            <rule e="way" k="{$blueKey}" v="*">
-                <rule e="way" k="{$greenKey}" v="*">
-                    <rule e="way" k="{$yellowKey}" v="*">
-                        <line stroke="{$red}" dy="{$off1}" scale-dy-size="{$scaleDySize}" stroke-width="{$markedTrailWidth}"/>
-                        <line stroke="{$blue}" dy="{$off2}" scale-dy-size="{$scaleDySize}" stroke-width="{$markedTrailWidth}"/>
-                        <line stroke="{$green}" dy="{$off3}" scale-dy-size="{$scaleDySize}" stroke-width="{$markedTrailWidth}"/>
-                        <line stroke="{$yellow}" dy="{$off4}" scale-dy-size="{$scaleDySize}" stroke-width="{$markedTrailWidth}"/>
-                    </rule>
-
-                    <rule e="way" k="{$yellowKey}" v="~">
-                        <line stroke="{$red}" dy="{$off1}" scale-dy-size="{$scaleDySize}" stroke-width="{$markedTrailWidth}"/>
-                        <line stroke="{$blue}" dy="{$off2}" scale-dy-size="{$scaleDySize}" stroke-width="{$markedTrailWidth}"/>
-                        <line stroke="{$green}" dy="{$off3}" scale-dy-size="{$scaleDySize}" stroke-width="{$markedTrailWidth}"/>
-                    </rule>
-                </rule>
-
-                <rule e="way" k="{$greenKey}" v="~">
-                    <rule e="way" k="{$yellowKey}" v="*">
-                        <line stroke="{$red}" dy="{$off1}" scale-dy-size="{$scaleDySize}" stroke-width="{$markedTrailWidth}"/>
-                        <line stroke="{$blue}" dy="{$off2}" scale-dy-size="{$scaleDySize}" stroke-width="{$markedTrailWidth}"/>
-                        <line stroke="{$yellow}" dy="{$off3}" scale-dy-size="{$scaleDySize}" stroke-width="{$markedTrailWidth}"/>
-                    </rule>
-
-                    <rule e="way" k="{$yellowKey}" v="~">
-                        <line stroke="{$red}" dy="{$off1}" scale-dy-size="{$scaleDySize}" stroke-width="{$markedTrailWidth}"/>
-                        <line stroke="{$blue}" dy="{$off2}" scale-dy-size="{$scaleDySize}" stroke-width="{$markedTrailWidth}"/>
-                    </rule>
-                </rule>
-            </rule>
-
-            <rule e="way" k="{$blueKey}" v="~">
-                <rule e="way" k="{$greenKey}" v="*">
-                    <rule e="way" k="{$yellowKey}" v="*">
-                        <line stroke="{$red}" dy="{$off1}" scale-dy-size="{$scaleDySize}" stroke-width="{$markedTrailWidth}"/>
-                        <line stroke="{$green}" dy="{$off2}" scale-dy-size="{$scaleDySize}" stroke-width="{$markedTrailWidth}"/>
-                        <line stroke="{$yellow}" dy="{$off3}" scale-dy-size="{$scaleDySize}" stroke-width="{$markedTrailWidth}"/>
-                    </rule>
-
-                    <rule e="way" k="{$yellowKey}" v="~">
-                        <line stroke="{$red}" dy="{$off1}" scale-dy-size="{$scaleDySize}" stroke-width="{$markedTrailWidth}"/>
-                        <line stroke="{$green}" dy="{$off2}" scale-dy-size="{$scaleDySize}" stroke-width="{$markedTrailWidth}"/>
-                    </rule>
-                </rule>
-
-                <rule e="way" k="{$greenKey}" v="~">
-                    <rule e="way" k="{$yellowKey}" v="*">
-                        <line stroke="{$red}" dy="{$off1}" scale-dy-size="{$scaleDySize}" stroke-width="{$markedTrailWidth}"/>
-                        <line stroke="{$yellow}" dy="{$off2}" scale-dy-size="{$scaleDySize}" stroke-width="{$markedTrailWidth}"/>
-                    </rule>
-
-                    <rule e="way" k="{$yellowKey}" v="~">
-                        <line stroke="{$red}" dy="{$off1}" scale-dy-size="{$scaleDySize}" stroke-width="{$markedTrailWidth}"/>
-                    </rule>
-                </rule>
-            </rule>
-        </rule>
-
-        <rule e="way" k="{$redKey}" v="~">
-            <rule e="way" k="{$blueKey}" v="*">
-                <rule e="way" k="{$greenKey}" v="*">
-                    <rule e="way" k="{$yellowKey}" v="*">
-                        <line stroke="{$blue}" dy="{$off1}" scale-dy-size="{$scaleDySize}" stroke-width="{$markedTrailWidth}"/>
-                        <line stroke="{$green}" dy="{$off2}" scale-dy-size="{$scaleDySize}" stroke-width="{$markedTrailWidth}"/>
-                        <line stroke="{$yellow}" dy="{$off3}" scale-dy-size="{$scaleDySize}" stroke-width="{$markedTrailWidth}"/>
-                    </rule>
-
-                    <rule e="way" k="{$yellowKey}" v="~">
-                        <line stroke="{$blue}" dy="{$off1}" scale-dy-size="{$scaleDySize}" stroke-width="{$markedTrailWidth}"/>
-                        <line stroke="{$green}" dy="{$off2}" scale-dy-size="{$scaleDySize}" stroke-width="{$markedTrailWidth}"/>
-                    </rule>
-                </rule>
-
-                <rule e="way" k="{$greenKey}" v="~">
-                    <rule e="way" k="{$yellowKey}" v="*">
-                        <line stroke="{$blue}" dy="{$off1}" scale-dy-size="{$scaleDySize}" stroke-width="{$markedTrailWidth}"/>
-                        <line stroke="{$yellow}" dy="{$off2}" scale-dy-size="{$scaleDySize}" stroke-width="{$markedTrailWidth}"/>
-                    </rule>
-
-                    <rule e="way" k="{$yellowKey}" v="~">
-                        <line stroke="{$blue}" dy="{$off1}" scale-dy-size="{$scaleDySize}" stroke-width="{$markedTrailWidth}"/>
-                    </rule>
-                </rule>
-            </rule>
-
-            <rule e="way" k="{$blueKey}" v="~">
-                <rule e="way" k="{$greenKey}" v="*">
-                    <rule e="way" k="{$yellowKey}" v="*">
-                        <line stroke="{$green}" dy="{$off1}" scale-dy-size="{$scaleDySize}" stroke-width="{$markedTrailWidth}"/>
-                        <line stroke="{$yellow}" dy="{$off2}" scale-dy-size="{$scaleDySize}" stroke-width="{$markedTrailWidth}"/>
-                    </rule>
-
-                    <rule e="way" k="{$yellowKey}" v="~">
-                        <line stroke="{$green}" dy="{$off1}" scale-dy-size="{$scaleDySize}" stroke-width="{$markedTrailWidth}"/>
-                    </rule>
-                </rule>
-
-                <rule e="way" k="{$greenKey}" v="~">
-                    <rule e="way" k="{$yellowKey}" v="*">
-                        <line stroke="{$yellow}" dy="{$off1}" scale-dy-size="{$scaleDySize}" stroke-width="{$markedTrailWidth}"/>
-                    </rule>
-
-                    <rule e="way" k="{$yellowKey}" v="~">
-                        <rule e="way" k="{$fallbackKey}" v="*">
-                            <line stroke="{$fallback}" dy="{$off1}" scale-dy-size="{$scaleDySize}" stroke-width="{$markedTrailWidth}"/>
-                        </rule>
-                    </rule>
-                </rule>
-            </rule>
-        </rule>
-
-    </xsl:template>
 </xsl:stylesheet>
