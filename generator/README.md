@@ -23,6 +23,4 @@ Note: OSM data don't contain countours. Use http://wiki.openstreetmap.org/wiki/P
 
 phyghtmap  --jobs=6 --pbf  --source=srtm1 --polygon=CLIP_POLYGON.poly --max-nodes-per-way=1000 --start-node-id=100000000000 --start-way-id=100000000000 -s 10 -c 100,50 
 osmosis --rb file=INPUT_FILE-fmrel.osm.pbf  --rb file=CONTOURS.osm.pbf --merge --wb file=MERGED_DATA.osm.pbf  omitmetadata=true 
-
-
        
