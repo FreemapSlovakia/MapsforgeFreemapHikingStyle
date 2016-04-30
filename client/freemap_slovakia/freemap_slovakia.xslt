@@ -13,6 +13,10 @@
     <xsl:include href="railways.xslt" />
     <xsl:include href="leisure.xslt" />
     <xsl:include href="highways.xslt" />
+    <xsl:include href="admin.xslt" />
+    <xsl:include href="waterways.xslt" />
+    <xsl:include href="pistes.xslt" />
+    <xsl:include href="aerialways.xslt" />
 
     <xsl:template match="/">
 
@@ -20,115 +24,26 @@
             <!-- ways -->
             <rule e="way" k="*" v="*">
 
-                <!-- landuse -->
                 <xsl:call-template name="landuses"/>
-
-                <!-- amenity -->
                 <xsl:call-template name="amenity_ways"/>
-
-                <!-- natural -->
                 <xsl:call-template name="natural_ways"/>
-
-                <!-- leisure -->
                 <xsl:call-template name="leisure_ways"/>
-
-                <rule e="way" k="admin_level" v="*">
-                    <rule e="way" k="admin_level" v="2">
-                        <line stroke="#70EDC2EC" stroke-width="8dp" stroke-linecap="butt"/>
-                    </rule>
-                    <rule e="way" k="admin_level" v="4|5|6">
-                        <line stroke="#70EDC2EC" stroke-width="5dp" stroke-linecap="butt"/>
-                    </rule>
-                </rule>
-
+                <xsl:call-template name="admin_major"/>
                 <xsl:call-template name="contour_lines"/>
 
                 <!-- tunnel -->
                 <rule e="way" k="tunnel" v="true|yes" zoom-min="12">
-                    <!-- highway tunnels -->
                     <xsl:call-template name="highway_tunnels"/>
-
-                    <!-- railway tunnel -->
                     <xsl:call-template name="railway_tunnels"/>
                 </rule>
-                <!-- waterways -->
-                <rule e="way" k="waterway" v="*">
-                    <!-- waterway casings -->
-                    <rule e="way" k="waterway" v="drain" zoom-min="13">
-                        <rule e="way" k="tunnel" v="yes|culvert">
-                            <line stroke="#647FC5" stroke-dasharray="5,5" stroke-width="1.0dp"/>
-                        </rule>
-                        <rule e="way" k="tunnel" v="~|no">
-                            <line stroke="#647FC5" stroke-width="1.0dp"/>
-                        </rule>
-                    </rule>
-                    <rule e="way" k="waterway" v="canal" zoom-min="13">
-                        <line stroke="#647FC5" stroke-width="1.0dp"/>
-                    </rule>
-                    <!-- waterway cores -->
-                    <rule e="way" k="waterway" v="ditch">
-                        <line stroke="#8DB0DD" stroke-width="0.1dp" zoom-min="13"/>
-                        <rule e="way" k="*" v="*" zoom-min="16">
-                            <lineSymbol src="file:/symbols/waterflow.svg" align-center="true" repeat="true" symbol-width="7dp" repeat-gap="50dp"/>
-                        </rule>
-                    </rule>
-                    <rule e="way" k="waterway" v="drain">
-                        <line stroke="#8DB0DD" stroke-width="0.8dp" zoom-min="13"/>
-                        <rule e="way" k="*" v="*" zoom-min="16">
-                            <lineSymbol src="file:/symbols/waterflow.svg" align-center="true" repeat="true" symbol-width="7dp" repeat-gap="50dp"/>
-                        </rule>
-                    </rule>
-                    <rule e="way" k="waterway" v="canal">
-                        <line stroke="#8DB0DD" stroke-width="0.8dp" zoom-min="13"/>
-                        <rule e="way" k="*" v="*" zoom-min="16">
-                            <lineSymbol src="file:/symbols/waterflow.svg" align-center="true" repeat="true" symbol-width="7dp" repeat-gap="50dp"/>
-                        </rule>
-                    </rule>
-                    <rule e="way" k="waterway" v="stream" zoom-min="14">
-                        <pathText k="name" font-style="bold_italic" font-size="8dp" fill="#8DB0DD" stroke="#ffffff" stroke-width="2dp"/>
-                        <rule e="way" k="tunnel" v="yes|culvert">
-                            <line stroke="#8DB0DD" stroke-dasharray="5,15" stroke-width="0.3dp"/>
-                        </rule>
-                        <rule e="way" k="tunnel" v="~|no">
-                            <line stroke="#8DB0DD" stroke-width="0.3dp"/>
-                        </rule>
-                        <rule e="way" k="*" v="*" zoom-min="15">
-                            <lineSymbol src="file:/symbols/waterflow.svg" align-center="true" repeat="true" symbol-width="7dp" repeat-gap="50dp"/>
-                        </rule>
-                    </rule>
-                    <rule e="way" k="waterway" v="river">
-                        <pathText k="name" font-style="bold_italic" font-size="9dp" fill="#8DB0DD" stroke="#ffffff" stroke-width="2.6dp"/>
-                        <rule e="way" k="tunnel" v="yes|culvert">
-                            <line stroke="#8DB0DD" stroke-dasharray="5,15" stroke-width="1.0dp"/>
-                        </rule>
-                        <rule e="way" k="tunnel" v="~|no">
-                            <line stroke="#8DB0DD" stroke-width="1.5dp"/>
-                        </rule>
-                        <rule e="way" k="*" v="*" zoom-min="13">
-                            <lineSymbol src="file:/symbols/waterflow.svg" align-center="true" repeat="true" symbol-width="7dp" scale-icon-size="16,1.1" repeat-gap="50dp"/>
-                        </rule>
-                    </rule>
-                    <rule e="way" k="waterway" v="dock">
-                        <area fill="#b5d6f1"/>
-                    </rule>
-                    <rule e="way" k="waterway" v="riverbank">
-                        <area fill="#8DB0DD"/>
-                    </rule>
-                    <rule e="way" k="waterway" v="weir">
-                        <line stroke="#000044" stroke-width="0.375dp"/>
-                    </rule>
-                    <rule e="way" k="waterway" v="dam">
-                        <line stroke="#000000" stroke-width="0.5dp"/>
-                    </rule>
-                    <rule e="way" k="lock" v="yes|true">
-                        <line stroke="#000000" stroke-width="2.0dp" stroke-linecap="butt"/>
-                        <line stroke="#f8f8f8" stroke-width="1.5dp" stroke-linecap="butt"/>
-                    </rule>
-                </rule>
+
+                <xsl:call-template name="waterways"/>
+
                 <!-- military -->
                 <rule e="way" k="military" v="*">
                     <area src="file:/patterns/military.png" stroke="#e4e4e4" stroke-width="0.2dp"/>
                 </rule>
+
                 <!-- historic -->
                 <rule e="any" k="historic" v="ruins" zoom-min="16">
                     <symbol src="file:/symbols/ruins.png" symbol-width="16dp"/>
@@ -264,85 +179,9 @@
                     </rule>
                 </rule>
                 <!-- pistes -->
-                <rule e="way" k="piste:type" v="*" zoom-min="11">
-                    <!-- piste areas -->
-                    <rule e="way" k="piste:type" v="downhill" closed="yes">
-                        <rule e="way" k="piste:difficulty" v="novice">
-                            <area fill="#5540ff40" stroke="#5540ff40" stroke-width="5.0dp"/>
-                        </rule>
-                        <rule e="way" k="piste:difficulty" v="easy">
-                            <area fill="#554040ff" stroke="#554040ff" stroke-width="5.0dp"/>
-                        </rule>
-                        <rule e="way" k="piste:difficulty" v="intermediate">
-                            <area fill="#55ff4040" stroke="#55ff4040" stroke-width="5.0dp"/>
-                        </rule>
-                        <rule e="way" k="piste:difficulty" v="advanced">
-                            <area fill="#55000000" stroke="#55000000" stroke-width="5.0dp"/>
-                        </rule>
-                        <rule e="way" k="piste:difficulty" v="expert">
-                            <area fill="#55f6800a" stroke="#55f6800a" stroke-width="5.0dp"/>
-                        </rule>
-                        <rule e="way" k="piste:difficulty" v="freeride">
-                            <area fill="#55f6dd0a" stroke="#55f6dd0a" stroke-width="5.0dp"/>
-                        </rule>
-                        <rule e="way" k="piste:difficulty" v="~">
-                            <area fill="#55505050" stroke="#55505050" stroke-width="5.0dp"/>
-                        </rule>
-                        <rule e="way" k="*" v="*" zoom-min="16">
-                            <caption k="name" font-style="bold" font-size="10dp" fill="#000000" stroke="#ffffff" stroke-width="2.0dp"/>
-                        </rule>
-                    </rule>
-                    <!-- piste ways -->
-                    <rule e="way" k="piste:type" v="downhill" closed="no">
-                        <rule e="way" k="piste:difficulty" v="novice">
-                            <line stroke="#5540ff40" stroke-width="5.0dp"/>
-                        </rule>
-                        <rule e="way" k="piste:difficulty" v="easy">
-                            <line stroke="#554040ff" stroke-width="5.0dp"/>
-                        </rule>
-                        <rule e="way" k="piste:difficulty" v="intermediate">
-                            <line stroke="#55ff4040" stroke-width="5.0dp"/>
-                        </rule>
-                        <rule e="way" k="piste:difficulty" v="advanced">
-                            <line stroke="#55000000" stroke-width="5.0dp"/>
-                        </rule>
-                        <rule e="way" k="piste:difficulty" v="expert">
-                            <line stroke="#55f6800a" stroke-width="5.0dp"/>
-                        </rule>
-                        <rule e="way" k="piste:difficulty" v="freeride">
-                            <line stroke="#55f6dd0a" stroke-width="5.0dp"/>
-                        </rule>
-                        <rule e="way" k="piste:difficulty" v="~">
-                            <line stroke="#55505050" stroke-width="5.0dp"/>
-                        </rule>
-                        <rule e="way" k="*" v="*" zoom-min="14">
-                            <pathText k="name" font-style="bold" font-size="10dp" fill="#000000" stroke="#ffffff" stroke-width="2.0dp"/>
-                        </rule>
-                    </rule>
-                    <rule e="way" k="piste:type" v="sled">
-                        <line stroke="#cdabde" stroke-width="2.5dp"/>
-                    </rule>
-                    <rule e="way" k="piste:type" v="nordic">
-                        <line stroke="#c00000" stroke-width="1.0dp" stroke-dasharray="30,5" stroke-linecap="butt"/>
-                    </rule>
-                </rule>
+                <xsl:call-template name="pistes"/>
                 <!-- aerial ways -->
-                <rule e="way" k="aerialway" v="*">
-                    <line stroke="#202020" stroke-width="0.4dp" stroke-linecap="butt"/>
-                    <line stroke="#202020" stroke-width="4.0dp" stroke-dasharray="2,200" stroke-linecap="butt"/>
-                    <rule e="way" k="aerialway" v="cable_car">
-                        <lineSymbol src="file:/symbols/cable_car.png"/>
-                    </rule>
-                    <rule e="way" k="aerialway" v="chair_lift">
-                        <lineSymbol src="file:/symbols/chair_lift_2.png"/>
-                    </rule>
-                    <rule e="way" k="aerialway" v="gondola">
-                        <lineSymbol src="file:/symbols/gondola.png"/>
-                    </rule>
-                    <rule e="way" k="*" v="*" zoom-min="14">
-                        <pathText k="name" font-style="bold" font-size="10dp" fill="#606060" stroke="#ffffff" stroke-width="2.0dp"/>
-                    </rule>
-                </rule>
+                <xsl:call-template name="aerialways"/>
                 <!-- railway (no tunnel) -->
                 <xsl:call-template name="railways_no_tunnel"/>
 
@@ -361,41 +200,9 @@
                         </rule>
                     </rule>
                 </rule>
-                <rule e="way" k="admin_level" v="*">
-                    <rule e="way" k="admin_level" v="11">
-                        <line stroke="#9A3996" stroke-width="0.1dp" stroke-dasharray="1,5"/>
-                    </rule>
-                    <rule e="way" k="admin_level" v="10">
-                        <line stroke="#9A3996" stroke-width="0.1dp" stroke-dasharray="5,25"/>
-                    </rule>
-                    <rule e="way" k="admin_level" v="9">
-                        <line stroke="#9A3996" stroke-width="0.1dp" stroke-dasharray="15,15"/>
-                    </rule>
-                    <rule e="way" k="admin_level" v="8">
-                        <line stroke="#9A3996" stroke-width="0.1dp" stroke-dasharray="15, 5, 5, 5"/>
-                    </rule>
-                    <rule e="way" k="admin_level" v="7">
-                        <line stroke="#9A3996" stroke-width="0.1dp"/>
-                    </rule>
-                    <rule e="way" k="admin_level" v="6">
-                        <line stroke="#9A3996" stroke-width="0.25dp" stroke-dasharray="5, 5"/>
-                    </rule>
-                    <rule e="way" k="admin_level" v="5">
-                        <line stroke="#9A3996" stroke-width="0.25dp" stroke-dasharray="15, 15"/>
-                    </rule>
-                    <rule e="way" k="admin_level" v="4">
-                        <line stroke="#9A3996" stroke-width="0.25dp" stroke-dasharray="15, 5, 5, 5"/>
-                    </rule>
-                    <rule e="way" k="admin_level" v="3">
-                        <line stroke="#9A3996" stroke-width="0.25dp"/>
-                    </rule>
-                    <rule e="way" k="admin_level" v="2">
-                        <line stroke="#9A3996" stroke-width="0.25dp" stroke-dasharray="15, 15"/>
-                    </rule>
-                    <rule e="way" k="admin_level" v="1">
-                        <line stroke="#9A3996" stroke-width="0.25dp" stroke-dasharray="15, 5, 5, 5"/>
-                    </rule>
-                </rule>
+
+                <xsl:call-template name="admin"/>
+
             </rule>
 
             <rule e="way" k="addr:housenumber" v="*" zoom-min="18">
