@@ -13,7 +13,7 @@
                     <rule e="way" k="bridge" v="~|no|false">
                         <!-- highway casings -->
                         <rule e="way" k="highway" v="steps" zoom-min="14">
-                            <line stroke="#707070" stroke-width="0.6dp"/>
+                            <line stroke="#707070" stroke-width="0.5dp"/>
                         </rule>
                         <rule e="way" k="highway" v="footway|path" zoom-min="13">
                             <line stroke="#c2b5a3" stroke-width="0.4dp"/>
@@ -54,10 +54,10 @@
                     <rule e="way" k="bridge" v="yes|true" zoom-min="15">
                         <!-- highway casings -->
                         <rule e="way" k="highway" v="steps|footway|path">
-                            <line stroke="#000000" stroke-width="0.5dp" stroke-linecap="butt"/>
+                            <line stroke="#000000" stroke-width="0.6dp" stroke-linecap="butt"/>
                         </rule>
                         <rule e="way" k="highway" v="track|cycleway|bridleway|service">
-                            <line stroke="#000000" stroke-width="0.6dp" stroke-linecap="butt"/>
+                            <line stroke="#000000" stroke-width="0.5dp" stroke-linecap="butt"/>
                         </rule>
                         <rule e="way" k="highway" v="construction">
                             <line stroke="#000000" stroke-width="0.6dp" stroke-linecap="butt"/>
@@ -177,21 +177,20 @@
                 <rule e="way" k="area" v="~|no|false">
                     <!-- highway cores -->
                     <rule e="way" k="highway" v="steps" zoom-min="14">
-                        <line stroke="#e5e0c2" stroke-width="0.45dp" stroke-dasharray="3,1" stroke-linecap="butt"/>
+                        <line stroke="#e5e0c2" stroke-width="0.25dp" stroke-dasharray="3,1" stroke-linecap="butt"/>
                         <rule e="way" k="*" v="*" zoom-min="15">
                             <pathText k="name" font-style="bold" font-size="10dp" stroke="#e5e0c2" stroke-width="2.0dp"/>
                         </rule>
                     </rule>
                     <rule e="way" k="highway" v="footway" zoom-min="13">
-                        <line stroke="#e5e0c2" stroke-width="0.4dp"/>
+                        <line stroke="#e5e0c2" stroke-width="0.15dp"/>
                         <rule e="way" k="*" v="*" zoom-min="15">
                             <pathText k="name" font-style="bold" font-size="10dp" stroke="#e5e0c2" stroke-width="2.0dp"/>
                         </rule>
                     </rule>
                     <rule e="way" k="highway" v="path" zoom-min="13">
                         <line stroke="#6A5B47" stroke-width="0.3dp" stroke-dasharray="5,5" stroke-linecap="butt"/>
-                        <rule e="way" k="*" v="*" zoom-min
-                            ="15">
+                        <rule e="way" k="*" v="*" zoom-min="15">
                             <pathText k="name" font-style="bold" font-size="10dp" stroke="#d0d0d0" stroke-width="2.0dp"/>
                         </rule>
                     </rule>
@@ -264,7 +263,7 @@
                         </rule>
                     </rule>
                     <rule e="way" k="highway" v="pedestrian" zoom-min="11">
-                        <line stroke="#e5e0c2" stroke-width="1.35dp"/>
+                        <line stroke="#e5e0c2" stroke-width="0.7dp"/>
                         <rule e="way" k="*" v="*" zoom-min="15">
                             <pathText k="name" font-style="bold" font-size="11dp" stroke="#e5e0c2" stroke-width="2.0dp"/>
                         </rule>
