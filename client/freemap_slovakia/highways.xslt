@@ -66,7 +66,7 @@
                             <line stroke="#000000" stroke-width="0.6dp" stroke-linecap="butt"/>
                         </rule>
                         <rule e="way" k="highway" v="pedestrian|unclassified|residential|living_street|byway">
-                            <line stroke="#000000" stroke-width="0.7dp" stroke-linecap="butt"/>
+                            <line stroke="#000000" stroke-width="1.2dp" stroke-linecap="butt"/>
                         </rule>
                         <rule e="way" k="highway" v="secondary|secondary_link|tertiary">
                             <line stroke="#000000" stroke-width="1.3dp" stroke-linecap="butt"/>
