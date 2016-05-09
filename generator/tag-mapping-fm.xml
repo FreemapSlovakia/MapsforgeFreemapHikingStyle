@@ -44,7 +44,9 @@
 		<osm-tag key="amenity" value="university" zoom-appear="17" />
 
 		<osm-tag key="amenity" value="hunting_stand" zoom-appear="14" />
+		<osm-tag key="amenity" value="ranger_house" zoom-appear="14" />
 		<osm-tag key="amenity" value="shelter" zoom-appear="15" />
+		<osm-tag key="amenity" value="feeding_place" zoom-appear="15" />
 		
 
 		<osm-tag key="emergency" value="phone" zoom-appear="16" />
@@ -82,6 +84,7 @@
 		<osm-tag key="tourism" value="attraction" zoom-appear="15" />
 		<osm-tag key="tourism" value="hostel" zoom-appear="15" />
 		<osm-tag key="tourism" value="hotel" zoom-appear="15" />
+		<osm-tag key="tourism" value="guest_house" zoom-appear="15" />
 		<osm-tag key="tourism" value="information" zoom-appear="10" />
 		<osm-tag key="tourism" value="museum" zoom-appear="14" />
 		<osm-tag key="tourism" value="viewpoint" zoom-appear="14" />
@@ -137,11 +140,10 @@
 		<osm-tag key="man_made" value="windmill" zoom-appear="14" />
 		<osm-tag key="man_made" value="adit" zoom-appear="14" />
 		<osm-tag key="man_made" value="mineshaft" zoom-appear="14" />
+		<osm-tag key="man_made" value="chimney" zoom-appear="14" />
 		
 		<osm-tag key="disused" value="yes" zoom-appear="14" />
 		
-		
-
 		<osm-tag key="power" value="generator" zoom-appear="12" />
 		<osm-tag key="power" value="tower" zoom-appear="14" />
 	</pois>
@@ -168,7 +170,7 @@
       <osm-tag key="ele" value="100" zoom-appear="14" />
       <osm-tag key="ele" value="150" zoom-appear="14" />
       <osm-tag key="ele" value="200" zoom-appear="14" />
-      <osm-tag key="ele" value="250" zoom-appear="14" />      
+      <osm-tag key="ele" value="250" zoom-appear="14" />
       <osm-tag key="ele" value="300" zoom-appear="14" />
       <osm-tag key="ele" value="350" zoom-appear="14" />
       <osm-tag key="ele" value="400" zoom-appear="14" />
@@ -440,6 +442,7 @@
 		<osm-tag key="building" value="greenhouse" zoom-appear="14" />
 		<osm-tag key="building" value="hut" zoom-appear="14" />
 		<osm-tag key="building" value="shed" zoom-appear="14" />
+		<osm-tag key="building" value="hayloft" zoom-appear="14" />
 	</ways>
 
 	<!-- ADMINISTRATIVE BOUNDARIES -->
@@ -503,8 +506,6 @@
 		<osm-tag key="military" value="airfield" zoom-appear="12" />
 		<osm-tag key="military" value="barracks" zoom-appear="12" />
 		<osm-tag key="military" value="naval_base" zoom-appear="12" />
-
-		<osm-tag key="place" value="locality" zoom-appear="15" />
 	</ways>
 
 	<!-- NOT TO RENDER -->
@@ -666,7 +667,7 @@
 	<ways>
 		<osm-tag key="power" value="line" zoom-appear="13" />
 		<osm-tag key="power" value="minor_line" zoom-appear="16" />
-                <osm-tag key="man_made" value="pipeline" zoom-appear="14" />
-                <osm-tag key="location" value="overground" renderable="false" />
+		<osm-tag key="man_made" value="pipeline" zoom-appear="14" />
+		<osm-tag key="location" value="overground" renderable="false" />
 	</ways>
 </tag-mapping>
