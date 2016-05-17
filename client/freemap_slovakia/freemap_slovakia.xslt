@@ -20,7 +20,7 @@
 
     <xsl:template match="/">
 
-        <rendertheme version="4" map-background="#FBFBF9" map-background-outside="#dddddd">
+        <rendertheme version="1" locus-extended="1" xsi:schemaLocation="http://mapsforge.org/renderTheme ../renderTheme.xsd" map-background="#FBFBF9" map-background-outside="#dddddd">
             <!-- ways -->
             <rule e="way" k="*" v="*">
 
