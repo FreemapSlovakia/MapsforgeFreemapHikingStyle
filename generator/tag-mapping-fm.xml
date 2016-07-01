@@ -424,6 +424,7 @@
 		<osm-tag key="building" value="garages" zoom-appear="14" />
 		<osm-tag key="building" value="garage" zoom-appear="14" />
 		<osm-tag key="building" value="terrace" zoom-appear="14" />
+		<osm-tag key="building" value="dormitory" zoom-appear="14" />
 
 		<osm-tag key="building" value="commercial" zoom-appear="14" />
 		<osm-tag key="building" value="industrial" zoom-appear="14" />
