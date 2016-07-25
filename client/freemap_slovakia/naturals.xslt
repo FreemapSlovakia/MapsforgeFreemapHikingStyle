@@ -74,6 +74,10 @@
                 </rule>
             </rule>
         </rule>
+        <rule e="node" k="waterway" v="waterfall" zoom-min="14">
+          <symbol src="file:/symbols/waterfall.svg" symbol-width="12dp"/>
+          <caption k="name" dy="+12dp" font-style="bold_italic" font-family="serif" font-size="6dp" scale-font-size="16,1.1" fill="#4040ff" stroke="#ffffff" stroke-width="1.8dp"/>
+        </rule>
         <rule e="node" k="amenity" v="hunting_stand" zoom-min="14">
             <symbol src="file:/symbols/hunting_stand.svg" symbol-width="14dp"/>
         </rule>
