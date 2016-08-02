@@ -17,20 +17,20 @@
                 <line stroke="#647FC5" stroke-width="1.0dp"/>
             </rule>
             <!-- waterway cores -->
-            <rule e="way" k="waterway" v="ditch">
-                <line stroke="#8DB0DD" stroke-width="0.1dp" zoom-min="13"/>
+            <rule e="way" k="waterway" v="ditch" zoom-min="13">
+                <line stroke="#8DB0DD" stroke-width="0.1dp"/>
                 <rule e="way" k="*" v="*" zoom-min="16">
                     <lineSymbol src="file:/symbols/waterflow.svg" align-center="true" repeat="true" symbol-width="7dp" repeat-gap="50dp"/>
                 </rule>
             </rule>
-            <rule e="way" k="waterway" v="drain">
-                <line stroke="#8DB0DD" stroke-width="0.8dp" zoom-min="13"/>
+            <rule e="way" k="waterway" v="drain" zoom-min="13">
+                <line stroke="#8DB0DD" stroke-width="0.8dp"/>
                 <rule e="way" k="*" v="*" zoom-min="16">
                     <lineSymbol src="file:/symbols/waterflow.svg" align-center="true" repeat="true" symbol-width="7dp" repeat-gap="50dp"/>
                 </rule>
             </rule>
-            <rule e="way" k="waterway" v="canal">
-                <line stroke="#8DB0DD" stroke-width="0.8dp" zoom-min="13"/>
+            <rule e="way" k="waterway" v="canal" zoom-min="13">
+                <line stroke="#8DB0DD" stroke-width="0.8dp" />
                 <rule e="way" k="*" v="*" zoom-min="16">
                     <lineSymbol src="file:/symbols/waterflow.svg" align-center="true" repeat="true" symbol-width="7dp" repeat-gap="50dp"/>
                 </rule>
