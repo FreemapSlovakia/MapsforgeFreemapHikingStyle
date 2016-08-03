@@ -225,7 +225,7 @@
         <xsl:variable name="off4"><xsl:value-of select="concat($side * $offset4, 'dp')"/></xsl:variable>
 
         <xsl:variable name="HikingMarking1">yes|major|peak|cave|interesting_object|ruin|spring|roundtrip|stripe</xsl:variable>
-        <xsl:variable name="HikingMarking2">local</xsl:variable>
+        <xsl:variable name="HikingMarking2">local|education</xsl:variable>
 
         <rule e="way" k="{$redKey}" v="*">
             <rule e="way" k="{$blueKey}" v="*">
