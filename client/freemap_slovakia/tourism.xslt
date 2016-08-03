@@ -3,7 +3,7 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns="http://mapsforge.org/renderTheme" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
     <xsl:template name="tourism_informations">
-        <rule e="node" k="tourism" v="information">
+        <rule cat="topo_common" e="node" k="tourism" v="information">
             <rule e="node" k="information" v="guidepost" zoom-min="13">
                 <rule cat="cycle_old" e="node" k="bicycle" v="yes" zoom-min="13" zoom-max="13">
                     <caption dy="-8dp" k="name" font-style="bold" force-draw="1" font-size="8dp" fill="#000000" stroke="#90ffffff" stroke-width="2dp"/>
@@ -62,26 +62,13 @@
                   </rule>
                 </rule>
 
-                <rule cat="hiking" e="node" k="bicycle" v="yes" zoom-min="13" zoom-max="13">
-                  <rule e="node" k="cycle" v="yes">
-                    <caption dy="-8dp" k="name" font-style="bold" force-draw="1" font-size="8dp" fill="#000000" stroke="#90ffffff" stroke-width="2dp"/>
-                    <symbol src="file:/symbols/guidepost_hikingcycle.svg" force-draw="1" symbol-width="12dp"/>
-                  </rule>
-                </rule>
-                <rule cat="hiking" e="node" k="bicycle" v="yes" zoom-min="14">
+                <rule cat="topo_common" e="node" k="bicycle" v="yes" zoom-min="13" zoom-max="13">
                   <rule e="node" k="hiking" v="yes">
-                    <caption dy="-11dp" k="name" font-style="bold" force-draw="1" font-size="10dp" fill="#000000" stroke="#90ffffff" stroke-width="3dp"/>
-                    <caption dy="18dp" k="ele" font-style="normal" force-draw="1" font-size="10dp" fill="#000000" stroke="#90ffffff" stroke-width="3dp"/>
-                    <symbol src="file:/symbols/guidepost_hikingcycle.svg" force-draw="1" symbol-width="18dp"/>
-                  </rule>
-                </rule>
-                <rule cat="cycle" e="node" k="bicycle" v="yes" zoom-min="13" zoom-max="13">
-                  <rule e="node" k="cycle" v="yes">
                     <caption dy="-8dp" k="name" font-style="bold" force-draw="1" font-size="8dp" fill="#000000" stroke="#90ffffff" stroke-width="2dp"/>
                     <symbol src="file:/symbols/guidepost_hikingcycle.svg" force-draw="1" symbol-width="12dp"/>
                   </rule>
                 </rule>
-                <rule cat="cycle" e="node" k="bicycle" v="yes" zoom-min="14">
+                <rule cat="topo_common" e="node" k="bicycle" v="yes" zoom-min="14">
                   <rule e="node" k="hiking" v="yes">
                     <caption dy="-11dp" k="name" font-style="bold" force-draw="1" font-size="10dp" fill="#000000" stroke="#90ffffff" stroke-width="3dp"/>
                     <caption dy="18dp" k="ele" font-style="normal" force-draw="1" font-size="10dp" fill="#000000" stroke="#90ffffff" stroke-width="3dp"/>
@@ -89,16 +76,12 @@
                   </rule>
                 </rule>
 
-                <rule cat="hiking" e="node" k="hiking|bicycle" v="~" zoom-min="14">
+                <rule cat="topo_common" e="node" k="hiking|bicycle" v="~" zoom-min="14">
                   <caption dy="-8dp" k="name" font-style="bold" font-size="8dp" fill="#000000" stroke="#90ffffff" stroke-width="2dp"/>
                   <caption dy="15dp" k="ele" font-style="normal" font-size="8dp" fill="#000000" stroke="#90ffffff" stroke-width="2dp"/>
                   <symbol src="file:/symbols/guidepost.svg" symbol-width="18dp"/>
                 </rule>
-                <rule cat="cycle" e="node" k="hiking|bicycle" v="~" zoom-min="14">
-                  <caption dy="-8dp" k="name" font-style="bold" font-size="8dp" fill="#000000" stroke="#90ffffff" stroke-width="2dp"/>
-                  <caption dy="15dp" k="ele" font-style="normal" font-size="8dp" fill="#000000" stroke="#90ffffff" stroke-width="2dp"/>
-                  <symbol src="file:/symbols/guidepost.svg" symbol-width="18dp"/>
-                </rule>
+
                     </rule>
                 </rule>
 

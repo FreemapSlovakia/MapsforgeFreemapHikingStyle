@@ -13,11 +13,13 @@
             <name lang="en" value="Hiking trails" />
             <name lang="sk" value="Turistické značky" />
             <cat id="hiking" />
+            <cat id="topo_common" />
         </layer>
         <layer id="cycle" enabled="true" visible="false">
             <name lang="en" value="Cycle trails" />
             <name lang="sk" value="Cyklo značky" />
             <cat id="cycle" />
+            <cat id="topo_common" />
         </layer>
         <layer id="topo" visible="true">
             <name lang="en" value="Topo" />
@@ -35,12 +37,14 @@
             <name lang="en" value="Hiking (old version)" />
             <name lang="sk" value="Turistika (stará verzia)" />
             <cat id="hiking_old" />
+            <cat id="topo_common" />
             <overlay id="contours" />
         </layer>
         <layer id="cycle_old" visible="true">
             <name lang="en" value="Cycle (old version)" />
             <name lang="sk" value="Cyklo (stará verzia)" />
             <cat id="cycle_old" />
+            <cat id="topo_common" />
             <overlay id="contours" />
         </layer>
         </stylemenu>

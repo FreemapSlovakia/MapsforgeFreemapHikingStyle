@@ -27,11 +27,11 @@
             <rule e="way" k="natural" v="marsh|wetland">
                 <area src="file:/patterns/marsh.png"/>
             </rule>
-            <rule e="way" k="natural" v="cliff" zoom-min="14" zoom-max="16">
+            <rule cat="topo_common" e="way" k="natural" v="cliff" zoom-min="14" zoom-max="16">
               <line stroke="#555555"  stroke-width="0.2dp"/>
               <line stroke="#555555"  dy="1dp" stroke-dasharray="2,10" stroke-width="0.4dp" stroke-linecap="butt"/>
             </rule>
-            <rule e="way" k="natural" v="cliff" zoom-min="17">
+            <rule cat="topo_common" e="way" k="natural" v="cliff" zoom-min="17">
               <line stroke="#555555"  stroke-width="0.18dp"/>
               <line stroke="#555555"  dy="1.8dp" stroke-dasharray="2,20" stroke-width="0.4dp" stroke-linecap="butt"/>
             </rule>
@@ -39,7 +39,7 @@
     </xsl:template>
 
     <xsl:template name="natural_nodes">
-        <rule e="node" k="natural" v="*">
+        <rule cat="topo_common" e="node" k="natural" v="*">
             <rule e="node" k="natural" v="cave_entrance" zoom-min="14">
                 <symbol src="file:/symbols/cave_entrance.png" symbol-width="16dp"/>
                 <rule e="node" k="*" v="*" zoom-min="16">
@@ -78,7 +78,7 @@
           <symbol src="file:/symbols/waterfall.svg" symbol-width="12dp"/>
           <caption k="name" dy="+12dp" font-style="bold_italic" font-family="serif" font-size="6dp" scale-font-size="16,1.1" fill="#4040ff" stroke="#ffffff" stroke-width="1.8dp"/>
         </rule>
-        <rule e="node" k="amenity" v="hunting_stand" zoom-min="14">
+        <rule cat="topo_common" e="node" k="amenity" v="hunting_stand" zoom-min="14">
             <symbol src="file:/symbols/hunting_stand.svg" symbol-width="14dp"/>
         </rule>
         <rule e="node" k="man_made" v="mast" zoom-min="14">
