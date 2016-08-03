@@ -12,35 +12,35 @@
         <layer id="hiking" enabled="true" visible="false">
             <name lang="en" value="Hiking trails" />
             <name lang="sk" value="Turistické značky" />
-            <cat id="hiking2" />
+            <cat id="hiking" />
         </layer>
         <layer id="cycle" enabled="true" visible="false">
             <name lang="en" value="Cycle trails" />
             <name lang="sk" value="Cyklo značky" />
-            <cat id="cycle2" />
-        </layer>
-        <layer id="default" visible="true">
-            <name lang="en" value="Default" />
-            <name lang="sk" value="Všeobecná" />
+            <cat id="cycle" />
         </layer>
         <layer id="topo" visible="true">
             <name lang="en" value="Topo" />
             <name lang="sk" value="Topo" />
             <cat id="topo" />
             <overlay id="contours" />
-            <overlay id="hiking2" />
-            <overlay id="cycle2" />
+            <overlay id="hiking" />
+            <overlay id="cycle" />
+        </layer>
+        <layer id="default" visible="true">
+            <name lang="en" value="Default" />
+            <name lang="sk" value="Všeobecná" />
         </layer>
         <layer id="hiking_old" visible="true">
-            <name lang="en" value="Hiking" />
-            <name lang="sk" value="Turistika" />
-            <cat id="hiking" />
+            <name lang="en" value="Hiking (old version)" />
+            <name lang="sk" value="Turistika (stará verzia)" />
+            <cat id="hiking_old" />
             <overlay id="contours" />
         </layer>
         <layer id="cycle_old" visible="true">
-            <name lang="en" value="Cycle" />
-            <name lang="sk" value="Cyklo" />
-            <cat id="cycle" />
+            <name lang="en" value="Cycle (old version)" />
+            <name lang="sk" value="Cyklo (stará verzia)" />
+            <cat id="cycle_old" />
             <overlay id="contours" />
         </layer>
         </stylemenu>

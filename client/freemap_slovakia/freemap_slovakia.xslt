@@ -2,6 +2,7 @@
 
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns="http://mapsforge.org/renderTheme" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
+    <xsl:include href="menu.xslt" />
     <xsl:include href="marked_trails.xslt" />
     <xsl:include href="contours.xslt" />
     <xsl:include href="places.xslt" />
@@ -24,6 +25,7 @@
             <!-- ways -->
             <rule e="way" k="*" v="*">
 
+                <xsl:call-template name="menu"/>
                 <xsl:call-template name="landuses"/>
                 <xsl:call-template name="amenity_ways"/>
                 <xsl:call-template name="natural_ways"/>
@@ -310,6 +312,7 @@
             <xsl:call-template name="contour_labels"/>
 
             <xsl:call-template name="markedTrailsAll"/>
+            <xsl:call-template name="markedTrailsAllNew"/>
 
         </rendertheme>
     </xsl:template>
