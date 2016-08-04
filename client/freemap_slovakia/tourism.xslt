@@ -82,6 +82,16 @@
                   <symbol src="file:/symbols/guidepost.svg" symbol-width="18dp"/>
                 </rule>
 
+                <rule cat="ski" e="node" k="ski" v="yes" zoom-min="13" zoom-max="13">
+                  <caption dy="-8dp" k="name" font-style="bold" force-draw="1" font-size="8dp" fill="#000000" stroke="#90ffffff" stroke-width="2dp"/>
+                  <symbol src="file:/symbols/guidepost_ski.svg" force-draw="1" symbol-width="12dp"/>
+                </rule>
+                <rule cat="ski" e="node" k="ski" v="yes" zoom-min="14">
+                  <caption dy="-11dp" k="name" font-style="bold" force-draw="1" font-size="10dp" fill="#000000" stroke="#90ffffff" stroke-width="3dp"/>
+                  <caption dy="18dp" k="ele" font-style="normal" force-draw="1" font-size="10dp" fill="#000000" stroke="#90ffffff" stroke-width="3dp"/>
+                  <symbol src="file:/symbols/guidepost_ski.svg" force-draw="1" symbol-width="18dp"/>
+                </rule>
+
                     </rule>
                 </rule>
 

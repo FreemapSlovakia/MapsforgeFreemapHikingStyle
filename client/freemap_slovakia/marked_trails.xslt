@@ -16,8 +16,7 @@
 
     <xsl:variable name="markedTrailWidth">0.95dp</xsl:variable>
     <xsl:variable name="scaleDySize">14,1.45</xsl:variable>
-    <xsl:variable name="dasharrayCycle">0.3,6</xsl:variable>
-    <xsl:variable name="dasharrayHiking">10,8</xsl:variable>
+
     
     <xsl:template name="markedTrailsAll">
         <!-- turistika -->
@@ -187,30 +186,43 @@
     <xsl:template name="markedTrailsAllNew">
         <!-- turistika nová -->
         <rule cat="hiking" e="way" k="highway" v="*" zoom-min="11">
-            <xsl:call-template name="markedTrailsHiking">
+            <xsl:call-template name="markedTrailsDual">
                 <xsl:with-param name="redKey" select="'fmrelhikingred'"/>
                 <xsl:with-param name="blueKey" select="'fmrelhikingblue'"/>
                 <xsl:with-param name="greenKey" select="'fmrelhikinggreen|fmreleducation'"/>
                 <xsl:with-param name="yellowKey" select="'fmrelhikingyellow'"/>
                 <xsl:with-param name="fallbackKey" select="'fmrelhikingwhite|fmrelhikingblack|fmrelhikingdefault'"/>
                 <xsl:with-param name="side" select="1"/>
+                <xsl:with-param name="dasharray" select="'10,8'"/>
             </xsl:call-template>
         </rule>
         <!-- cyklistika nová -->
         <rule cat="cycle" e="way" k="highway" v="*" zoom-min="11">
-            <xsl:call-template name="markedTrailsCycle">
+            <xsl:call-template name="markedTrailsSingle">
                 <xsl:with-param name="redKey" select="'fmrelbicyclered'"/>
                 <xsl:with-param name="blueKey" select="'fmrelbicycleblue'"/>
                 <xsl:with-param name="greenKey" select="'fmrelbicyclegreen'"/>
                 <xsl:with-param name="yellowKey" select="'fmrelbicycleyellow'"/>
                 <xsl:with-param name="fallbackKey" select="'fmrelbicyclewhite|fmrelbicycleblack|fmrelbicycledefault'"/>
                 <xsl:with-param name="side" select="-1"/>
+                <xsl:with-param name="dasharray" select="'0.3,6'"/>
+            </xsl:call-template>
+        </rule>
+        <!-- lyže nová -->
+        <rule cat="ski" e="way" k="highway" v="*" zoom-min="11">
+            <xsl:call-template name="markedTrailsSingle">
+                <xsl:with-param name="redKey" select="'fmrelskired'"/>
+                <xsl:with-param name="blueKey" select="'fmrelskiblue'"/>
+                <xsl:with-param name="greenKey" select="'fmrelskigreen'"/>
+                <xsl:with-param name="yellowKey" select="'fmrelskiyellow'"/>
+                <xsl:with-param name="fallbackKey" select="'fmrelskiwhite|fmrelskiblack|fmrelskidefault'"/>
+                <xsl:with-param name="side" select="-1"/>
+                <xsl:with-param name="dasharray" select="'4,6'"/>
             </xsl:call-template>
         </rule>
     </xsl:template>
 
-
-    <xsl:template name="markedTrailsHiking">
+    <xsl:template name="markedTrailsDual">
         <xsl:param name="redKey" />
         <xsl:param name="blueKey" />
         <xsl:param name="greenKey" />
@@ -218,6 +230,8 @@
         <xsl:param name="fallbackKey" />
 
         <xsl:param name="side" />
+
+        <xsl:param name="dasharray" />
 
         <xsl:variable name="off1"><xsl:value-of select="concat($side * $offset1, 'dp')"/></xsl:variable>
         <xsl:variable name="off2"><xsl:value-of select="concat($side * $offset2, 'dp')"/></xsl:variable>
@@ -244,16 +258,16 @@
                             <line stroke="{$yellow}" dy="{$off4}" scale-dy-size="{$scaleDySize}" stroke-width="{$markedTrailWidth}"/>
                         </rule>
                         <rule e="way" k="{$yellowKey}" v="{$HikingMarking2}">
-                            <line stroke="{$red}" dy="{$off1}" scale-dy-size="{$scaleDySize}" stroke-width="{$markedTrailWidth}" stroke-dasharray="{$dasharrayHiking}"/>
+                            <line stroke="{$red}" dy="{$off1}" scale-dy-size="{$scaleDySize}" stroke-width="{$markedTrailWidth}" stroke-dasharray="{$dasharray}"/>
                         </rule>
                         <rule e="way" k="{$blueKey}" v="{$HikingMarking2}">
-                            <line stroke="{$blue}" dy="{$off2}" scale-dy-size="{$scaleDySize}" stroke-width="{$markedTrailWidth}" stroke-dasharray="{$dasharrayHiking}"/>
+                            <line stroke="{$blue}" dy="{$off2}" scale-dy-size="{$scaleDySize}" stroke-width="{$markedTrailWidth}" stroke-dasharray="{$dasharray}"/>
                         </rule>
                         <rule e="way" k="{$greenKey}" v="{$HikingMarking2}">
-                            <line stroke="{$green}" dy="{$off3}" scale-dy-size="{$scaleDySize}" stroke-width="{$markedTrailWidth}" stroke-dasharray="{$dasharrayHiking}"/>
+                            <line stroke="{$green}" dy="{$off3}" scale-dy-size="{$scaleDySize}" stroke-width="{$markedTrailWidth}" stroke-dasharray="{$dasharray}"/>
                         </rule>
                         <rule e="way" k="{$yellowKey}" v="{$HikingMarking2}">
-                            <line stroke="{$yellow}" dy="{$off4}" scale-dy-size="{$scaleDySize}" stroke-width="{$markedTrailWidth}" stroke-dasharray="{$dasharrayHiking}"/>
+                            <line stroke="{$yellow}" dy="{$off4}" scale-dy-size="{$scaleDySize}" stroke-width="{$markedTrailWidth}" stroke-dasharray="{$dasharray}"/>
                         </rule>
                     </rule>
 
@@ -268,13 +282,13 @@
                             <line stroke="{$green}" dy="{$off3}" scale-dy-size="{$scaleDySize}" stroke-width="{$markedTrailWidth}"/>
                         </rule>
                         <rule e="way" k="{$redKey}" v="{$HikingMarking2}">
-                            <line stroke="{$red}" dy="{$off1}" scale-dy-size="{$scaleDySize}" stroke-width="{$markedTrailWidth}" stroke-dasharray="{$dasharrayHiking}"/>
+                            <line stroke="{$red}" dy="{$off1}" scale-dy-size="{$scaleDySize}" stroke-width="{$markedTrailWidth}" stroke-dasharray="{$dasharray}"/>
                         </rule>
                         <rule e="way" k="{$blueKey}" v="{$HikingMarking2}">
-                            <line stroke="{$blue}" dy="{$off2}" scale-dy-size="{$scaleDySize}" stroke-width="{$markedTrailWidth}" stroke-dasharray="{$dasharrayHiking}"/>
+                            <line stroke="{$blue}" dy="{$off2}" scale-dy-size="{$scaleDySize}" stroke-width="{$markedTrailWidth}" stroke-dasharray="{$dasharray}"/>
                         </rule>
                         <rule e="way" k="{$greenKey}" v="{$HikingMarking2}">
-                            <line stroke="{$green}" dy="{$off3}" scale-dy-size="{$scaleDySize}" stroke-width="{$markedTrailWidth}" stroke-dasharray="{$dasharrayHiking}"/>
+                            <line stroke="{$green}" dy="{$off3}" scale-dy-size="{$scaleDySize}" stroke-width="{$markedTrailWidth}" stroke-dasharray="{$dasharray}"/>
                         </rule>
                     </rule>
                 </rule>
@@ -297,19 +311,19 @@
                             <line stroke="{$yellow}" dy="{$off3}" scale-dy-size="{$scaleDySize}" stroke-width="{$markedTrailWidth}"/>
                         </rule>
                         <rule e="way" k="{$redKey}" v="{$HikingMarking2}">
-                            <line stroke="{$red}" dy="{$off1}" scale-dy-size="{$scaleDySize}" stroke-width="{$markedTrailWidth}" stroke-dasharray="{$dasharrayHiking}"/>
+                            <line stroke="{$red}" dy="{$off1}" scale-dy-size="{$scaleDySize}" stroke-width="{$markedTrailWidth}" stroke-dasharray="{$dasharray}"/>
                         </rule>
                         <rule e="way" k="{$blueKey}" v="{$HikingMarking2}">
-                            <line stroke="{$blue}" dy="{$off2}" scale-dy-size="{$scaleDySize}" stroke-width="{$markedTrailWidth}" stroke-dasharray="{$dasharrayHiking}"/>
+                            <line stroke="{$blue}" dy="{$off2}" scale-dy-size="{$scaleDySize}" stroke-width="{$markedTrailWidth}" stroke-dasharray="{$dasharray}"/>
                         </rule>
                         <rule e="way" k="{$blueKey}" v="{$HikingMarking2}">
-                            <line stroke="{$blue}" dy="{$off2}" scale-dy-size="{$scaleDySize}" stroke-width="{$markedTrailWidth}" stroke-dasharray="{$dasharrayHiking}"/>
+                            <line stroke="{$blue}" dy="{$off2}" scale-dy-size="{$scaleDySize}" stroke-width="{$markedTrailWidth}" stroke-dasharray="{$dasharray}"/>
                         </rule>
                         <rule e="way" k="{$yellowKey}" v="{$HikingMarking2}">
-                            <line stroke="{$yellow}" dy="{$off3}" scale-dy-size="{$scaleDySize}" stroke-width="{$markedTrailWidth}" stroke-dasharray="{$dasharrayHiking}"/>
+                            <line stroke="{$yellow}" dy="{$off3}" scale-dy-size="{$scaleDySize}" stroke-width="{$markedTrailWidth}" stroke-dasharray="{$dasharray}"/>
                         </rule>
                         <rule e="way" k="{$yellowKey}" v="{$HikingMarking2}">
-                            <line stroke="{$yellow}" dy="{$off3}" scale-dy-size="{$scaleDySize}" stroke-width="{$markedTrailWidth}" stroke-dasharray="{$dasharrayHiking}"/>
+                            <line stroke="{$yellow}" dy="{$off3}" scale-dy-size="{$scaleDySize}" stroke-width="{$markedTrailWidth}" stroke-dasharray="{$dasharray}"/>
                         </rule>
                     </rule>
 
@@ -321,10 +335,10 @@
                             <line stroke="{$blue}" dy="{$off2}" scale-dy-size="{$scaleDySize}" stroke-width="{$markedTrailWidth}"/>
                         </rule>
                         <rule e="way" k="{$redKey}" v="{$HikingMarking2}">
-                            <line stroke="{$red}" dy="{$off1}" scale-dy-size="{$scaleDySize}" stroke-width="{$markedTrailWidth}" stroke-dasharray="{$dasharrayHiking}"/>
+                            <line stroke="{$red}" dy="{$off1}" scale-dy-size="{$scaleDySize}" stroke-width="{$markedTrailWidth}" stroke-dasharray="{$dasharray}"/>
                         </rule>
                         <rule e="way" k="{$blueKey}" v="{$HikingMarking2}">
-                            <line stroke="{$blue}" dy="{$off2}" scale-dy-size="{$scaleDySize}" stroke-width="{$markedTrailWidth}" stroke-dasharray="{$dasharrayHiking}"/>
+                            <line stroke="{$blue}" dy="{$off2}" scale-dy-size="{$scaleDySize}" stroke-width="{$markedTrailWidth}" stroke-dasharray="{$dasharray}"/>
                         </rule>
                     </rule>
                 </rule>
@@ -343,13 +357,13 @@
                             <line stroke="{$yellow}" dy="{$off3}" scale-dy-size="{$scaleDySize}" stroke-width="{$markedTrailWidth}"/>
                         </rule>
                         <rule e="way" k="{$redKey}" v="{$HikingMarking2}">
-                            <line stroke="{$red}" dy="{$off1}" scale-dy-size="{$scaleDySize}" stroke-width="{$markedTrailWidth}" stroke-dasharray="{$dasharrayHiking}"/>
+                            <line stroke="{$red}" dy="{$off1}" scale-dy-size="{$scaleDySize}" stroke-width="{$markedTrailWidth}" stroke-dasharray="{$dasharray}"/>
                         </rule>
                         <rule e="way" k="{$greenKey}" v="{$HikingMarking2}">
-                            <line stroke="{$green}" dy="{$off2}" scale-dy-size="{$scaleDySize}" stroke-width="{$markedTrailWidth}" stroke-dasharray="{$dasharrayHiking}"/>
+                            <line stroke="{$green}" dy="{$off2}" scale-dy-size="{$scaleDySize}" stroke-width="{$markedTrailWidth}" stroke-dasharray="{$dasharray}"/>
                         </rule>
                         <rule e="way" k="{$yellowKey}" v="{$HikingMarking2}">
-                            <line stroke="{$yellow}" dy="{$off3}" scale-dy-size="{$scaleDySize}" stroke-width="{$markedTrailWidth}" stroke-dasharray="{$dasharrayHiking}"/>
+                            <line stroke="{$yellow}" dy="{$off3}" scale-dy-size="{$scaleDySize}" stroke-width="{$markedTrailWidth}" stroke-dasharray="{$dasharray}"/>
                         </rule>
                     </rule>
 
@@ -361,10 +375,10 @@
                             <line stroke="{$green}" dy="{$off2}" scale-dy-size="{$scaleDySize}" stroke-width="{$markedTrailWidth}"/>
                         </rule>
                         <rule e="way" k="{$redKey}" v="{$HikingMarking2}">
-                            <line stroke="{$red}" dy="{$off1}" scale-dy-size="{$scaleDySize}" stroke-width="{$markedTrailWidth}" stroke-dasharray="{$dasharrayHiking}"/>
+                            <line stroke="{$red}" dy="{$off1}" scale-dy-size="{$scaleDySize}" stroke-width="{$markedTrailWidth}" stroke-dasharray="{$dasharray}"/>
                         </rule>
                         <rule e="way" k="{$greenKey}" v="{$HikingMarking2}">
-                            <line stroke="{$green}" dy="{$off2}" scale-dy-size="{$scaleDySize}" stroke-width="{$markedTrailWidth}" stroke-dasharray="{$dasharrayHiking}"/>
+                            <line stroke="{$green}" dy="{$off2}" scale-dy-size="{$scaleDySize}" stroke-width="{$markedTrailWidth}" stroke-dasharray="{$dasharray}"/>
                         </rule>
                     </rule>
                 </rule>
@@ -378,10 +392,10 @@
                             <line stroke="{$yellow}" dy="{$off2}" scale-dy-size="{$scaleDySize}" stroke-width="{$markedTrailWidth}"/>
                         </rule>
                         <rule e="way" k="{$redKey}" v="{$HikingMarking2}">
-                            <line stroke="{$red}" dy="{$off1}" scale-dy-size="{$scaleDySize}" stroke-width="{$markedTrailWidth}" stroke-dasharray="{$dasharrayHiking}"/>
+                            <line stroke="{$red}" dy="{$off1}" scale-dy-size="{$scaleDySize}" stroke-width="{$markedTrailWidth}" stroke-dasharray="{$dasharray}"/>
                         </rule>
                         <rule e="way" k="{$yellowKey}" v="{$HikingMarking2}">
-                            <line stroke="{$yellow}" dy="{$off2}" scale-dy-size="{$scaleDySize}" stroke-width="{$markedTrailWidth}" stroke-dasharray="{$dasharrayHiking}"/>
+                            <line stroke="{$yellow}" dy="{$off2}" scale-dy-size="{$scaleDySize}" stroke-width="{$markedTrailWidth}" stroke-dasharray="{$dasharray}"/>
                         </rule>
 
                     </rule>
@@ -391,7 +405,7 @@
                             <line stroke="{$red}" dy="{$off1}" scale-dy-size="{$scaleDySize}" stroke-width="{$markedTrailWidth}"/>
                         </rule>
                         <rule e="way" k="{$redKey}" v="{$HikingMarking2}">
-                            <line stroke="{$red}" dy="{$off1}" scale-dy-size="{$scaleDySize}" stroke-width="{$markedTrailWidth}" stroke-dasharray="{$dasharrayHiking}"/>
+                            <line stroke="{$red}" dy="{$off1}" scale-dy-size="{$scaleDySize}" stroke-width="{$markedTrailWidth}" stroke-dasharray="{$dasharray}"/>
                         </rule>
                     </rule>
                 </rule>
@@ -412,13 +426,13 @@
                             <line stroke="{$yellow}" dy="{$off3}" scale-dy-size="{$scaleDySize}" stroke-width="{$markedTrailWidth}"/>
                         </rule>
                         <rule e="way" k="{$blueKey}" v="{$HikingMarking2}">
-                            <line stroke="{$blue}" dy="{$off1}" scale-dy-size="{$scaleDySize}" stroke-width="{$markedTrailWidth}" stroke-dasharray="{$dasharrayHiking}"/>
+                            <line stroke="{$blue}" dy="{$off1}" scale-dy-size="{$scaleDySize}" stroke-width="{$markedTrailWidth}" stroke-dasharray="{$dasharray}"/>
                         </rule>
                         <rule e="way" k="{$greenKey}" v="{$HikingMarking2}">
-                            <line stroke="{$green}" dy="{$off2}" scale-dy-size="{$scaleDySize}" stroke-width="{$markedTrailWidth}" stroke-dasharray="{$dasharrayHiking}"/>
+                            <line stroke="{$green}" dy="{$off2}" scale-dy-size="{$scaleDySize}" stroke-width="{$markedTrailWidth}" stroke-dasharray="{$dasharray}"/>
                         </rule>
                         <rule e="way" k="{$yellowKey}" v="{$HikingMarking2}">
-                            <line stroke="{$yellow}" dy="{$off3}" scale-dy-size="{$scaleDySize}" stroke-width="{$markedTrailWidth}" stroke-dasharray="{$dasharrayHiking}"/>
+                            <line stroke="{$yellow}" dy="{$off3}" scale-dy-size="{$scaleDySize}" stroke-width="{$markedTrailWidth}" stroke-dasharray="{$dasharray}"/>
                         </rule>
                     </rule>
 
@@ -430,10 +444,10 @@
                             <line stroke="{$green}" dy="{$off2}" scale-dy-size="{$scaleDySize}" stroke-width="{$markedTrailWidth}"/>
                         </rule>
                         <rule e="way" k="{$blueKey}" v="{$HikingMarking2}">
-                            <line stroke="{$blue}" dy="{$off1}" scale-dy-size="{$scaleDySize}" stroke-width="{$markedTrailWidth}" stroke-dasharray="{$dasharrayHiking}"/>
+                            <line stroke="{$blue}" dy="{$off1}" scale-dy-size="{$scaleDySize}" stroke-width="{$markedTrailWidth}" stroke-dasharray="{$dasharray}"/>
                         </rule>
                         <rule e="way" k="{$greenKey}" v="{$HikingMarking2}">
-                            <line stroke="{$green}" dy="{$off2}" scale-dy-size="{$scaleDySize}" stroke-width="{$markedTrailWidth}" stroke-dasharray="{$dasharrayHiking}"/>
+                            <line stroke="{$green}" dy="{$off2}" scale-dy-size="{$scaleDySize}" stroke-width="{$markedTrailWidth}" stroke-dasharray="{$dasharray}"/>
                         </rule>
                     </rule>
                 </rule>
@@ -447,10 +461,10 @@
                             <line stroke="{$yellow}" dy="{$off2}" scale-dy-size="{$scaleDySize}" stroke-width="{$markedTrailWidth}"/>
                         </rule>
                         <rule e="way" k="{$blueKey}" v="{$HikingMarking2}">
-                            <line stroke="{$blue}" dy="{$off1}" scale-dy-size="{$scaleDySize}" stroke-width="{$markedTrailWidth}" stroke-dasharray="{$dasharrayHiking}"/>
+                            <line stroke="{$blue}" dy="{$off1}" scale-dy-size="{$scaleDySize}" stroke-width="{$markedTrailWidth}" stroke-dasharray="{$dasharray}"/>
                         </rule>
                         <rule e="way" k="{$yellowKey}" v="{$HikingMarking2}">
-                            <line stroke="{$yellow}" dy="{$off2}" scale-dy-size="{$scaleDySize}" stroke-width="{$markedTrailWidth}" stroke-dasharray="{$dasharrayHiking}"/>
+                            <line stroke="{$yellow}" dy="{$off2}" scale-dy-size="{$scaleDySize}" stroke-width="{$markedTrailWidth}" stroke-dasharray="{$dasharray}"/>
                         </rule>
                     </rule>
 
@@ -459,7 +473,7 @@
                             <line stroke="{$blue}" dy="{$off1}" scale-dy-size="{$scaleDySize}" stroke-width="{$markedTrailWidth}"/>
                         </rule>
                         <rule e="way" k="{$blueKey}" v="{$HikingMarking2}">
-                            <line stroke="{$blue}" dy="{$off1}" scale-dy-size="{$scaleDySize}" stroke-width="{$markedTrailWidth}" stroke-dasharray="{$dasharrayHiking}"/>
+                            <line stroke="{$blue}" dy="{$off1}" scale-dy-size="{$scaleDySize}" stroke-width="{$markedTrailWidth}" stroke-dasharray="{$dasharray}"/>
                         </rule>
                     </rule>
                 </rule>
@@ -475,10 +489,10 @@
                             <line stroke="{$yellow}" dy="{$off2}" scale-dy-size="{$scaleDySize}" stroke-width="{$markedTrailWidth}"/>
                         </rule>
                         <rule e="way" k="{$greenKey}" v="{$HikingMarking2}">
-                            <line stroke="{$green}" dy="{$off1}" scale-dy-size="{$scaleDySize}" stroke-width="{$markedTrailWidth}" stroke-dasharray="{$dasharrayHiking}"/>
+                            <line stroke="{$green}" dy="{$off1}" scale-dy-size="{$scaleDySize}" stroke-width="{$markedTrailWidth}" stroke-dasharray="{$dasharray}"/>
                         </rule>
                         <rule e="way" k="{$yellowKey}" v="{$HikingMarking2}">
-                            <line stroke="{$yellow}" dy="{$off2}" scale-dy-size="{$scaleDySize}" stroke-width="{$markedTrailWidth}" stroke-dasharray="{$dasharrayHiking}"/>
+                            <line stroke="{$yellow}" dy="{$off2}" scale-dy-size="{$scaleDySize}" stroke-width="{$markedTrailWidth}" stroke-dasharray="{$dasharray}"/>
                         </rule>
                     </rule>
 
@@ -487,7 +501,7 @@
                             <line stroke="{$green}" dy="{$off1}" scale-dy-size="{$scaleDySize}" stroke-width="{$markedTrailWidth}"/>
                         </rule>
                         <rule e="way" k="{$greenKey}" v="{$HikingMarking2}">
-                            <line stroke="{$green}" dy="{$off1}" scale-dy-size="{$scaleDySize}" stroke-width="{$markedTrailWidth}" stroke-dasharray="{$dasharrayHiking}"/>
+                            <line stroke="{$green}" dy="{$off1}" scale-dy-size="{$scaleDySize}" stroke-width="{$markedTrailWidth}" stroke-dasharray="{$dasharray}"/>
                         </rule>
                     </rule>
                 </rule>
@@ -498,7 +512,7 @@
                             <line stroke="{$yellow}" dy="{$off1}" scale-dy-size="{$scaleDySize}" stroke-width="{$markedTrailWidth}"/>
                         </rule>
                         <rule e="way" k="{$yellowKey}" v="{$HikingMarking2}">
-                            <line stroke="{$yellow}" dy="{$off1}" scale-dy-size="{$scaleDySize}" stroke-width="{$markedTrailWidth}" stroke-dasharray="{$dasharrayHiking}"/>
+                            <line stroke="{$yellow}" dy="{$off1}" scale-dy-size="{$scaleDySize}" stroke-width="{$markedTrailWidth}" stroke-dasharray="{$dasharray}"/>
                         </rule>
                     </rule>
 
@@ -513,7 +527,7 @@
 
     </xsl:template>
 
-    <xsl:template name="markedTrailsCycle">
+    <xsl:template name="markedTrailsSingle">
         <xsl:param name="redKey" />
         <xsl:param name="blueKey" />
         <xsl:param name="greenKey" />
@@ -522,6 +536,8 @@
 
         <xsl:param name="side" />
 
+        <xsl:param name="dasharray" />
+        
         <xsl:variable name="off1"><xsl:value-of select="concat($side * $offset1, 'dp')"/></xsl:variable>
         <xsl:variable name="off2"><xsl:value-of select="concat($side * $offset2, 'dp')"/></xsl:variable>
         <xsl:variable name="off3"><xsl:value-of select="concat($side * $offset3, 'dp')"/></xsl:variable>
@@ -531,29 +547,29 @@
             <rule e="way" k="{$blueKey}" v="*">
                 <rule e="way" k="{$greenKey}" v="*">
                     <rule e="way" k="{$yellowKey}" v="*">
-                        <line stroke="{$red}" dy="{$off1}" scale-dy-size="{$scaleDySize}" stroke-dasharray="{$dasharrayCycle}" stroke-width="{$markedTrailWidth}"/>
-                        <line stroke="{$blue}" dy="{$off2}" scale-dy-size="{$scaleDySize}" stroke-dasharray="{$dasharrayCycle}" stroke-width="{$markedTrailWidth}"/>
-                        <line stroke="{$green}" dy="{$off3}" scale-dy-size="{$scaleDySize}" stroke-dasharray="{$dasharrayCycle}" stroke-width="{$markedTrailWidth}"/>
-                        <line stroke="{$yellow}" dy="{$off4}" scale-dy-size="{$scaleDySize}" stroke-dasharray="{$dasharrayCycle}" stroke-width="{$markedTrailWidth}"/>
+                        <line stroke="{$red}" dy="{$off1}" scale-dy-size="{$scaleDySize}" stroke-dasharray="{$dasharray}" stroke-width="{$markedTrailWidth}"/>
+                        <line stroke="{$blue}" dy="{$off2}" scale-dy-size="{$scaleDySize}" stroke-dasharray="{$dasharray}" stroke-width="{$markedTrailWidth}"/>
+                        <line stroke="{$green}" dy="{$off3}" scale-dy-size="{$scaleDySize}" stroke-dasharray="{$dasharray}" stroke-width="{$markedTrailWidth}"/>
+                        <line stroke="{$yellow}" dy="{$off4}" scale-dy-size="{$scaleDySize}" stroke-dasharray="{$dasharray}" stroke-width="{$markedTrailWidth}"/>
                     </rule>
 
                     <rule e="way" k="{$yellowKey}" v="~">
-                        <line stroke="{$red}" dy="{$off1}" scale-dy-size="{$scaleDySize}" stroke-dasharray="{$dasharrayCycle}" stroke-width="{$markedTrailWidth}"/>
-                        <line stroke="{$blue}" dy="{$off2}" scale-dy-size="{$scaleDySize}" stroke-dasharray="{$dasharrayCycle}" stroke-width="{$markedTrailWidth}"/>
-                        <line stroke="{$green}" dy="{$off3}" scale-dy-size="{$scaleDySize}" stroke-dasharray="{$dasharrayCycle}" stroke-width="{$markedTrailWidth}"/>
+                        <line stroke="{$red}" dy="{$off1}" scale-dy-size="{$scaleDySize}" stroke-dasharray="{$dasharray}" stroke-width="{$markedTrailWidth}"/>
+                        <line stroke="{$blue}" dy="{$off2}" scale-dy-size="{$scaleDySize}" stroke-dasharray="{$dasharray}" stroke-width="{$markedTrailWidth}"/>
+                        <line stroke="{$green}" dy="{$off3}" scale-dy-size="{$scaleDySize}" stroke-dasharray="{$dasharray}" stroke-width="{$markedTrailWidth}"/>
                     </rule>
                 </rule>
 
                 <rule e="way" k="{$greenKey}" v="~">
                     <rule e="way" k="{$yellowKey}" v="*">
-                        <line stroke="{$red}" dy="{$off1}" scale-dy-size="{$scaleDySize}" stroke-dasharray="{$dasharrayCycle}" stroke-width="{$markedTrailWidth}"/>
-                        <line stroke="{$blue}" dy="{$off2}" scale-dy-size="{$scaleDySize}" stroke-dasharray="{$dasharrayCycle}" stroke-width="{$markedTrailWidth}"/>
-                        <line stroke="{$yellow}" dy="{$off3}" scale-dy-size="{$scaleDySize}" stroke-dasharray="{$dasharrayCycle}" stroke-width="{$markedTrailWidth}"/>
+                        <line stroke="{$red}" dy="{$off1}" scale-dy-size="{$scaleDySize}" stroke-dasharray="{$dasharray}" stroke-width="{$markedTrailWidth}"/>
+                        <line stroke="{$blue}" dy="{$off2}" scale-dy-size="{$scaleDySize}" stroke-dasharray="{$dasharray}" stroke-width="{$markedTrailWidth}"/>
+                        <line stroke="{$yellow}" dy="{$off3}" scale-dy-size="{$scaleDySize}" stroke-dasharray="{$dasharray}" stroke-width="{$markedTrailWidth}"/>
                     </rule>
 
                     <rule e="way" k="{$yellowKey}" v="~">
-                        <line stroke="{$red}" dy="{$off1}" scale-dy-size="{$scaleDySize}" stroke-dasharray="{$dasharrayCycle}" stroke-width="{$markedTrailWidth}"/>
-                        <line stroke="{$blue}" dy="{$off2}" scale-dy-size="{$scaleDySize}" stroke-dasharray="{$dasharrayCycle}" stroke-width="{$markedTrailWidth}"/>
+                        <line stroke="{$red}" dy="{$off1}" scale-dy-size="{$scaleDySize}" stroke-dasharray="{$dasharray}" stroke-width="{$markedTrailWidth}"/>
+                        <line stroke="{$blue}" dy="{$off2}" scale-dy-size="{$scaleDySize}" stroke-dasharray="{$dasharray}" stroke-width="{$markedTrailWidth}"/>
                     </rule>
                 </rule>
             </rule>
@@ -561,25 +577,25 @@
             <rule e="way" k="{$blueKey}" v="~">
                 <rule e="way" k="{$greenKey}" v="*">
                     <rule e="way" k="{$yellowKey}" v="*">
-                        <line stroke="{$red}" dy="{$off1}" scale-dy-size="{$scaleDySize}" stroke-dasharray="{$dasharrayCycle}" stroke-width="{$markedTrailWidth}"/>
-                        <line stroke="{$green}" dy="{$off2}" scale-dy-size="{$scaleDySize}" stroke-dasharray="{$dasharrayCycle}" stroke-width="{$markedTrailWidth}"/>
-                        <line stroke="{$yellow}" dy="{$off3}" scale-dy-size="{$scaleDySize}" stroke-dasharray="{$dasharrayCycle}" stroke-width="{$markedTrailWidth}"/>
+                        <line stroke="{$red}" dy="{$off1}" scale-dy-size="{$scaleDySize}" stroke-dasharray="{$dasharray}" stroke-width="{$markedTrailWidth}"/>
+                        <line stroke="{$green}" dy="{$off2}" scale-dy-size="{$scaleDySize}" stroke-dasharray="{$dasharray}" stroke-width="{$markedTrailWidth}"/>
+                        <line stroke="{$yellow}" dy="{$off3}" scale-dy-size="{$scaleDySize}" stroke-dasharray="{$dasharray}" stroke-width="{$markedTrailWidth}"/>
                     </rule>
 
                     <rule e="way" k="{$yellowKey}" v="~">
-                        <line stroke="{$red}" dy="{$off1}" scale-dy-size="{$scaleDySize}" stroke-dasharray="{$dasharrayCycle}" stroke-width="{$markedTrailWidth}"/>
-                        <line stroke="{$green}" dy="{$off2}" scale-dy-size="{$scaleDySize}" stroke-dasharray="{$dasharrayCycle}" stroke-width="{$markedTrailWidth}"/>
+                        <line stroke="{$red}" dy="{$off1}" scale-dy-size="{$scaleDySize}" stroke-dasharray="{$dasharray}" stroke-width="{$markedTrailWidth}"/>
+                        <line stroke="{$green}" dy="{$off2}" scale-dy-size="{$scaleDySize}" stroke-dasharray="{$dasharray}" stroke-width="{$markedTrailWidth}"/>
                     </rule>
                 </rule>
 
                 <rule e="way" k="{$greenKey}" v="~">
                     <rule e="way" k="{$yellowKey}" v="*">
-                        <line stroke="{$red}" dy="{$off1}" scale-dy-size="{$scaleDySize}" stroke-dasharray="{$dasharrayCycle}" stroke-width="{$markedTrailWidth}"/>
-                        <line stroke="{$yellow}" dy="{$off2}" scale-dy-size="{$scaleDySize}" stroke-dasharray="{$dasharrayCycle}" stroke-width="{$markedTrailWidth}"/>
+                        <line stroke="{$red}" dy="{$off1}" scale-dy-size="{$scaleDySize}" stroke-dasharray="{$dasharray}" stroke-width="{$markedTrailWidth}"/>
+                        <line stroke="{$yellow}" dy="{$off2}" scale-dy-size="{$scaleDySize}" stroke-dasharray="{$dasharray}" stroke-width="{$markedTrailWidth}"/>
                     </rule>
 
                     <rule e="way" k="{$yellowKey}" v="~">
-                        <line stroke="{$red}" dy="{$off1}" scale-dy-size="{$scaleDySize}" stroke-dasharray="{$dasharrayCycle}" stroke-width="{$markedTrailWidth}"/>
+                        <line stroke="{$red}" dy="{$off1}" scale-dy-size="{$scaleDySize}" stroke-dasharray="{$dasharray}" stroke-width="{$markedTrailWidth}"/>
                     </rule>
                 </rule>
             </rule>
@@ -589,25 +605,25 @@
             <rule e="way" k="{$blueKey}" v="*">
                 <rule e="way" k="{$greenKey}" v="*">
                     <rule e="way" k="{$yellowKey}" v="*">
-                        <line stroke="{$blue}" dy="{$off1}" scale-dy-size="{$scaleDySize}" stroke-dasharray="{$dasharrayCycle}" stroke-width="{$markedTrailWidth}"/>
-                        <line stroke="{$green}" dy="{$off2}" scale-dy-size="{$scaleDySize}" stroke-dasharray="{$dasharrayCycle}" stroke-width="{$markedTrailWidth}"/>
-                        <line stroke="{$yellow}" dy="{$off3}" scale-dy-size="{$scaleDySize}" stroke-dasharray="{$dasharrayCycle}" stroke-width="{$markedTrailWidth}"/>
+                        <line stroke="{$blue}" dy="{$off1}" scale-dy-size="{$scaleDySize}" stroke-dasharray="{$dasharray}" stroke-width="{$markedTrailWidth}"/>
+                        <line stroke="{$green}" dy="{$off2}" scale-dy-size="{$scaleDySize}" stroke-dasharray="{$dasharray}" stroke-width="{$markedTrailWidth}"/>
+                        <line stroke="{$yellow}" dy="{$off3}" scale-dy-size="{$scaleDySize}" stroke-dasharray="{$dasharray}" stroke-width="{$markedTrailWidth}"/>
                     </rule>
 
                     <rule e="way" k="{$yellowKey}" v="~">
-                        <line stroke="{$blue}" dy="{$off1}" scale-dy-size="{$scaleDySize}" stroke-dasharray="{$dasharrayCycle}" stroke-width="{$markedTrailWidth}"/>
-                        <line stroke="{$green}" dy="{$off2}" scale-dy-size="{$scaleDySize}" stroke-dasharray="{$dasharrayCycle}" stroke-width="{$markedTrailWidth}"/>
+                        <line stroke="{$blue}" dy="{$off1}" scale-dy-size="{$scaleDySize}" stroke-dasharray="{$dasharray}" stroke-width="{$markedTrailWidth}"/>
+                        <line stroke="{$green}" dy="{$off2}" scale-dy-size="{$scaleDySize}" stroke-dasharray="{$dasharray}" stroke-width="{$markedTrailWidth}"/>
                     </rule>
                 </rule>
 
                 <rule e="way" k="{$greenKey}" v="~">
                     <rule e="way" k="{$yellowKey}" v="*">
-                        <line stroke="{$blue}" dy="{$off1}" scale-dy-size="{$scaleDySize}" stroke-dasharray="{$dasharrayCycle}" stroke-width="{$markedTrailWidth}"/>
-                        <line stroke="{$yellow}" dy="{$off2}" scale-dy-size="{$scaleDySize}" stroke-dasharray="{$dasharrayCycle}" stroke-width="{$markedTrailWidth}"/>
+                        <line stroke="{$blue}" dy="{$off1}" scale-dy-size="{$scaleDySize}" stroke-dasharray="{$dasharray}" stroke-width="{$markedTrailWidth}"/>
+                        <line stroke="{$yellow}" dy="{$off2}" scale-dy-size="{$scaleDySize}" stroke-dasharray="{$dasharray}" stroke-width="{$markedTrailWidth}"/>
                     </rule>
 
                     <rule e="way" k="{$yellowKey}" v="~">
-                        <line stroke="{$blue}" dy="{$off1}" scale-dy-size="{$scaleDySize}" stroke-dasharray="{$dasharrayCycle}" stroke-width="{$markedTrailWidth}"/>
+                        <line stroke="{$blue}" dy="{$off1}" scale-dy-size="{$scaleDySize}" stroke-dasharray="{$dasharray}" stroke-width="{$markedTrailWidth}"/>
                     </rule>
                 </rule>
             </rule>
@@ -615,23 +631,23 @@
             <rule e="way" k="{$blueKey}" v="~">
                 <rule e="way" k="{$greenKey}" v="*">
                     <rule e="way" k="{$yellowKey}" v="*">
-                        <line stroke="{$green}" dy="{$off1}" scale-dy-size="{$scaleDySize}" stroke-dasharray="{$dasharrayCycle}" stroke-width="{$markedTrailWidth}"/>
-                        <line stroke="{$yellow}" dy="{$off2}" scale-dy-size="{$scaleDySize}" stroke-dasharray="{$dasharrayCycle}" stroke-width="{$markedTrailWidth}"/>
+                        <line stroke="{$green}" dy="{$off1}" scale-dy-size="{$scaleDySize}" stroke-dasharray="{$dasharray}" stroke-width="{$markedTrailWidth}"/>
+                        <line stroke="{$yellow}" dy="{$off2}" scale-dy-size="{$scaleDySize}" stroke-dasharray="{$dasharray}" stroke-width="{$markedTrailWidth}"/>
                     </rule>
 
                     <rule e="way" k="{$yellowKey}" v="~">
-                        <line stroke="{$green}" dy="{$off1}" scale-dy-size="{$scaleDySize}" stroke-dasharray="{$dasharrayCycle}" stroke-width="{$markedTrailWidth}"/>
+                        <line stroke="{$green}" dy="{$off1}" scale-dy-size="{$scaleDySize}" stroke-dasharray="{$dasharray}" stroke-width="{$markedTrailWidth}"/>
                     </rule>
                 </rule>
 
                 <rule e="way" k="{$greenKey}" v="~">
                     <rule e="way" k="{$yellowKey}" v="*">
-                        <line stroke="{$yellow}" dy="{$off1}" scale-dy-size="{$scaleDySize}" stroke-dasharray="{$dasharrayCycle}" stroke-width="{$markedTrailWidth}"/>
+                        <line stroke="{$yellow}" dy="{$off1}" scale-dy-size="{$scaleDySize}" stroke-dasharray="{$dasharray}" stroke-width="{$markedTrailWidth}"/>
                     </rule>
 
                     <rule e="way" k="{$yellowKey}" v="~">
                         <rule e="way" k="{$fallbackKey}" v="*">
-                            <line stroke="{$fallback}" dy="{$off1}" scale-dy-size="{$scaleDySize}" stroke-dasharray="{$dasharrayCycle}" stroke-width="{$markedTrailWidth}"/>
+                            <line stroke="{$fallback}" dy="{$off1}" scale-dy-size="{$scaleDySize}" stroke-dasharray="{$dasharray}" stroke-width="{$markedTrailWidth}"/>
                         </rule>
                     </rule>
                 </rule>

@@ -21,6 +21,11 @@
             <cat id="cycle" />
             <cat id="hikingcycle" />
         </layer>
+        <layer id="ski" enabled="false" visible="false">
+            <name lang="en" value="Ski trails" />
+            <name lang="sk" value="Lyžiarske značky" />
+            <cat id="ski" />
+        </layer>
         <layer id="topo" visible="true">
             <name lang="en" value="Topo" />
             <name lang="sk" value="Topo" />
@@ -29,6 +34,7 @@
             <overlay id="contours" />
             <overlay id="hiking" />
             <overlay id="cycle" />
+            <overlay id="ski" />
         </layer>
         <layer id="default" visible="true">
             <name lang="en" value="Default" />
