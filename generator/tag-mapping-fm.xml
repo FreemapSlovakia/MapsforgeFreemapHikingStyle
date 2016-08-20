@@ -47,7 +47,6 @@
 		<osm-tag key="amenity" value="ranger_house" zoom-appear="14" />
 		<osm-tag key="amenity" value="shelter" zoom-appear="15" />
 		<osm-tag key="amenity" value="feeding_place" zoom-appear="15" />
-		
 
 		<osm-tag key="emergency" value="phone" zoom-appear="16" />
 
@@ -94,7 +93,9 @@
 
 		<osm-tag key="information" value="guidepost" renderable="false" />
 		<osm-tag key="information" value="map" renderable="false" />
-		
+
+		<osm-tag key="amenity" value="feeding_place" renderable="14" />
+
 		<osm-tag key="ski" value="yes" equivalent-values="1,true" renderable="false" />
 		<osm-tag key="ski" value="no" equivalent-values="0,false" renderable="false" />
 		<osm-tag key="hiking" value="yes" equivalent-values="1,true" renderable="false" />
