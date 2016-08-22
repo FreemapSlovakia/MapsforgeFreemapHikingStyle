@@ -18,7 +18,8 @@
     <xsl:include href="waterways.xslt" />
     <xsl:include href="pistes.xslt" />
     <xsl:include href="aerialways.xslt" />
-
+    <xsl:include href="osmmapper.xslt" />
+    
     <xsl:template match="/">
 
         <rendertheme version="1" locus-extended="1" xsi:schemaLocation="http://mapsforge.org/renderTheme ../renderTheme.xsd" map-background="#FBFBF9" map-background-outside="#dddddd">
@@ -313,7 +314,7 @@
 
             <xsl:call-template name="markedTrailsAll"/>
             <xsl:call-template name="markedTrailsAllNew"/>
-
+            <xsl:call-template name="fixme_node"/>
         </rendertheme>
     </xsl:template>
 

@@ -189,7 +189,7 @@
                         </rule>
                     </rule>
                     <rule e="way" k="highway" v="path" zoom-min="13">
-                        <line stroke="#6A5B47" stroke-width="0.3dp" stroke-dasharray="5,5" stroke-linecap="butt"/>
+                        <line stroke="#6A5B47" stroke-width="0.4dp" stroke-dasharray="3,3" stroke-linecap="butt"/>
                         <rule e="way" k="*" v="*" zoom-min="15">
                             <pathText k="name" font-style="bold" font-size="10dp" stroke="#d0d0d0" stroke-width="2.0dp"/>
                         </rule>

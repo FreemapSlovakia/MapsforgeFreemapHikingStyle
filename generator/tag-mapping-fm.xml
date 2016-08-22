@@ -673,4 +673,13 @@
 		<osm-tag key="man_made" value="pipeline" zoom-appear="14" />
 		<osm-tag key="location" value="overground" renderable="false" />
 	</ways>
+
+	<!-- OSM mapper -->
+	<pois>
+		<osm-tag key="fixme" value="continue" zoom-appear="14" />
+		<osm-tag key="fixme" value="incomplete" zoom-appear="14" />
+		<osm-tag key="fixme" value="resurvey" zoom-appear="14" />
+		<osm-tag key="fixme" value="cross or shrine" zoom-appear="14" />
+	</pois>
+
 </tag-mapping>

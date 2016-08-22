@@ -4,6 +4,11 @@
 
     <xsl:template name="menu">
         <stylemenu id="fmskmenu" defaultvalue="topo" defaultlang="sk">
+        <layer id="osmmapper" enabled="false" visible="false">
+            <name lang="en" value="OSM mapper" />
+            <name lang="sk" value="OSM mapper" />
+            <cat id="osmmapper" />
+        </layer>
         <layer id="contours" enabled="true" visible="false">
             <name lang="en" value="Contours" />
             <name lang="sk" value="Vrstevnice" />
@@ -35,10 +40,12 @@
             <overlay id="hiking" />
             <overlay id="cycle" />
             <overlay id="ski" />
+            <overlay id="osmmapper" />
         </layer>
         <layer id="default" visible="true">
             <name lang="en" value="Default" />
             <name lang="sk" value="Všeobecná" />
+            <overlay id="osmmapper" />
         </layer>
         <layer id="hiking_old" visible="true">
             <name lang="en" value="Hiking (old version)" />
@@ -46,6 +53,7 @@
             <cat id="hiking_old" />
             <cat id="topo_common" />
             <overlay id="contours" />
+            <overlay id="osmmapper" />
         </layer>
         <layer id="cycle_old" visible="true">
             <name lang="en" value="Cycle (old version)" />
@@ -53,6 +61,7 @@
             <cat id="cycle_old" />
             <cat id="topo_common" />
             <overlay id="contours" />
+            <overlay id="osmmapper" />
         </layer>
         </stylemenu>
     </xsl:template>
