@@ -131,6 +131,9 @@
 	<pois>
 		<osm-tag key="barrier" value="bollard" zoom-appear="15" />
 		<osm-tag key="barrier" value="cycle_barrier" zoom-appear="15" />
+		<osm-tag key="barrier" value="lift_gate" zoom-appear="15" />
+		<osm-tag key="barrier" value="gate" zoom-appear="15" />
+		<osm-tag key="barrier" value="entrance" zoom-appear="15" />
 
 		<osm-tag key="man_made" value="lighthouse" zoom-appear="15" />
 		<osm-tag key="man_made" value="surveillance" zoom-appear="15" />
