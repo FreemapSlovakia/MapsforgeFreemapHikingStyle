@@ -4,6 +4,28 @@
 
     <xsl:template name="natural_ways">
         <rule e="way" k="natural" v="*">
+        <rule cat="topo_common" e="way" k="natural" v="valley" zoom-min="14">
+            <rule e="way" k="*" v="*" zoom-min="14" zoom-max="15">
+                <pathText k="name" font-style="bold" font-size="5dp" fill="#DDFFFFFF" stroke="#66000000" stroke-width="1.6dp" />
+            </rule>
+            <rule e="way" k="*" v="*" zoom-min="16" zoom-max="17">
+                <pathText k="name" font-style="bold" font-size="7dp" fill="#EEFFFFFF" stroke="#66000000" stroke-width="1.8dp" />
+             </rule>
+             <rule e="way" k="*" v="*" zoom-min="18">
+               <pathText k="name" font-style="bold" font-size="10dp" fill="#EEFFFFFF" stroke="#66000000" stroke-width="2dp" />
+            </rule>
+        </rule>
+        <rule cat="topo_common" e="way" k="natural" v="ridge" zoom-min="14"> 
+            <rule e="way" k="*" v="*" zoom-min="14" zoom-max="15">
+                <pathText k="name" font-style="bold" font-size="5dp" fill="#DDFFFFFF" stroke="#66000000" stroke-width="1.6dp" />
+            </rule>
+            <rule e="way" k="*" v="*" zoom-min="16" zoom-max="17">
+                <pathText k="name" font-style="bold" font-size="7dp" fill="#EEFFFFFF" stroke="#66000000" stroke-width="1.8dp" />
+            </rule>
+            <rule e="way" k="*" v="*" zoom-min="18">
+                <pathText k="name" font-style="bold" font-size="10dp" fill="#EEFFFFFF" stroke="#66000000" stroke-width="2dp" />
+            </rule>
+        </rule>
             <rule e="way" k="natural" v="coastline">
                 <rule e="way" k="*" v="*" closed="no">
                     <line stroke="#708599" stroke-width="2.0dp"/>
@@ -40,6 +62,14 @@
 
     <xsl:template name="natural_nodes">
         <rule cat="topo_common" e="node" k="natural" v="*">
+            <rule e="node" k="natural" v="valley" zoom-min="15">
+                <caption k="name" font-style="bold" font-size="9dp" fill="#DDFFFFFF" stroke="#55000000" stroke-width="1.6dp"/>
+            </rule>
+            <rule e="node" k="natural" v="saddle" zoom-min="15">
+                <circle r="2" scale-radius="true" fill="#760000"/>
+                <caption k="name" dy="-6dp" font-style="bold" font-size="9dp" fill="#FFFFFF" stroke="#760000" stroke-width="1.6dp"/>
+                <caption k="ele" dy="8dp" font-style="bold" font-size="9dp" fill="#FFFFFF" stroke="#760000" stroke-width="1.4dp"/>
+            </rule>
             <rule e="node" k="natural" v="cave_entrance" zoom-min="14">
                 <symbol src="file:/symbols/cave_entrance.png" symbol-width="16dp"/>
                 <rule e="node" k="*" v="*" zoom-min="16">

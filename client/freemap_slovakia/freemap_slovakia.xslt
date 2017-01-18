@@ -229,8 +229,19 @@
                 <xsl:call-template name="amenity_nodes"/>
 
                 <!-- barrier -->
-                <rule e="node" k="barrier" v="bollard">
-                    <circle r="1.5" fill="#707070"/>
+                <rule e="node" k="barrier" v="*" zoom-min="15">
+                    <rule e="node" k="barrier" v="bollard">
+                        <symbol src="file:/symbols/barrier-bollard.svg" symbol-width="12dp"/>
+                    </rule>
+                    <rule e="node" k="barrier" v="block">
+                        <symbol src="file:/symbols/barrier-block.svg" symbol-width="12dp"/>
+                    </rule>
+                    <rule e="node" k="barrier" v="lift_gate">
+                        <symbol src="file:/symbols/barrier-lift_gate.svg" symbol-width="12dp"/>
+                    </rule>
+                    <rule e="node" k="barrier" v="gate">
+                        <symbol src="file:/symbols/barrier-gate.svg" symbol-width="12dp"/>
+                    </rule>
                 </rule>
                 <!-- highway -->
                 <rule e="node" k="highway" v="*">

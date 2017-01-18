@@ -118,18 +118,21 @@
 
 	<!-- NATURAL TAGS -->
 	<pois>
-		<osm-tag key="natural" value="valley" zoom-appear="6" />
+		<osm-tag key="natural" value="valley" zoom-appear="12" />
 		<osm-tag key="natural" value="cave_entrance" zoom-appear="10" />
 		<osm-tag key="natural" value="peak" zoom-appear="10" />
 		<osm-tag key="natural" value="spring" zoom-appear="12" />
 		<osm-tag key="natural" value="tree" zoom-appear="15" />
 		<osm-tag key="waterway" value="waterfall" zoom-appear="12" />
 		<osm-tag key="natural" value="volcano" zoom-appear="10" />
+		<osm-tag key="natural" value="saddle" zoom-appear="12" />
+
 	</pois>
 
 	<!-- OTHER POIS -->
 	<pois>
 		<osm-tag key="barrier" value="bollard" zoom-appear="15" />
+		<osm-tag key="barrier" value="block" zoom-appear="15" />
 		<osm-tag key="barrier" value="cycle_barrier" zoom-appear="15" />
 		<osm-tag key="barrier" value="lift_gate" zoom-appear="15" />
 		<osm-tag key="barrier" value="gate" zoom-appear="15" />
@@ -301,8 +304,8 @@
 	<!-- NATURAL / WATERWAY TAGS -->
 	<ways>
 		<osm-tag key="lock" value="yes" zoom-appear="14" />
-		<osm-tag key="natural" value="valley" zoom-appear="6" />
-		<osm-tag key="natural" value="ridge" zoom-appear="6" />
+		<osm-tag key="natural" value="valley" zoom-appear="12" />
+		<osm-tag key="natural" value="ridge" zoom-appear="12" />
 
 		<osm-tag key="natural" value="beach" zoom-appear="14" />
 		<osm-tag key="natural" value="coastline" zoom-appear="0" />
