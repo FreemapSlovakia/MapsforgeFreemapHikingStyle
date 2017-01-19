@@ -66,9 +66,11 @@
                 <caption k="name" font-style="bold" font-size="9dp" fill="#DDFFFFFF" stroke="#55000000" stroke-width="1.6dp"/>
             </rule>
             <rule e="node" k="natural" v="saddle" zoom-min="15">
-                <circle r="2" scale-radius="true" fill="#760000"/>
-                <caption k="name" dy="-6dp" font-style="bold" font-size="9dp" fill="#FFFFFF" stroke="#760000" stroke-width="1.6dp"/>
-                <caption k="ele" dy="8dp" font-style="bold" font-size="9dp" fill="#FFFFFF" stroke="#760000" stroke-width="1.4dp"/>
+                <symbol src="file:/symbols/natural-saddle.svg" symbol-width="12dp"/>
+                <rule e="node" k="*" v="*" zoom-min="16">
+                    <caption k="name" dy="-8dp" font-style="bold" font-size="10dp" fill="#e9dca2" stroke="#760000" stroke-width="1.6dp"/>
+                    <caption k="ele" dy="14dp" font-style="italic" font-size="9dp" fill="#000000" stroke="#ffffff" stroke-width="1.4dp"/>
+                </rule>
             </rule>
             <rule e="node" k="natural" v="cave_entrance" zoom-min="14">
                 <symbol src="file:/symbols/cave_entrance.png" symbol-width="16dp"/>
