@@ -6,10 +6,10 @@
         <rule e="way" k="natural" v="*">
         <rule cat="topo_common" e="way" k="natural" v="valley" zoom-min="14">
             <rule e="way" k="*" v="*" zoom-min="14" zoom-max="15">
-                <pathText k="name" font-style="bold" font-size="5dp" fill="#DDFFFFFF" stroke="#66000000" stroke-width="1.6dp" />
+                <pathText k="name" font-style="bold" font-size="6dp" fill="#DDFFFFFF" stroke="#66000000" stroke-width="1.8dp" />
             </rule>
             <rule e="way" k="*" v="*" zoom-min="16" zoom-max="17">
-                <pathText k="name" font-style="bold" font-size="7dp" fill="#EEFFFFFF" stroke="#66000000" stroke-width="1.8dp" />
+                <pathText k="name" font-style="bold" font-size="8dp" fill="#EEFFFFFF" stroke="#66000000" stroke-width="2dp" />
              </rule>
              <rule e="way" k="*" v="*" zoom-min="18">
                <pathText k="name" font-style="bold" font-size="10dp" fill="#EEFFFFFF" stroke="#66000000" stroke-width="2dp" />
@@ -17,10 +17,10 @@
         </rule>
         <rule cat="topo_common" e="way" k="natural" v="ridge" zoom-min="14"> 
             <rule e="way" k="*" v="*" zoom-min="14" zoom-max="15">
-                <pathText k="name" font-style="bold" font-size="5dp" fill="#DDFFFFFF" stroke="#66000000" stroke-width="1.6dp" />
+                <pathText k="name" font-style="bold" font-size="5dp" fill="#DDFFFFFF" stroke="#66000000" stroke-width="1.8dp" />
             </rule>
             <rule e="way" k="*" v="*" zoom-min="16" zoom-max="17">
-                <pathText k="name" font-style="bold" font-size="7dp" fill="#EEFFFFFF" stroke="#66000000" stroke-width="1.8dp" />
+                <pathText k="name" font-style="bold" font-size="7dp" fill="#EEFFFFFF" stroke="#66000000" stroke-width="2dp" />
             </rule>
             <rule e="way" k="*" v="*" zoom-min="18">
                 <pathText k="name" font-style="bold" font-size="10dp" fill="#EEFFFFFF" stroke="#66000000" stroke-width="2dp" />
@@ -63,7 +63,7 @@
     <xsl:template name="natural_nodes">
         <rule cat="topo_common" e="node" k="natural" v="*">
             <rule e="node" k="natural" v="valley" zoom-min="15">
-                <caption k="name" font-style="bold" font-size="9dp" fill="#DDFFFFFF" stroke="#55000000" stroke-width="1.6dp"/>
+                <caption k="name" font-style="bold" font-size="10dp" fill="#A0666666" stroke="#ffffff" stroke-width="2.0dp"/>
             </rule>
             <rule e="node" k="natural" v="saddle" zoom-min="15">
                 <symbol src="file:/symbols/natural-saddle.svg" symbol-width="12dp"/>
@@ -108,7 +108,7 @@
         </rule>
         <rule e="node" k="waterway" v="waterfall" zoom-min="14">
           <symbol src="file:/symbols/waterfall.svg" symbol-width="12dp"/>
-          <caption k="name" dy="+12dp" font-style="bold_italic" font-family="serif" font-size="6dp" scale-font-size="16,1.1" fill="#4040ff" stroke="#ffffff" stroke-width="1.8dp"/>
+          <caption k="name" dy="16dp" font-style="bold_italic" font-family="serif" font-size="7dp" scale-font-size="16,1.1" fill="#4040ff" stroke="#ffffff" stroke-width="1.8dp"/>
         </rule>
         <rule cat="topo_common" e="node" k="amenity" v="hunting_stand" zoom-min="14">
             <symbol src="file:/symbols/hunting_stand.svg" symbol-width="14dp"/>
