@@ -17,3 +17,9 @@ xsltproc freemap_slovakia.xslt > freemap_slovakia.xml && adb push freemap_slovak
 ```
 
 Then re-select the theme in Locus.
+
+## Usage in other mapsforge apps
+
+1. Create xml file with xsltproc 
+2. Run 'VanillaMapsforge.sh' script (script removes all Locus specific tags)
+3. Put files where needed (you must find proper path for your app)
