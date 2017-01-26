@@ -47,6 +47,7 @@
 		<osm-tag key="amenity" value="ranger_house" zoom-appear="14" />
 		<osm-tag key="amenity" value="shelter" zoom-appear="15" />
 		<osm-tag key="amenity" value="feeding_place" zoom-appear="15" />
+		<osm-tag key="amenity" value="game_feeding" zoom-appear="15" />
 
 		<osm-tag key="emergency" value="phone" zoom-appear="16" />
 

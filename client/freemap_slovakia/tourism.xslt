@@ -128,7 +128,7 @@
             <rule e="node" k="tourism" v="viewpoint" zoom-min="15">
                 <symbol src="file:/symbols/viewpoint.png" symbol-width="12dp"/>
             </rule>
-            <rule  cat="topo_common" e="node" k="amenity" v="feeding_place" zoom-min="15">
+            <rule  cat="topo_common" e="node" k="amenity" v="feeding_place|game_feeding" zoom-min="15">
                 <symbol src="file:/symbols/feeding_place.svg" symbol-width="18dp"/>
             </rule>
         </rule>
