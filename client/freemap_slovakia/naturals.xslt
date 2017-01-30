@@ -49,14 +49,19 @@
             <rule e="way" k="natural" v="marsh|wetland">
                 <area src="file:/patterns/marsh.png"/>
             </rule>
-            <rule cat="topo_common" e="way" k="natural" v="cliff" zoom-min="14" zoom-max="16">
+            <rule cat="topo_common" e="way" k="natural" v="cliff" zoom-min="14">
               <line stroke="#555555"  stroke-width="0.2dp"/>
-              <line stroke="#555555"  dy="1dp" stroke-dasharray="2,10" stroke-width="0.4dp" stroke-linecap="butt"/>
+              <rule e="way" k="*" v="*" zoom-min="14" zoom-max="16">
+                  <line stroke="#555555"  dy="1dp" stroke-dasharray="1,8" stroke-width="0.6dp" stroke-linecap="butt"/>
+              </rule>
+              <rule e="way" k="*" v="*" zoom-min="17" zoom-max="19">
+                  <line stroke="#555555"  dy="2dp" stroke-dasharray="1,10" stroke-width="0.6dp" stroke-linecap="butt"/>
+              </rule>
+              <rule e="way" k="*" v="*" zoom-min="20">
+                 <line stroke="#555555"  dy="5.6dp" stroke-dasharray="1,10" stroke-width="0.6dp" stroke-linecap="butt"/>
+              </rule>
             </rule>
-            <rule cat="topo_common" e="way" k="natural" v="cliff" zoom-min="17">
-              <line stroke="#555555"  stroke-width="0.18dp"/>
-              <line stroke="#555555"  dy="1.8dp" stroke-dasharray="2,20" stroke-width="0.4dp" stroke-linecap="butt"/>
-            </rule>
+
         </rule>
     </xsl:template>
 

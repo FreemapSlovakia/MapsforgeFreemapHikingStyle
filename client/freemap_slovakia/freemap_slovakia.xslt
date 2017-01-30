@@ -102,7 +102,7 @@
                 <!-- runways casings and areas -->
                 <rule e="way" k="aeroway" v="*" zoom-min="11">
                     <rule e="way" k="aeroway" v="aerodrome" closed="yes">
-                        <area fill="#d8dcce" stroke="#000000" stroke-width="0.5dp"/>
+                        <area fill="#d8dcce" stroke="#000000" stroke-width="0.3dp"/>
                     </rule>
                     <rule e="way" k="aeroway" v="apron">
                         <area fill="#f0f0f0"/>
@@ -111,10 +111,10 @@
                         <area fill="#f3d6b6" stroke="#6a5a8e" stroke-width="0.2dp"/>
                     </rule>
                     <rule e="way" k="aeroway" v="runway">
-                        <line stroke="#000000" stroke-width="7dp" stroke-linecap="square"/>
+                         <line stroke="#000000" stroke-width="3dp" stroke-linecap="square"/>
                     </rule>
                     <rule e="way" k="aeroway" v="taxiway">
-                        <line stroke="#000000" stroke-width="3dp" stroke-linecap="butt"/>
+                        <line stroke="#000000" stroke-width="2dp" stroke-linecap="butt"/>
                     </rule>
                     <rule e="way" k="*" v="*" zoom-min="16">
                         <caption k="name" font-style="bold" font-size="9dp" fill="#4040ff" stroke="#ffffff" stroke-width="2.0dp"/>
@@ -140,10 +140,10 @@
                 <!-- runways cores -->
                 <rule e="way" k="aeroway" v="*" zoom-min="11">
                     <rule e="way" k="aeroway" v="runway">
-                        <line stroke="#d4dcbd" stroke-width="5dp" stroke-linecap="square"/>
+                        <line stroke="#d4dcbd" stroke-width="2.5dp" stroke-linecap="square"/>
                     </rule>
                     <rule e="way" k="aeroway" v="taxiway">
-                        <line stroke="#d4dcbd" stroke-width="2dp" stroke-linecap="butt"/>
+                        <line stroke="#d4dcbd" stroke-width="1.6dp" stroke-linecap="butt"/>
                     </rule>
                 </rule>
                 <!-- man_made features -->
@@ -160,7 +160,7 @@
                 <rule e="way" k="barrier" v="*">
                     <rule e="way" k="barrier" v="fence|wall|city_wall">
                         <line stroke="#000000" stroke-width="0.1dp" stroke-linecap="butt"/>
-                        <lineSymbol src="file:/symbols/fence.svg" align-center="true" repeat="true" symbol-width="8dp" repeat-gap="8dp" scale-icon-size="14,1.1"/>
+                        <lineSymbol src="file:/symbols/fence.svg" align-center="true" repeat="true" symbol-width="14dp" repeat-gap="8dp" scale-icon-size="14,1.1"/>
                     </rule>
                     <rule e="way" k="barrier" v="retaining_wall">
                         <line stroke="#888888" stroke-width="0.1dp" stroke-linecap="butt"/>
@@ -231,16 +231,16 @@
                 <!-- barrier -->
                 <rule e="node" k="barrier" v="*" zoom-min="15">
                     <rule e="node" k="barrier" v="bollard">
-                        <symbol src="file:/symbols/barrier-bollard.svg" symbol-width="12dp"/>
+                        <symbol src="file:/symbols/barrier-bollard.svg" symbol-width="14dp"/>
                     </rule>
                     <rule e="node" k="barrier" v="block">
-                        <symbol src="file:/symbols/barrier-block.svg" symbol-width="12dp"/>
+                        <symbol src="file:/symbols/barrier-block.svg" symbol-width="14dp"/>
                     </rule>
                     <rule e="node" k="barrier" v="lift_gate">
-                        <symbol src="file:/symbols/barrier-lift_gate.svg" symbol-width="12dp"/>
+                        <symbol src="file:/symbols/barrier-lift_gate.svg" symbol-width="14dp"/>
                     </rule>
                     <rule e="node" k="barrier" v="gate">
-                        <symbol src="file:/symbols/barrier-gate.svg" symbol-width="12dp"/>
+                        <symbol src="file:/symbols/barrier-gate.svg" symbol-width="14dp"/>
                     </rule>
                 </rule>
                 <!-- highway -->

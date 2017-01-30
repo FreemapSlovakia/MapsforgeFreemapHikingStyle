@@ -331,7 +331,7 @@
 	<!-- LANDUSE TAGS -->
 	<ways>
 		<osm-tag key="landuse" value="forest" zoom-appear="8" />
-		<osm-tag key="landuse" value="military" zoom-appear="8" force-polygon-line="true" />
+		<osm-tag key="landuse" value="military" zoom-appear="8" />
 		<osm-tag key="landuse" value="residential" zoom-appear="8" />
 		<osm-tag key="landuse" value="retail" zoom-appear="8" />
 		<osm-tag key="landuse" value="wood" zoom-appear="8" />
@@ -408,6 +408,10 @@
 		<osm-tag key="railway" value="subway" zoom-appear="15" />
 		<osm-tag key="railway" value="tram" zoom-appear="15" />
 		<osm-tag key="railway" value="funicular" zoom-appear="12" />
+		<osm-tag key="service" value="spur" zoom-appear="10" renderable="false" />
+		<osm-tag key="service" value="siding" zoom-appear="10" renderable="false" />
+		<osm-tag key="service" value="crossover" zoom-appear="10" renderable="false" />
+		<osm-tag key="service" value="yard" zoom-appear="10" renderable="false" />
 	</ways>
 
 	<!-- BUILDINGS -->
