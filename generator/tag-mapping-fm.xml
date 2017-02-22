@@ -127,6 +127,7 @@
 		<osm-tag key="waterway" value="waterfall" zoom-appear="12" />
 		<osm-tag key="natural" value="volcano" zoom-appear="10" />
 		<osm-tag key="natural" value="saddle" zoom-appear="12" />
+		<osm-tag key="natural" value="fell" zoom-appear="11" />
 
 	</pois>
 
@@ -315,6 +316,9 @@
 		<osm-tag key="natural" value="land" zoom-appear="11" />
 		<osm-tag key="natural" value="marsh" zoom-appear="11" />
 		<osm-tag key="natural" value="scrub" zoom-appear="11" />
+		<osm-tag key="natural" value="bare_rock" zoom-appear="11" />
+		<osm-tag key="natural" value="fell" zoom-appear="11" />
+		<osm-tag key="natural" value="scree" zoom-appear="11" />
 		<osm-tag key="natural" value="water" zoom-appear="8" />
 		<osm-tag key="natural" value="wetland" zoom-appear="12" />
 		<osm-tag key="natural" value="wood" zoom-appear="8" />

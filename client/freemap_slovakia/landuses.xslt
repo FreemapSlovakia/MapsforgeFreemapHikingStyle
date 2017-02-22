@@ -5,6 +5,25 @@
     <xsl:template name="landuses">
 
         <!-- landuse -->
+        <rule e="way" k="natural|landuse" v="forest|wood">
+            <rule e="way" k="wood|forest" v="*">
+                <rule e="way" k="wood|forest" v="coniferous">
+                    <area fill="#B6D9BE"/>
+                </rule>
+                <rule e="way" k="wood|forest" v="deciduous">
+                    <area fill="#D1E5C0"/>
+                </rule>
+                <rule e="way" k="wood|forest" v="mixed">
+                    <area fill="#BFDEBA"/>
+                </rule>
+            </rule>
+            <rule e="way" k="wood" v="~">
+                <area fill="#C7DBBB"/>
+            </rule>
+            <rule e="way" k="*" v="*" zoom-min="16">
+                <caption k="name" font-style="bold" font-size="10dp" fill="#40ff40" stroke="#ffffff" stroke-width="2.0dp"/>
+            </rule>
+        </rule>
         <rule e="way" k="landuse" v="*">
             <rule e="way" k="landuse" v="farmyard">
                 <area fill="#80DFCFBC"/>
@@ -58,27 +77,6 @@
             </rule>
             <rule e="way" k="*" v="*" zoom-min="16">
                 <caption k="name" font-style="bold" font-size="10dp" fill="#808080" stroke="#ffffff" stroke-width="2.0dp"/>
-            </rule>
-        </rule>
-
-        <!-- landuse -->
-        <rule e="way" k="natural|landuse" v="forest|wood|scrub">
-            <rule e="way" k="wood|forest" v="*">
-                <rule e="way" k="wood|forest" v="coniferous">
-                    <area fill="#B6D9BE"/>
-                </rule>
-                <rule e="way" k="wood|forest" v="deciduous">
-                    <area fill="#D1E5C0"/>
-                </rule>
-                <rule e="way" k="wood|forest" v="mixed">
-                    <area fill="#BFDEBA"/>
-                </rule>
-            </rule>
-            <rule e="way" k="wood" v="~">
-                <area fill="#C7DBBB"/>
-            </rule>
-            <rule e="way" k="*" v="*" zoom-min="16">
-                <caption k="name" font-style="bold" font-size="10dp" fill="#40ff40" stroke="#ffffff" stroke-width="2.0dp"/>
             </rule>
         </rule>
         <rule e="way" k="landuse" v="military">

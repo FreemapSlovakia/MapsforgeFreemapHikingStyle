@@ -34,6 +34,21 @@
                     <area fill="#b5d6f1" stroke="#b5d6f1" stroke-width="0.4dp"/>
                 </rule>
             </rule>
+            <rule e="way" k="natural" v="bare_rock">
+                <area src="file:/patterns/barerock.png" fill="#d7d6d5" stroke-width="0"/>
+            </rule>
+             <rule e="way" k="natural" v="scree">
+                <area src="file:/patterns/scree.png" fill="#d7d6d5" stroke-width="0"/>
+            </rule>
+             <rule e="way" k="natural" v="fell">
+                <area fill="#e3e2a1" stroke-width="0"/>
+            </rule>
+             <rule e="way" k="natural" v="scrub">
+                <area fill="#d6e8b7" stroke-width="0"/>
+            </rule>
+             <rule e="way" k="natural" v="heath">
+                <area fill="#d6e8b7" stroke-width="0"/>
+            </rule>
             <rule e="way" k="natural" v="glacier">
                 <area fill="#fafaff" stroke="#add8e6" stroke-width="0.8dp"/>
             </rule>
