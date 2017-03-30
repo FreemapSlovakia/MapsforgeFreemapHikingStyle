@@ -101,6 +101,7 @@
         <rule e="way" k="tourism" v="*">
             <rule e="way" k="tourism" v="attraction">
                 <area fill="#F2CAEA"/>
+                <symbol src="file:/symbols/attraction.svg" symbol-width="18dp"/>
             </rule>
             <rule e="way" k="tourism" v="zoo|picnic_site|caravan_site|camp_site">
                 <area fill="#90c7f1a3" stroke="#6fc18e" stroke-width="0.2dp"/>
@@ -130,6 +131,9 @@
             </rule>
             <rule  cat="topo_common" e="node" k="amenity" v="feeding_place|game_feeding" zoom-min="15">
                 <symbol src="file:/symbols/feeding_place.svg" symbol-width="18dp"/>
+            </rule>
+            <rule e="node" k="tourism" v="attraction">
+                <symbol src="file:/symbols/attraction.svg" symbol-width="18dp"/>
             </rule>
         </rule>
     </xsl:template>

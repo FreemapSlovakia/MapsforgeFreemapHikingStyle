@@ -209,7 +209,7 @@
             </rule>
 
             <rule e="way" k="addr:housenumber" v="*" zoom-min="18">
-                <caption k="addr:housenumber" font-style="bold" font-size="8dp" fill="#606060" stroke="#ffffff" stroke-width="2.0dp"/>
+                <caption k="addr:housenumber" font-style="bold" font-size="7dp" fill="#000000" stroke="#ffffff" stroke-width="1.2dp"/>
             </rule>
             <!-- nodes -->
             <rule e="node" k="*" v="*">
@@ -264,7 +264,7 @@
                 </rule>
                 <!-- house numbers -->
                 <rule e="node" k="addr:housenumber" v="*" zoom-min="18">
-                    <caption k="addr:housenumber" font-style="bold" font-size="8dp" fill="#606060" stroke="#ffffff" stroke-width="2.0dp"/>
+                    <caption k="addr:housenumber" font-style="bold" font-size="7dp" fill="#000000" stroke="#ffffff" stroke-width="1.2dp"/>
                 </rule>
 
                 <!-- leisure -->

@@ -283,7 +283,7 @@
                     <rule e="way" k="highway" v="tertiary" zoom-min="9">
                         <line stroke="#FEF9B9" stroke-width="0.9dp"/>
                         <rule e="way" k="*" v="*" zoom-min="15">
-                            <caption k="ref" font-style="bold" font-size="6dp" fill="#000000" stroke="#ffff90" stroke-width="1dp" bg-rect-fill="#ffff90" bg-rect-over="2dp"/>
+                            <caption k="ref" font-style="bold" font-size="6dp" fill="#000000" stroke="#ffff90" stroke-width="1dp" bg-rect-fill="#AAffff90" bg-rect-over="2dp"/>
                             <pathText k="name" font-style="bold" font-size="10dp" stroke="#ffff90" stroke-width="2.0dp"/>
                         </rule>
                     </rule>
@@ -296,7 +296,7 @@
                     <rule e="way" k="highway" v="secondary">
                         <line stroke="#FDBF6F" stroke-width="0.9dp"/>
                         <rule e="way" k="*" v="*" zoom-min="14">
-                            <caption k="ref" font-style="bold" scale-font-size="17,1.1" font-size="6dp" stroke="#fdbf6f" stroke-width="1dp" bg-rect-fill="#fdbf6f" bg-rect-over="2dp"/>
+                            <caption k="ref" font-style="bold" scale-font-size="17,1.1" font-size="6dp" stroke="#fdbf6f" stroke-width="1dp" bg-rect-fill="#AAfdbf6f" bg-rect-over="2dp"/>
                             <pathText k="name" font-style="bold" font-size="11dp" stroke="#fdbf6f" stroke-width="2.0dp"/>
                         </rule>
                     </rule>
@@ -309,7 +309,7 @@
                     <rule e="way" k="highway" v="primary">
                         <line stroke="#FF9988" stroke-width="1dp"/>
                         <rule e="way" k="*" v="*" zoom-min="14">
-                            <caption k="ref" font-style="bold" scale-font-size="17,1.1" font-size="6dp" fill="#ffffff" bg-rect-fill="#e46d71" bg-rect-over="2dp"/>
+                            <caption k="ref" font-style="bold" scale-font-size="17,1.1" font-size="6dp" fill="#ffffff" bg-rect-fill="#AAe46d71" bg-rect-over="2dp"/>
                             <pathText k="name" font-style="bold" font-size="11dp" stroke="#ffffff" stroke-width="2.0dp"/>
                         </rule>
                     </rule>
@@ -322,7 +322,7 @@
                     <rule e="way" k="highway" v="trunk">
                         <line stroke="#FFFF00" stroke-width="1.5dp"/>
                         <rule e="way" k="*" v="*" zoom-min="11">
-                            <caption k="ref" font-style="bold" scale-font-size="17,1.2" font-size="7dp" fill="#FFFFFF" stroke="#000000" stroke-width="1dp" bg-rect-fill="#7fc97f" bg-rect-over="3" bg-rect-rounded="2"/>
+                            <caption k="ref" font-style="bold" scale-font-size="17,1.2" font-size="7dp" fill="#FFFFFF" stroke="#000000" stroke-width="0.6dp" bg-rect-fill="#7fc97f" bg-rect-over="3" bg-rect-rounded="2"/>
                         </rule>
                         <rule e="way" k="*" v="*" zoom-min="14">
                             <pathText k="name" font-style="bold" font-size="11dp" stroke="#7fc97f" stroke-width="2.0dp"/>
@@ -337,7 +337,7 @@
                     <rule e="way" k="highway" v="motorway">
                         <line stroke="#FFFF00" stroke-width="1.6dp"/>
                         <rule e="way" k="*" v="*" zoom-min="11">
-                            <caption k="ref" font-style="bold" scale-font-size="17,1.2" font-size="7dp" fill="#FFFFFF" stroke="#000000" stroke-width="1dp" bg-rect-fill="#809bc0" bg-rect-over="3" bg-rect-rounded="2"/>
+                            <caption k="ref" font-style="bold" scale-font-size="17,1.2" font-size="7dp" fill="#FFFFFF" stroke="#000000" stroke-width="0.6dp" bg-rect-fill="#809bc0" bg-rect-over="3" bg-rect-rounded="2"/>
                         </rule>
                         <rule e="way" k="*" v="*" zoom-min="14">
                             <pathText k="name" font-style="bold" font-size="11dp" stroke="#809bc0" stroke-width="2.0dp"/>
