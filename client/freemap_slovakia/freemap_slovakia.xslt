@@ -239,6 +239,9 @@
                     <rule e="node" k="barrier" v="lift_gate">
                         <symbol src="file:/symbols/barrier-lift_gate.svg" symbol-width="14dp"/>
                     </rule>
+                    <rule e="node" k="barrier" v="swing_gate">
+                        <symbol src="file:/symbols/barrier-lift_gate.svg" symbol-width="14dp"/>
+                    </rule>
                     <rule e="node" k="barrier" v="gate">
                         <symbol src="file:/symbols/barrier-gate.svg" symbol-width="14dp"/>
                     </rule>
