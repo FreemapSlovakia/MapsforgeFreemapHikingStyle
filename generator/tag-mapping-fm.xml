@@ -85,6 +85,8 @@
 		<osm-tag key="tourism" value="hostel" zoom-appear="15" />
 		<osm-tag key="tourism" value="hotel" zoom-appear="15" />
 		<osm-tag key="tourism" value="guest_house" zoom-appear="15" />
+		<osm-tag key="tourism" value="wilderness_hut" zoom-appear="15" />
+		<osm-tag key="tourism" value="alpine_hut" zoom-appear="15" />
 		<osm-tag key="tourism" value="information" zoom-appear="10" />
 		<osm-tag key="tourism" value="museum" zoom-appear="14" />
 		<osm-tag key="tourism" value="viewpoint" zoom-appear="14" />
@@ -398,6 +400,10 @@
 
 		<osm-tag key="tourism" value="attraction" zoom-appear="15" />
 		<osm-tag key="tourism" value="hostel" zoom-appear="15" />
+		<osm-tag key="tourism" value="hotel" zoom-appear="15" />
+		<osm-tag key="tourism" value="guest_house" zoom-appear="15" />
+		<osm-tag key="tourism" value="wilderness_hut" zoom-appear="15" />
+		<osm-tag key="tourism" value="alpine_hut" zoom-appear="15" />
 		<osm-tag key="tourism" value="zoo" zoom-appear="12" />
 	</ways>
 
