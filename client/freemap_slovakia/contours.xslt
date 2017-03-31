@@ -5,13 +5,13 @@
     <xsl:template name="contour_labels">
         <rule cat="contours" e="way" k="contour_ext" v="*">
             <rule e="way" k="contour_ext" v="elevation_major" zoom-min="13">
-                <pathText k="ele" font-size="8dp" font-style="bold" fill="#A86868" stroke="#FFFFFF" stroke-width="1dp" curve="cubic"/>
+                <pathText k="ele" font-size="7dp" scale-font-size="17,1.2" font-style="bold" fill="#A86868" stroke="#FFFFFF" stroke-width="1dp"/>
             </rule>
             <rule e="way" k="contour_ext" v="elevation_medium" zoom-min="14">
-                <pathText k="ele" font-size="8dp" font-style="bold" fill="#A86868" stroke="#FFFFFF" stroke-width="1dp" curve="cubic"/>
+                <pathText k="ele" font-size="7dp" scale-font-size="17,1.2" font-style="bold" fill="#A86868" stroke="#FFFFFF" stroke-width="1dp"/>
             </rule>
             <rule e="way" k="contour_ext" v="elevation_minor" zoom-min="16">
-                <pathText k="ele" font-size="5dp" font-style="bold" fill="#A86868" stroke="#FFFFFF" stroke-width="1dp" curve="cubic"/>
+                <pathText k="ele" font-size="5dp" font-style="bold" fill="#A86868" stroke="#FFFFFF" stroke-width="1dp"/>
             </rule>
         </rule>
     </xsl:template>
@@ -31,7 +31,7 @@
         </rule>
 
         <rule cat="contours" e="way" k="contour_ext" v="elevation_minor" zoom-min="14" zoom-max="15">
-            <line stroke="#DDDB8888" stroke-width="0.08dp" stroke-linecap="butt" curve="cubic"/>
+            <line stroke="#DDDB8888" stroke-width="0.06dp" stroke-linecap="butt" curve="cubic"/>
         </rule>
         <rule cat="contours" e="way" k="contour_ext" v="elevation_minor" zoom-min="16">
             <line stroke="#DDDB8888" stroke-width="0.10dp" stroke-linecap="butt" curve="cubic"/>

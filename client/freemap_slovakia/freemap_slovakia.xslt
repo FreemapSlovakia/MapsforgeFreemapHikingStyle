@@ -22,7 +22,7 @@
     
     <xsl:template match="/">
 
-        <rendertheme version="1" locus-extended="1" xsi:schemaLocation="http://mapsforge.org/renderTheme ../renderTheme.xsd" map-background="#FBFBF9" map-background-outside="#dddddd">
+        <rendertheme version="1" locus-extended="1" xsi:schemaLocation="http://mapsforge.org/renderTheme https://raw.githubusercontent.com/mapsforge/mapsforge/dev/resources/renderTheme.xsd" map-background="#FBFBF9" map-background-outside="#dddddd">
             <!-- ways -->
             <rule e="way" k="*" v="*">
 

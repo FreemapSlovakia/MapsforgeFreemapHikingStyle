@@ -106,6 +106,18 @@
             <rule e="way" k="tourism" v="zoo|picnic_site|caravan_site|camp_site">
                 <area fill="#90c7f1a3" stroke="#6fc18e" stroke-width="0.2dp"/>
             </rule>
+            <rule e="node" k="tourism" v="hostel" zoom-min="17">
+                <symbol src="file:/symbols/hostel.png" symbol-width="12dp"/>
+            </rule>
+            <rule e="node" k="tourism" v="hotel" zoom-min="16">
+                <symbol src="file:/symbols/hotel.png" symbol-width="12dp"/>
+            </rule>
+            <rule e="node" k="tourism" v="alpine_hut" zoom-min="15">
+                <symbol src="file:/symbols/alpine_hut.svg" symbol-width="14dp" force-draw="1"/>
+            </rule>
+            <rule e="node" k="tourism" v="wilderness_hut" zoom-min="15">
+                <symbol src="file:/symbols/wilderness_hut.svg" symbol-width="14dp" force-draw="1"/>
+            </rule>
             <rule e="way" k="*" v="*" zoom-min="16">
                 <caption k="name" font-style="bold" font-size="10dp" fill="#4040ff" stroke="#ffffff" stroke-width="2.0dp"/>
             </rule>
@@ -120,11 +132,19 @@
             <rule e="node" k="tourism" v="hostel" zoom-min="17">
                 <symbol src="file:/symbols/hostel.png" symbol-width="12dp"/>
             </rule>
-            <rule e="node" k="tourism" v="hotel" zoom-min="17">
+            <rule e="node" k="tourism" v="hotel" zoom-min="16">
                 <symbol src="file:/symbols/hotel.png" symbol-width="12dp"/>
             </rule>
+            <rule e="node" k="tourism" v="alpine_hut" zoom-min="15">
+                <symbol src="file:/symbols/alpine_hut.svg" symbol-width="14dp" force-draw="1"/>
+            </rule>
+            <rule e="node" k="tourism" v="wilderness_hut" zoom-min="15">
+                <symbol src="file:/symbols/wilderness_hut.svg" symbol-width="14dp" force-draw="1"/>
+            </rule>
             <rule e="node" k="tourism" v="information" zoom-min="17">
-                <symbol src="file:/symbols/information.png" symbol-width="12dp"/>
+                <rule e="node" k="information" v="map|board" zoom-min="15">
+                    <symbol src="file:/symbols/information.png" symbol-width="12dp"/>
+                </rule>
             </rule>
             <rule e="node" k="tourism" v="viewpoint" zoom-min="15">
                 <symbol src="file:/symbols/viewpoint.png" symbol-width="12dp"/>
@@ -132,7 +152,7 @@
             <rule  cat="topo_common" e="node" k="amenity" v="feeding_place|game_feeding" zoom-min="15">
                 <symbol src="file:/symbols/feeding_place.svg" symbol-width="18dp"/>
             </rule>
-            <rule e="node" k="tourism" v="attraction">
+            <rule e="node" k="tourism" v="attraction" zoom-min="15">
                 <symbol src="file:/symbols/attraction.svg" symbol-width="18dp"/>
             </rule>
         </rule>

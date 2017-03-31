@@ -93,7 +93,7 @@
                 </rule>
             </rule>
             <rule e="node" k="natural" v="cave_entrance" zoom-min="14">
-                <symbol src="file:/symbols/cave_entrance.png" symbol-width="16dp"/>
+                <symbol src="file:/symbols/cave_entrance.png" symbol-width="16dp" force-draw="1"/>
                 <rule e="node" k="*" v="*" zoom-min="16">
                     <caption k="name" dy="12dp" font-style="bold" font-family="serif" font-size="8dp" fill="#000000" stroke="#ffffff" stroke-width="2dp"/>
                 </rule>
