@@ -93,6 +93,7 @@
 
 		<osm-tag key="historic" value="memorial" zoom-appear="17" />
 		<osm-tag key="historic" value="monument" zoom-appear="17" />
+		<osm-tag key="historic" value="wayside_cross" zoom-appear="15" />
 
 		<osm-tag key="information" value="guidepost" renderable="false" />
 		<osm-tag key="information" value="map" renderable="false" />

@@ -259,6 +259,9 @@
                     </rule>
                 </rule>
                 <!-- historic -->
+                <rule e="node" k="historic" v="wayside_cross" zoom-min="16">
+                    <symbol src="file:/symbols/wayside_cross.svg" symbol-width="12dp"/>
+                </rule>
                 <rule e="node" k="historic" v="*">
                     <circle r="3" fill="#4040ff" stroke="#606060" stroke-width="1.5dp"/>
                     <rule e="node" k="*" v="*" zoom-min="17">
