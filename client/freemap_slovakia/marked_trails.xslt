@@ -186,6 +186,9 @@
     <xsl:template name="markedTrailsAllNew">
         <!-- turistika nová -->
         <rule cat="hiking" e="way" k="highway" v="*" zoom-min="11">
+            <rule e="way" k="addr:housenumber" v="*" zoom-min="16">
+                <pathText k="addr:housenumber" dy="10dp" font-style="bold" font-size="9dp" fill="#000000" stroke="#ffffff" stroke-width="2.2dp"/>
+            </rule>
             <xsl:call-template name="markedTrailsDual">
                 <xsl:with-param name="redKey" select="'fmrelhikingred'"/>
                 <xsl:with-param name="blueKey" select="'fmrelhikingblue'"/>

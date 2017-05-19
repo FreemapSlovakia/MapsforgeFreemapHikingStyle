@@ -13,10 +13,10 @@
             <rule e="node" k="place" v="town" zoom-min="11" zoom-max="15">
                 <caption k="name" font-style="bold" font-size="14dp" fill="#000000" stroke="#ffffff" stroke-width="2dp"/>
             </rule>
-            <rule e="node" k="place" v="suburb" zoom-min="12" zoom-max="16">
+            <rule e="node" k="place" v="suburb" zoom-min="14" zoom-max="16">
                 <caption k="name" font-style="bold" font-size="12dp" fill="#6C6C6C" stroke="#ffffff" stroke-width="2dp"/>
             </rule>
-            <rule e="node" k="place" v="village" zoom-min="11" zoom-max="12">
+            <rule e="node" k="place" v="village" zoom-min="12" zoom-max="12">
                 <caption k="name" font-style="normal" font-size="7dp" fill="#000000" stroke="#ffffff" stroke-width="2dp"/>
             </rule>
             <rule e="node" k="place" v="village" zoom-min="13" zoom-max="18">

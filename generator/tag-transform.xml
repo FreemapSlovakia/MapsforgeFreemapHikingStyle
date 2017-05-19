@@ -22,4 +22,28 @@
 			<tag k="layer" v="0"/>
 		</output>
 	</translation>
+	<translation>
+		<name>info board ref</name>
+		<description>add ref tag to tourism=information, information=board as addr:housenumber</description>
+		<match type="node" mode="and">
+			<tag k="tourism" v="information"/>
+			<tag k="information" v="board"/>
+			<tag k="ref" match_id="board_ref" v="(^[0-9]{1,4})"/>
+		</match>
+		<output>
+			<copy-all/>
+			<tag k="addr:housenumber" from_match="board_ref" v="{1}"/>
+		</output>
+	</translation>
+	<translation>
+		<name>hiking route ref</name>
+		<description>add ref tag to way from fmrelhikingref as addr:housenumber</description>
+		<match type="way" mode="and">
+			<tag k="fmrelhikingref" match_id="hiking_ref" v="(.*)"/>
+		</match>
+		<output>
+			<copy-all/>
+			<tag k="addr:housenumber" from_match="hiking_ref" v="TZT: {1}"/>
+		</output>
+	</translation>
 </translations>

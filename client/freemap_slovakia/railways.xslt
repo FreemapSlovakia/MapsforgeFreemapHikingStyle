@@ -23,7 +23,12 @@
                 <!-- railway casings and cores -->
                 <rule e="way" k="railway" v="tram" zoom-min="12">
                     <line stroke="#e6b7e6" stroke-width="0.25dp" stroke-linecap="butt"/>
-                    <line stroke="#4c0f4c" stroke-width="0.25dp" stroke-dasharray="12,18" stroke-linecap="butt"/>
+                    <rule e="way" k="*" v="*" max-zoom="16">
+                        <line stroke="#4c0f4c" stroke-width="0.25dp" stroke-dasharray="12,18" stroke-linecap="butt"/>
+                    </rule>
+                    <rule e="way" k="*" v="*" min-zoom="17">
+                        <line stroke="#4c0f4c" stroke-width="0.25dp" stroke-dasharray="8,12" stroke-linecap="butt"/>
+                    </rule>
                 </rule>
                 <rule e="way" k="railway" v="subway" zoom-min="12">
                     <line stroke="#0f0f4c" stroke-width="0.4dp" stroke-linecap="butt"/>
@@ -35,25 +40,44 @@
                     <line stroke="#0f4c0f" stroke-width="0.25dp" stroke-dasharray="12,18" stroke-linecap="butt"/>
                 </rule>
                 <rule e="way" k="railway" v="narrow_gauge|funicular" zoom-min="12">
-                    <line stroke="#333333" stroke-width="0.35dp" stroke-linecap="butt"/>
-                    <line stroke="#e6e6e6" stroke-width="0.20dp" stroke-linecap="butt"/>
-                    <line stroke="#333333" stroke-width="0.20dp" stroke-dasharray="8,8" stroke-linecap="butt"/>
+                    <rule e="way" k="*" v="*" zoom-min="12" zoom-max="16">
+                        <line stroke="#222222" stroke-width="0.6dp" stroke-linecap="butt"/>
+                        <line stroke="#cccccc" stroke-width="0.5dp" stroke-linecap="butt"/>
+                        <line stroke="#222222" stroke-width="0.5dp" stroke-dasharray="10,10" stroke-linecap="butt"/>
+                    </rule>
+                    <rule e="way" k="*" v="*" zoom-min="17">
+                        <line stroke="#222222" stroke-width="0.45dp" stroke-linecap="butt"/>
+                        <line stroke="#cccccc" stroke-width="0.3dp" stroke-linecap="butt"/>
+                        <line stroke="#222222" stroke-width="0.3dp" stroke-dasharray="8,8" stroke-linecap="butt"/>
+                    </rule>
+                </rule>
+                <rule e="way" k="railway" v="preserved" zoom-min="13">
+                    <rule e="way" k="*" v="*" zoom-min="13" zoom-max="16">
+                        <line stroke="#000000" stroke-width="0.6dp" stroke-linecap="butt"/>
+                        <line stroke="#ffff99" stroke-width="0.4dp" stroke-linecap="butt"/>
+                        <line stroke="#000000" stroke-width="0.4dp" stroke-dasharray="10,10" stroke-linecap="butt"/>
+                    </rule>
+                    <rule e="way" k="*" v="*" zoom-min="17">
+                        <line stroke="#000000" stroke-width="0.45dp" stroke-linecap="butt"/>
+                        <line stroke="#ffff99" stroke-width="0.3dp" stroke-linecap="butt"/>
+                        <line stroke="#000000" stroke-width="0.3dp" stroke-dasharray="8,8" stroke-linecap="butt"/>
+                    </rule>
                 </rule>
                 <rule e="way" k="railway" v="rail">
                     <rule e="way" k="service" v="~" zoom-max="16">
-                        <line stroke="#333333" stroke-width="0.55dp" stroke-linecap="butt"/>
-                        <line stroke="#e6e6e6" stroke-width="0.4dp" stroke-linecap="butt"/>
-                        <line stroke="#333333" stroke-width="0.4dp" stroke-dasharray="15,15" stroke-linecap="butt"/>
+                        <line stroke="#000000" stroke-width="0.6dp" stroke-linecap="butt"/>
+                        <line stroke="#f2f2f2" stroke-width="0.5dp" stroke-linecap="butt"/>
+                        <line stroke="#000000" stroke-width="0.5dp" stroke-dasharray="12,12" stroke-linecap="butt"/>
                     </rule>
                     <rule e="way" k="service" v="~" zoom-min="17">
-                        <line stroke="#333333" stroke-width="0.35dp" stroke-linecap="butt"/>
-                        <line stroke="#e6e6e6" stroke-width="0.25dp" stroke-linecap="butt"/>
-                        <line stroke="#333333" stroke-width="0.25dp" stroke-dasharray="15,15" stroke-linecap="butt"/>
+                        <line stroke="#000000" stroke-width="0.45dp" stroke-linecap="butt"/>
+                        <line stroke="#f2f2f2" stroke-width="0.3dp" stroke-linecap="butt"/>
+                        <line stroke="#000000" stroke-width="0.3dp" stroke-dasharray="10,10" stroke-linecap="butt"/>
                     </rule>
-                    <rule e="way" k="service" v="*" zoom-min="15">
-                        <line stroke="#333333" stroke-width="0.30dp" stroke-linecap="butt"/>
-                        <line stroke="#e6e6e6" stroke-width="0.20dp" stroke-linecap="butt"/>
-                        <line stroke="#333333" stroke-width="0.20dp" stroke-dasharray="10,10" stroke-linecap="butt"/>
+                    <rule e="way" k="service" v="*" zoom-min="16">
+                        <line stroke="#000000" stroke-width="0.30dp" stroke-linecap="butt"/>
+                        <line stroke="#f2f2f2" stroke-width="0.20dp" stroke-linecap="butt"/>
+                        <line stroke="#000000" stroke-width="0.20dp" stroke-dasharray="4,5" stroke-linecap="butt"/>
                     </rule>
                 </rule>
             </rule>

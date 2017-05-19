@@ -26,36 +26,46 @@
             <rule e="way" k="waterway" v="drain" zoom-min="13">
                 <line stroke="#8DB0DD" stroke-width="0.8dp"/>
                 <rule e="way" k="*" v="*" zoom-min="16">
-                    <lineSymbol src="file:/symbols/waterflow.svg" align-center="true" repeat="true" symbol-width="7dp" repeat-gap="50dp"/>
+                    <lineSymbol src="file:/symbols/waterflow.svg" align-center="true" repeat="true" symbol-width="7dp" repeat-gap="40dp"/>
                 </rule>
             </rule>
             <rule e="way" k="waterway" v="canal" zoom-min="13">
+                <pathText k="name" font-style="bold_italic" font-size="9dp" fill="#0000fc" stroke="#ffffff" stroke-width="2.5dp"/>
                 <line stroke="#8DB0DD" stroke-width="0.8dp" />
-                <rule e="way" k="*" v="*" zoom-min="16">
-                    <lineSymbol src="file:/symbols/waterflow.svg" align-center="true" repeat="true" symbol-width="7dp" repeat-gap="50dp"/>
+                <rule e="way" k="*" v="*" zoom-min="15" zoom-max="17">
+                    <lineSymbol src="file:/symbols/waterflow.svg" align-center="true" repeat="true" symbol-width="9dp" repeat-gap="30dp"/>
+                </rule>
+                <rule e="way" k="*" v="*" zoom-min="18">
+                    <lineSymbol src="file:/symbols/waterflow.svg" align-center="true" repeat="true" symbol-width="9dp" repeat-gap="50dp"/>
                 </rule>
             </rule>
             <rule e="way" k="waterway" v="stream" zoom-min="14">
-                <pathText k="name" font-style="bold_italic" font-size="8dp" fill="#8DB0DD" stroke="#ffffff" stroke-width="2dp"/>
+                <pathText k="name" font-style="bold_italic" font-size="8dp" fill="#0000fc" stroke="#ffffff" stroke-width="2dp"/>
                 <rule e="way" k="tunnel" v="yes|culvert">
                     <line stroke="#8DB0DD" stroke-dasharray="4,8" stroke-width="0.3dp"/>
                 </rule>
                 <rule e="way" k="tunnel" v="~|no">
                     <line stroke="#8DB0DD" stroke-width="0.3dp"/>
                 </rule>
-                <rule e="way" k="*" v="*" zoom-min="15">
+                <rule e="way" k="*" v="*" zoom-min="15" zoom-max="17">
+                    <lineSymbol src="file:/symbols/waterflow.svg" align-center="true" repeat="true" symbol-width="8dp" repeat-gap="30dp"/>
+                </rule>
+                <rule e="way" k="*" v="*" zoom-min="18">
                     <lineSymbol src="file:/symbols/waterflow.svg" align-center="true" repeat="true" symbol-width="9dp" repeat-gap="50dp"/>
                 </rule>
             </rule>
             <rule e="way" k="waterway" v="river">
-                <pathText k="name" font-style="bold_italic" font-size="9dp" fill="#8DB0DD" stroke="#ffffff" stroke-width="2.6dp"/>
+                <pathText k="name" font-style="bold_italic" font-size="9dp" fill="#0000fc" stroke="#ffffff" stroke-width="2.6dp"/>
                 <rule e="way" k="tunnel" v="yes|culvert">
                     <line stroke="#8DB0DD" stroke-dasharray="5,12" stroke-width="1.0dp"/>
                 </rule>
                 <rule e="way" k="tunnel" v="~|no">
                     <line stroke="#8DB0DD" stroke-width="1.5dp"/>
                 </rule>
-                <rule e="way" k="*" v="*" zoom-min="13">
+                <rule e="way" k="*" v="*" zoom-min="13" zoom-max="17">
+                    <lineSymbol src="file:/symbols/waterflow.svg" align-center="true" repeat="true" symbol-width="7dp" scale-icon-size="16,1.1" repeat-gap="30dp"/>
+                </rule>
+                <rule e="way" k="*" v="*" zoom-min="18">
                     <lineSymbol src="file:/symbols/waterflow.svg" align-center="true" repeat="true" symbol-width="7dp" scale-icon-size="16,1.1" repeat-gap="50dp"/>
                 </rule>
             </rule>

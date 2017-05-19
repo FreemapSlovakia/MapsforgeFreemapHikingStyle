@@ -141,15 +141,16 @@
             <rule e="node" k="tourism" v="wilderness_hut" zoom-min="15">
                 <symbol src="file:/symbols/wilderness_hut.svg" symbol-width="14dp" force-draw="1"/>
             </rule>
-            <rule e="node" k="tourism" v="information" zoom-min="17">
-                <rule e="node" k="information" v="map|board" zoom-min="15">
+            <rule cat="topo_common" e="node" k="tourism" v="information" zoom-min="16">
+                <rule e="node" k="information" v="map|board">
                     <symbol src="file:/symbols/information.png" symbol-width="12dp"/>
+                     <caption k="addr:housenumber" dy="15dp" font-style="bold" font-size="8dp" fill="#734a08" stroke="#ffffff" stroke-width="1.25dp"/>
                 </rule>
             </rule>
             <rule e="node" k="tourism" v="viewpoint" zoom-min="15">
                 <symbol src="file:/symbols/viewpoint.png" symbol-width="12dp"/>
             </rule>
-            <rule  cat="topo_common" e="node" k="amenity" v="feeding_place|game_feeding" zoom-min="15">
+            <rule cat="topo_common" e="node" k="amenity" v="feeding_place|game_feeding" zoom-min="15">
                 <symbol src="file:/symbols/feeding_place.svg" symbol-width="18dp"/>
             </rule>
             <rule e="node" k="tourism" v="attraction" zoom-min="15">

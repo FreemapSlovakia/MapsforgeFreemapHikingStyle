@@ -209,7 +209,9 @@
             </rule>
 
             <rule e="way" k="addr:housenumber" v="*" zoom-min="18">
-                <caption k="addr:housenumber" font-style="bold" font-size="7dp" fill="#000000" stroke="#ffffff" stroke-width="1.2dp"/>
+                <rule e="way" k="highway" v="~">
+                    <caption k="addr:housenumber" font-style="bold" font-size="7dp" fill="#000000" stroke="#ffffff" stroke-width="1.2dp"/>
+                </rule>
             </rule>
             <!-- nodes -->
             <rule e="node" k="*" v="*">
@@ -248,8 +250,13 @@
                 </rule>
                 <!-- highway -->
                 <rule e="node" k="highway" v="*">
-                    <rule e="node" k="highway" v="bus_stop" zoom-min="16">
-                        <symbol src="file:/symbols/bus.png" symbol-width="12dp"/>
+                    <rule e="node" k="highway" v="bus_stop" zoom-min="15">
+                        <rule e="node" k="*" v="*" zoom-max="16">
+                            <symbol src="file:/symbols/bus-mini.png" symbol-width="4dp"/>
+                        </rule>
+                        <rule e="node" k="*" v="*" zoom-min="17">
+                            <symbol src="file:/symbols/bus.png" symbol-width="12dp"/>
+                        </rule>
                     </rule>
                     <rule e="node" k="highway" v="traffic_signals" zoom-min="17">
                         <symbol src="file:/symbols/traffic_signal.png" symbol-width="6dp"/>
@@ -262,15 +269,22 @@
                 <rule e="node" k="historic" v="wayside_cross" zoom-min="16">
                     <symbol src="file:/symbols/wayside_cross.svg" symbol-width="12dp"/>
                 </rule>
-                <rule e="node" k="historic" v="*">
-                    <circle r="3" fill="#4040ff" stroke="#606060" stroke-width="1.5dp"/>
+                <rule e="node" k="historic" v="memorial|monument">
+                    <rule e="node" k="historic" v="memorial">
+                        <symbol src="file:/symbols/memorial.svg" symbol-width="14dp"/>
+                    </rule>
+                    <rule e="node" k="historic" v="monument">
+                        <circle r="3" fill="#4040ff" stroke="#606060" stroke-width="1.5dp"/>
+                    </rule>                    
                     <rule e="node" k="*" v="*" zoom-min="17">
-                        <caption k="name" dy="-10dp" font-style="bold" font-size="10dp" fill="#4040ff" stroke="#ffffff" stroke-width="2.0dp"/>
+                        <caption k="name" dy="-10dp" font-style="bold" font-size="10dp" fill="#660000" stroke="#ffffff" stroke-width="2.0dp"/>
                     </rule>
                 </rule>
                 <!-- house numbers -->
                 <rule e="node" k="addr:housenumber" v="*" zoom-min="18">
-                    <caption k="addr:housenumber" font-style="bold" font-size="7dp" fill="#000000" stroke="#ffffff" stroke-width="1.2dp"/>
+                    <rule e="node" k="information" v="~">
+                        <caption k="addr:housenumber" font-style="bold" font-size="7dp" fill="#000000" stroke="#ffffff" stroke-width="1.2dp"/>
+                    </rule>
                 </rule>
 
                 <!-- leisure -->
@@ -318,7 +332,12 @@
             <rule e="way" k="power" v="*">
                 <rule e="way" k="power" v="line" zoom-min="13">
                     <line stroke="#80000000" stroke-width="0.2dp"/>
-                    <lineSymbol src="file:/symbols/way_powerline.svg" align-center="true" repeat="true" symbol-width="16dp" repeat-gap="35dp"/>
+                    <rule e="way" k="*" v="*" zoom-min="14" zoom-max="16">
+                        <lineSymbol src="file:/symbols/way_powerline.svg" align-center="true" repeat="true" symbol-width="12dp" repeat-gap="50dp"/>
+                    </rule>
+                    <rule e="way" k="*" v="*" zoom-min="17">
+                        <lineSymbol src="file:/symbols/way_powerline.svg" align-center="true" repeat="true" symbol-width="16dp" repeat-gap="35dp"/>
+                    </rule>
                 </rule>
                 <!--
         <rule e="way" k="power" v="minor_line" zoom-min="17">

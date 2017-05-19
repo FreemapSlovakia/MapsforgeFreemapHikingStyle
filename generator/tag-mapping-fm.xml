@@ -97,6 +97,7 @@
 
 		<osm-tag key="information" value="guidepost" renderable="false" />
 		<osm-tag key="information" value="map" renderable="false" />
+		<osm-tag key="information" value="board" renderable="false" />
 
 		<osm-tag key="ski" value="yes" equivalent-values="1,true" renderable="false" />
 		<osm-tag key="ski" value="no" equivalent-values="0,false" renderable="false" />
@@ -159,6 +160,7 @@
 		
 		<osm-tag key="power" value="generator" zoom-appear="12" />
 		<osm-tag key="power" value="tower" zoom-appear="14" />
+		<osm-tag key="military" value="bunker" zoom-appear="12" />
 	</pois>
 
 	<!-- AIRPORT TAGS -->
@@ -414,6 +416,7 @@
 		<osm-tag key="route" value="ferry" zoom-appear="12" />
 		<osm-tag key="railway" value="light_rail" zoom-appear="12" />
 		<osm-tag key="railway" value="narrow_gauge" zoom-appear="12" />
+		<osm-tag key="railway" value="preserved" zoom-appear="12" />
 		<osm-tag key="railway" value="platform" zoom-appear="14" />
 		<osm-tag key="railway" value="rail" zoom-appear="10" />
 		<osm-tag key="railway" value="station" zoom-appear="14" />
@@ -534,6 +537,7 @@
 		<osm-tag key="military" value="airfield" zoom-appear="12" />
 		<osm-tag key="military" value="barracks" zoom-appear="12" />
 		<osm-tag key="military" value="naval_base" zoom-appear="12" />
+		<osm-tag key="military" value="bunker" zoom-appear="12" />
 	</ways>
 
 	<!-- NOT TO RENDER -->
