@@ -256,6 +256,7 @@
                         </rule>
                         <rule e="node" k="*" v="*" zoom-min="17">
                             <symbol src="file:/symbols/bus.png" symbol-width="12dp"/>
+                            <caption k="name" dy="14dp" font-style="normal" font-size="8dp" fill="#0092da" stroke="#ffffff" stroke-width="1.8dp"/>
                         </rule>
                     </rule>
                     <rule e="node" k="highway" v="traffic_signals" zoom-min="17">
