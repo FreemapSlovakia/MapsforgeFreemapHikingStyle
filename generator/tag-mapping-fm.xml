@@ -26,6 +26,7 @@
 		<osm-tag key="amenity" value="fire_station" zoom-appear="17" />
 		<osm-tag key="amenity" value="fuel" zoom-appear="16" />
 		<osm-tag key="amenity" value="hospital" zoom-appear="15" />
+		<osm-tag key="amenity" value="clinic" zoom-appear="15" />
 		<osm-tag key="amenity" value="kindergarten" zoom-appear="17" />
 		<osm-tag key="amenity" value="library" zoom-appear="17" />
 		<osm-tag key="amenity" value="parking" zoom-appear="17" />
@@ -396,11 +397,13 @@
 		<osm-tag key="amenity" value="fountain" zoom-appear="16" />
 		<osm-tag key="amenity" value="grave_yard" zoom-appear="14" />
 		<osm-tag key="amenity" value="hospital" zoom-appear="14" />
+		<osm-tag key="amenity" value="clinic" zoom-appear="14" />
 		<osm-tag key="amenity" value="parking" zoom-appear="14" />
 		<osm-tag key="amenity" value="school" zoom-appear="14" />
 		<osm-tag key="amenity" value="theatre" zoom-appear="14" />
 		<osm-tag key="amenity" value="toilets" zoom-appear="17" />
 		<osm-tag key="amenity" value="university" zoom-appear="14" />
+		<osm-tag key="amenity" value="place_of_worship" zoom-appear="17" />
 
 		<osm-tag key="tourism" value="attraction" zoom-appear="15" />
 		<osm-tag key="tourism" value="hostel" zoom-appear="15" />
