@@ -105,11 +105,21 @@
                 </rule>
             </rule>
             <rule e="node" k="natural" v="peak" zoom-min="11">
-                <symbol src="file:/symbols/peak.png" symbol-width="12dp" force-draw="1"/>
-                <rule e="any" k="*" v="*" zoom-min="12">
-                    <caption k="name" dy="-6dp" font-style="bold_italic" font-family="serif" font-size="8dp" scale-font-size="14,1.1" fill="#760000" stroke="#e9dca2" stroke-width="1.8dp"/>
+                <rule e="node" k="name" v="~" zoom-min="14">
+                    <symbol src="file:/symbols/peak.png" symbol-width="12dp" force-draw="1"/>
+                </rule>
+                <rule e="node" k="name" v="*">
+                    <rule e="node" k="*" v="*" zoom-min="11" zoom-max="13">
+                        <symbol src="file:/symbols/peak.png" symbol-width="12dp" force-draw="1"/>
+                    </rule> 
+                    <rule e="node" k="*" v="*" zoom-min="14">
+                        <symbol src="file:/symbols/peak.png" symbol-width="14dp" force-draw="1"/>
+                    </rule>
+                    <rule e="any" k="*" v="*" zoom-min="12">
+                        <caption k="name" dy="-8dp" font-style="bold" font-family="serif" font-size="8dp" scale-font-size="14,1.1" fill="#560000" stroke="#ffffcc" stroke-width="1.8dp"/>
+                    </rule>
                     <rule e="any" k="*" v="*" zoom-min="15">
-                        <caption k="ele" dy="12dp" font-style="italic" font-size="9dp" scale-font-size="16,1.1" fill="#000000" stroke="#ffffff" stroke-width="1.4dp"/>
+                        <caption k="ele" dy="14dp" font-size="9dp" scale-font-size="16,1.1" fill="#000000" stroke="#ffffff" stroke-width="1.4dp"/>
                     </rule>
                 </rule>
             </rule>

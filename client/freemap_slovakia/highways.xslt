@@ -343,11 +343,11 @@
                             <pathText k="name" font-style="bold" font-size="11dp" stroke="#809bc0" stroke-width="2.0dp"/>
                         </rule>
                     </rule>
-                    <rule e="way" k="highway" v="*" zoom-min="16">
+                    <rule e="way" k="highway" v="*" zoom-min="15">
                         <rule e="way" k="access" v="destination">
                             <line src="file:/patterns/access-destination.png" stroke-width="1.5dp"/>
                         </rule>
-                        <rule e="way" k="access" v="private">
+                        <rule e="way" k="access" v="private|no">
                             <line src="file:/patterns/access-private.png" stroke-width="1.5dp"/>
                         </rule>
                     </rule>

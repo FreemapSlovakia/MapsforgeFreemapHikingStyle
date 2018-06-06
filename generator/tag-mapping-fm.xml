@@ -544,6 +544,7 @@
 	<ways>
 		<osm-tag key="access" value="destination" renderable="false" />
 		<osm-tag key="access" value="private" renderable="false" />
+		<osm-tag key="access" value="no" renderable="false" />
 
 		<osm-tag key="area" value="yes" renderable="false" />
 		<osm-tag key="bridge" value="yes" renderable="false" />
@@ -571,15 +572,6 @@
 		<osm-tag key="wood" value="coniferous" renderable="false" />
 		<osm-tag key="wood" value="deciduous" renderable="false" />
 		<osm-tag key="wood" value="mixed" renderable="false" />
-
-		<osm-tag key="lanes" value="1" renderable="false" />
-		<osm-tag key="lanes" value="2" renderable="false" />
-		<osm-tag key="lanes" value="3" renderable="false" />
-		<osm-tag key="lanes" value="4" renderable="false" />
-		<osm-tag key="lanes" value="5" renderable="false" />
-		<osm-tag key="lanes" value="6" renderable="false" />
-		<osm-tag key="lanes" value="7" renderable="false" />
-		<osm-tag key="lanes" value="8" renderable="false" />
 
 		<osm-tag key="fmrelbus" value="yes" zoom-appear="8" />
 		<osm-tag key="fmrelbusref" value="x" zoom-appear="8" />
@@ -709,6 +701,7 @@
 		<osm-tag key="fixme" value="incomplete" zoom-appear="14" />
 		<osm-tag key="fixme" value="resurvey" zoom-appear="14" />
 		<osm-tag key="fixme" value="cross or shrine" zoom-appear="14" />
+		<osm-tag key="fixme" value="yes" zoom-appear="14" />
 	</pois>
 
 </tag-mapping>

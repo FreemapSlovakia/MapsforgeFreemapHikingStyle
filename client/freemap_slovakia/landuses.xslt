@@ -5,7 +5,7 @@
     <xsl:template name="landuses">
 
         <!-- landuse -->
-        <rule e="way" k="natural|landuse" v="forest|wood">
+        <rule e="way" k="natural|landuse" v="forest|wood"  zoom-min="10">
             <rule e="way" k="wood|forest" v="*">
                 <rule e="way" k="wood|forest" v="coniferous">
                     <area fill="#B6D9BE"/>
