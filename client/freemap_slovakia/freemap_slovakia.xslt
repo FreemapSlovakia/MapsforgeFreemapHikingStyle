@@ -174,10 +174,15 @@
                 <rule e="way" k="area" v="~|false|no">
                     <rule e="way" k="highway" v="*">
                         <rule e="way" k="oneway" v="yes|true" zoom-min="16">
-                            <lineSymbol src="file:/symbols/oneway.svg" align-center="true" repeat="true" symbol-width="16dp"/>
+                            <rule e="way" k="*" v="*" zoom-min="16" zoom-max="18"> 
+                                <lineSymbol src="file:/symbols/oneway.svg" align-center="true" repeat="true" symbol-width="16dp" repeat-gap="25dp"/>
+                            </rule>
+                            <rule e="way" k="*" v="*" zoom-min="19"> 
+                                <lineSymbol src="file:/symbols/oneway.svg" align-center="true" repeat="true" symbol-width="16dp" repeat-gap="80dp"/>
+                            </rule>
                         </rule>
                         <rule e="way" k="junction" v="roundabout" zoom-min="16">
-                            <lineSymbol src="file:/symbols/oneway.svg" align-center="true" repeat="true" symbol-width="16dp" repeat-gap="16dp"/>
+                            <lineSymbol src="file:/symbols/oneway.svg" align-center="true" repeat="true" symbol-width="14dp" repeat-gap="15dp"/>
                         </rule>
                     </rule>
                 </rule>

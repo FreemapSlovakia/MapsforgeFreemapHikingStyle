@@ -60,9 +60,13 @@
 		<osm-tag key="religion" value="muslim" renderable="false" />
 
 		<osm-tag key="shop" value="bakery" zoom-appear="17" />
-		<osm-tag key="shop" value="hairdresser" zoom-appear="17" />
 		<osm-tag key="shop" value="organic" zoom-appear="17" />
 		<osm-tag key="shop" value="supermarket" zoom-appear="17" />
+		<osm-tag key="shop" value="convenience" zoom-appear="17" />
+		<osm-tag key="shop" value="greengrocer" zoom-appear="17" />
+		<osm-tag key="shop" value="ice_cream" zoom-appear="17" />
+		<osm-tag key="shop" value="mall" zoom-appear="17" />
+		<osm-tag key="shop" value="department_store" zoom-appear="17" />
 	</pois>
 
 	<!-- PUBLIC TRANSPORT TAGS -->
@@ -173,6 +177,17 @@
 	</pois>
 
 	<!-- ************* WAYS *************** -->
+  <!-- shops -->
+	<ways>
+		<osm-tag key="shop" value="bakery" zoom-appear="17" />
+		<osm-tag key="shop" value="organic" zoom-appear="17" />
+		<osm-tag key="shop" value="supermarket" zoom-appear="17" />
+		<osm-tag key="shop" value="convenience" zoom-appear="17" />
+		<osm-tag key="shop" value="greengrocer" zoom-appear="17" />
+		<osm-tag key="shop" value="ice_cream" zoom-appear="17" />
+		<osm-tag key="shop" value="mall" zoom-appear="17" />
+		<osm-tag key="shop" value="department_store" zoom-appear="17" />
+	</ways>
 	<!-- contours TAGS -->
 	<ways>
 	  <!-- stare vrstevnice -->

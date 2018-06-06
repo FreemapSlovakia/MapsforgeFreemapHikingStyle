@@ -26,9 +26,13 @@
                     <symbol src="file:/symbols/fountain.png" symbol-width="12dp"/>
                 </rule>
             </rule>
-            <rule e="way" k="amenity" v="hospital|clinic" zoom-min="15">
-                <symbol src="file:/symbols/hospital.png" symbol-width="12dp"/>
-                <caption k="name" font-style="bold" font-size="9dp" fill="#0066FF" stroke="#ffffff" stroke-width="2.0dp"/>
+            <rule e="way" k="amenity" v="hospital" zoom-min="15">
+                <symbol src="file:/symbols/hospital.svg" symbol-width="12dp"/>
+                <caption k="name" dy="18dp" font-style="bold" font-size="9dp" fill="#0066FF" stroke="#ffffff" stroke-width="2.0dp"/>
+            </rule>
+            <rule e="way" k="amenity" v="clinic" zoom-min="15">
+                <symbol src="file:/symbols/clinic.svg" symbol-width="12dp"/>
+                <caption k="name" dy="18dp" font-style="bold" font-size="9dp" fill="#0066FF" stroke="#ffffff" stroke-width="2.0dp"/>
             </rule>
             <rule e="way" k="amenity" v="theatre" zoom-min="17">
                 <symbol src="file:/symbols/theatre.png" symbol-width="12dp"/>
@@ -37,7 +41,16 @@
                 <symbol src="file:/symbols/toilets.png" symbol-width="12dp"/>
             </rule>
             <rule e="way" k="amenity" v="place_of_worship" zoom-min="17">
-                <caption k="name" font-style="bold" font-size="10dp" fill="#000000" stroke="#ffffff" stroke-width="2.0dp"/>
+                <rule e="way" k="denomination|religion" v="jewish">
+                    <symbol src="file:/symbols/synagogue.png" symbol-width="12dp"/>
+                </rule>
+                <rule e="way" k="denomination|religion" v="muslim|moslem">
+                    <symbol src="file:/symbols/mosque.png" symbol-width="12dp"/>
+                </rule>
+                <rule e="way" k="denomination|religion" v="christian">
+                    <symbol src="file:/symbols/church.png" symbol-width="12dp"/>
+                </rule>
+                <caption k="name" dy="20dp" font-style="bold" font-size="10dp" fill="#000000" stroke="#ffffff" stroke-width="2.0dp"/>
             </rule>
         </rule>
     </xsl:template>
@@ -73,6 +86,7 @@
             </rule>
             <rule e="node" k="amenity" v="fast_food" zoom-min="17">
                 <symbol src="file:/symbols/fastfood.png" symbol-width="12dp"/>
+                <caption k="name" dy="18dp" font-style="normal" font-size="9dp" fill="#815c21" stroke="#ffffff" stroke-width="2.0dp"/>
             </rule>
             <rule e="node" k="amenity" v="fire_station" zoom-min="17">
                 <symbol src="file:/symbols/firebrigade.png" symbol-width="12dp"/>
@@ -84,10 +98,11 @@
                 <symbol src="file:/symbols/petrolStation.png" symbol-width="12dp"/>
             </rule>
             <rule e="node" k="amenity" v="hospital" zoom-min="15">
-                <symbol src="file:/symbols/hospital.png" symbol-width="12dp"/>
+                <symbol src="file:/symbols/hospital.svg" symbol-width="12dp"/>
                 <caption k="name" dy="18dp" font-style="bold" font-size="9dp" fill="#0066FF" stroke="#ffffff" stroke-width="2.0dp"/>
             </rule>
             <rule e="node" k="amenity" v="clinic" zoom-min="15">
+                <symbol src="file:/symbols/clinic.svg" symbol-width="12dp"/>
                 <caption k="name" dy="18dp" font-style="bold" font-size="9dp" fill="#0066FF" stroke="#ffffff" stroke-width="2.0dp"/>
             </rule>
             <rule e="node" k="amenity" v="kindergarten" zoom-min="17">
