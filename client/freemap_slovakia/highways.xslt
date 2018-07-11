@@ -21,7 +21,7 @@
                         <rule e="way" k="highway" v="track" zoom-min="13">
                             <line stroke="#c2b5a3" stroke-width="0.7dp"/>
                         </rule>
-                        <rule e="way" k="highway" v="cycleway|bridleway|service" zoom-min="12">
+                        <rule e="way" k="highway" v="bridleway|service" zoom-min="12">
                             <line stroke="#707070" stroke-width="0.7dp"/>
                         </rule>
                         <rule e="way" k="highway" v="byway" zoom-min="12">
@@ -48,7 +48,9 @@
                         <rule e="way" k="highway" v="motorway">
                             <line stroke="#ff0000" stroke-width="2dp" stroke-linecap="butt"/>
                         </rule>
-
+                        <rule cat="cycle" e="way" k="highway" v="cycleway" zoom-min="13">
+                            <line stroke="#006F00" stroke-width="0.45dp"/>
+                        </rule>
                     </rule>
                     <!-- bridge -->
                     <rule e="way" k="bridge" v="yes|true" zoom-min="15">
@@ -56,7 +58,7 @@
                         <rule e="way" k="highway" v="steps|footway|path">
                             <line stroke="#000000" stroke-width="0.6dp" stroke-linecap="butt"/>
                         </rule>
-                        <rule e="way" k="highway" v="track|cycleway|bridleway|service">
+                        <rule e="way" k="highway" v="track|bridleway|service">
                             <line stroke="#000000" stroke-width="0.5dp" stroke-linecap="butt"/>
                         </rule>
                         <rule e="way" k="highway" v="construction">
@@ -80,6 +82,9 @@
                         <rule e="way" k="highway" v="trunk|motorway">
                             <line stroke="#000000" stroke-width="2.2dp" stroke-linecap="butt"/>
                         </rule>
+                        <rule cat="cycle" e="way" k="highway" v="cycleway" zoom-min="13">
+                            <line stroke="#000000" stroke-width="0.6dp" stroke-linecap="butt"/>
+                        </rule>
                     </rule>
                 </rule>
             </rule>
@@ -92,7 +97,7 @@
             <rule e="way" k="highway" v="steps|footway|path">
                 <line stroke="#707070" stroke-width="0.6dp" stroke-dasharray="5,5" stroke-linecap="butt"/>
             </rule>
-            <rule e="way" k="highway" v="track|cycleway|bridleway|service" zoom-min="12">
+            <rule e="way" k="highway" v="track|bridleway|service" zoom-min="12">
                 <line stroke="#707070" stroke-width="1.0dp" stroke-dasharray="5,5" stroke-linecap="butt"/>
             </rule>
             <rule e="way" k="highway" v="construction">
@@ -110,6 +115,9 @@
             <rule e="way" k="highway" v="motorway">
                 <line stroke="#707070" stroke-width="2.0dp" stroke-dasharray="5,5" stroke-linecap="butt"/>
             </rule>
+            <rule e="way" k="highway" v="cycleway" zoom-min="13">
+                <line stroke="#707070" stroke-width="0.8dp" stroke-dasharray="5,5" stroke-linecap="butt"/>
+            </rule>
             <!-- highway tunnel cores -->
             <rule e="way" k="highway" v="steps|footway|path">
                 <line stroke="#ffffff" stroke-width="0.45dp" stroke-dasharray="5,5" stroke-linecap="butt"/>
@@ -117,7 +125,10 @@
             <rule e="way" k="highway" v="track">
                 <line stroke="#ffffff" stroke-width="0.7dp" stroke-dasharray="5,5" stroke-linecap="butt"/>
             </rule>
-            <rule e="way" k="highway" v="cycleway|bridleway|service" zoom-min="12">
+            <rule e="way" k="highway" v="bridleway|service" zoom-min="12">
+                <line stroke="#ffffff" stroke-width="0.85dp" stroke-dasharray="5,5" stroke-linecap="butt"/>
+            </rule>
+            <rule cat="cycle" e="way" k="highway" v="cycleway" zoom-min="13">
                 <line stroke="#ffffff" stroke-width="0.85dp" stroke-dasharray="5,5" stroke-linecap="butt"/>
             </rule>
             <rule e="way" k="highway" v="construction">
@@ -232,12 +243,6 @@
                             </rule>
                         </rule>
                     </rule>
-                    <rule e="way" k="highway" v="cycleway" zoom-min="11">
-                        <line stroke="#d1fad1" stroke-width="0.85dp"/>
-                        <rule e="way" k="*" v="*" zoom-min="15">
-                            <pathText k="name" font-style="bold" font-size="10dp" stroke="#d1fad1" stroke-width="2.0dp"/>
-                        </rule>
-                    </rule>
                     <rule e="way" k="highway" v="bridleway" zoom-min="11">
                         <line stroke="#d3cb98" stroke-width="0.85dp"/>
                         <rule e="way" k="*" v="*" zoom-min="15">
@@ -341,6 +346,12 @@
                         </rule>
                         <rule e="way" k="*" v="*" zoom-min="14">
                             <pathText k="name" font-style="bold" font-size="11dp" stroke="#809bc0" stroke-width="2.0dp"/>
+                        </rule>
+                    </rule>
+                    <rule cat="cycle" e="way" k="highway" v="cycleway" zoom-min="13">
+                        <line stroke="#d1fad1" stroke-width="0.2dp"/>
+                        <rule e="way" k="*" v="*" zoom-min="15">
+                            <pathText k="name" font-style="bold" font-size="10dp" stroke="#d1fad1" stroke-width="2.0dp"/>
                         </rule>
                     </rule>
                     <rule e="way" k="highway" v="*" zoom-min="15">
