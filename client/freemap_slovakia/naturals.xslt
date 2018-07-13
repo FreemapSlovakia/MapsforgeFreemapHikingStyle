@@ -15,6 +15,9 @@
                <pathText k="name" font-style="bold" font-size="10dp" fill="#EEFFFFFF" stroke="#66000000" stroke-width="2dp" />
             </rule>
         </rule>
+        <rule cat="topo_common" e="way" k="natural" v="sinkhole" closed="yes" zoom-min="16">
+            <line stroke="#000000" stroke-width="2.0dp"/>
+        </rule>
         <rule cat="topo_common" e="way" k="natural" v="ridge" zoom-min="14"> 
             <rule e="way" k="*" v="*" zoom-min="14" zoom-max="15">
                 <pathText k="name" font-style="bold" font-size="5dp" fill="#DDFFFFFF" stroke="#66000000" stroke-width="1.8dp" />
