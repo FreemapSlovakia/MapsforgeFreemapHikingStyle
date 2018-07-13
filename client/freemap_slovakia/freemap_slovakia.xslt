@@ -335,6 +335,9 @@
                 <!-- tourism -->
                 <xsl:call-template name="tourism_nodes"/>
             </rule>
+            <rule e="node" k="power" v="tower" zoom-min="17">
+               <symbol src="file:/symbols/power-tower.svg" symbol-width="12dp"/>
+            </rule>
             <rule e="way" k="power" v="*">
                 <rule e="way" k="power" v="line" zoom-min="13">
                     <line stroke="#80000000" stroke-width="0.2dp"/>

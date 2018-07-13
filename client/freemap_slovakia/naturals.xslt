@@ -82,6 +82,9 @@
 
     <xsl:template name="natural_nodes">
         <rule cat="topo_common" e="node" k="natural" v="*">
+            <rule e="node" k="natural" v="sinkhole" zoom-min="14">
+                <symbol src="file:/symbols/natural-sinkhole.svg" symbol-width="12dp"/>
+            </rule>
             <rule e="node" k="natural" v="valley" zoom-min="15">
                 <caption k="name" font-style="bold" font-size="10dp" fill="#A0666666" stroke="#ffffff" stroke-width="2.0dp"/>
             </rule>
