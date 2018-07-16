@@ -529,6 +529,7 @@
 		<osm-tag key="aerialway" value="magic_carpet" zoom-appear="13" />
 		<osm-tag key="aerialway" value="mixed_lift" zoom-appear="13" />
 		<osm-tag key="aerialway" value="rope_tow" zoom-appear="13" />
+		<osm-tag key="aerialway" value="t-bar" zoom-appear="13" />
 	</ways>
 
 	<!-- OTHER TAGS -->
