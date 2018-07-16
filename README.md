@@ -4,5 +4,5 @@ Style for Locus Map app
 # generator
 XML files for map generation
 
-# generator
+# poi
 XML files for POI file generation
