@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<category xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" title="root"
+    xmlns="http://mapsforge.org/poi-mapping"
+    xsi:schemaLocation="http://mapsforge.org/poi-mapping https://raw.githubusercontent.com/mapsforge/mapsforge/master/resources/poi-mapping.xsd">
+
+    <category title="turistika">
+        <category title="smerovník">
+            <mapping tag="information=guidepost" />
+            <mapping tag="hiking=yes" />
+        </category>
+        <category title="vrch">
+            <mapping tag="natural=peak" />
+        </category>
+    </category>
+
+</category>
