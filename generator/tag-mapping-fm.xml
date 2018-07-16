@@ -190,11 +190,6 @@
 	</ways>
 	<!-- contours TAGS -->
 	<ways>
-	  <!-- stare vrstevnice -->
-		<osm-tag key="landcontour" value="thin" zoom-appear="15" force-polygon-line="true"/>
-		<osm-tag key="landcontour" value="medium" zoom-appear="13" force-polygon-line="true"/>
-		<osm-tag key="landcontour" value="thick" zoom-appear="12" force-polygon-line="true"/>
-	  <!-- nove vrstevnice -->	  
 		<osm-tag key="contour_ext" value="elevation_minor" zoom-appear="14" force-polygon-line="true"/>
 		<osm-tag key="contour_ext" value="elevation_medium" zoom-appear="12" force-polygon-line="true"/>
 		<osm-tag key="contour_ext" value="elevation_major" zoom-appear="12" force-polygon-line="true"/>
@@ -725,5 +720,8 @@
 		<osm-tag key="fixme" value="cross or shrine" zoom-appear="14" />
 		<osm-tag key="fixme" value="yes" zoom-appear="14" />
 	</pois>
+	<ways>
+		<osm-tag key="fixme" value="yes" zoom-appear="14" />
+	</ways>
 
 </tag-mapping>

@@ -46,4 +46,15 @@
 			<tag k="addr:housenumber" from_match="hiking_ref" v="TZT: {1}"/>
 		</output>
 	</translation>
+	<translation>
+		<name>fixme tag</name>
+		<description>simplify way fixme tags</description>
+		<match type="way" mode="and">
+			<tag k="fixme" v=".*"/>
+		</match>
+		<output>
+			<copy-all/>
+			<tag k="fixme" v="yes"/>
+		</output>
+	</translation>
 </translations>
