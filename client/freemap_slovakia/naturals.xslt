@@ -16,7 +16,9 @@
             </rule>
         </rule>
         <rule cat="topo_common" e="way" k="natural" v="sinkhole" closed="yes" zoom-min="16">
-            <line stroke="#000000" stroke-width="2.0dp"/>
+            <line dy="-2" stroke="#000000" stroke-width="0.08dp"/>
+            <line dy="2" stroke="#000000" stroke-width="0.5dp" stroke-dasharray="1,8" stroke-linecap="butt"/>
+            <caption k="name" font-style="normal" font-size="9dp" fill="#000000" stroke="#FFFFFF" stroke-width="3dp"/>
         </rule>
         <rule cat="topo_common" e="way" k="natural" v="ridge" zoom-min="14"> 
             <rule e="way" k="*" v="*" zoom-min="14" zoom-max="15">
@@ -87,6 +89,7 @@
         <rule cat="topo_common" e="node" k="natural" v="*">
             <rule e="node" k="natural" v="sinkhole" zoom-min="14">
                 <symbol src="file:/symbols/natural-sinkhole.svg" symbol-width="12dp"/>
+                <caption dy="-12dp" k="name" font-style="normal" font-size="9dp" fill="#000000" stroke="#FFFFFF" stroke-width="3dp"/>
             </rule>
             <rule e="node" k="natural" v="valley" zoom-min="15">
                 <caption k="name" font-style="bold" font-size="10dp" fill="#A0666666" stroke="#ffffff" stroke-width="2.0dp"/>
