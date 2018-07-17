@@ -23,10 +23,10 @@
                 <!-- railway casings and cores -->
                 <rule e="way" k="railway" v="tram" zoom-min="12">
                     <line stroke="#e6b7e6" stroke-width="0.25dp" stroke-linecap="butt"/>
-                    <rule e="way" k="*" v="*" max-zoom="16">
+                    <rule e="way" k="*" v="*" zoom-max="16">
                         <line stroke="#4c0f4c" stroke-width="0.25dp" stroke-dasharray="12,18" stroke-linecap="butt"/>
                     </rule>
-                    <rule e="way" k="*" v="*" min-zoom="17">
+                    <rule e="way" k="*" v="*" zoom-min="17">
                         <line stroke="#4c0f4c" stroke-width="0.25dp" stroke-dasharray="8,12" stroke-linecap="butt"/>
                     </rule>
                 </rule>

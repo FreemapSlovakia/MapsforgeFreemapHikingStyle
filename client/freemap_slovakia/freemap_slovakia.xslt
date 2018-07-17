@@ -24,7 +24,7 @@
 
         <rendertheme version="1" locus-extended="1" xsi:schemaLocation="http://mapsforge.org/renderTheme https://raw.githubusercontent.com/mapsforge/mapsforge/dev/resources/renderTheme.xsd" map-background="#FBFBF9" map-background-outside="#dddddd">
             <!-- ways -->
-            <rule e="way" k="*" v="*">
+            <rule e="any" k="*" v="*">
 
                 <xsl:call-template name="menu"/>
                 <xsl:call-template name="landuses"/>
@@ -45,6 +45,9 @@
                 <!-- military -->
                 <rule e="way" k="military" v="*">
                     <area src="file:/patterns/military.png" stroke="#e4e4e4" stroke-width="0.2dp"/>
+                </rule>
+                <rule e="any" k="military" v="bunker" zoom-min="14">
+                    <symbol src="file:/symbols/bunker.svg" symbol-width="12dp"/>
                 </rule>
 
                 <!-- historic -->
