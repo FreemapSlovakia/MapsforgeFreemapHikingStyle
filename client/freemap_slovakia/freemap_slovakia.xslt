@@ -48,6 +48,9 @@
                 </rule>
                 <rule e="any" k="military" v="bunker" zoom-min="14">
                     <symbol src="file:/symbols/bunker.svg" symbol-width="12dp"/>
+                    <rule e="any" k="*" v="*" zoom-min="17">
+                       <caption k="name" dy="18dp" font-style="bold_italic" font-size="8dp" fill="#000000" stroke="#ffffff" stroke-width="2dp"/>
+                    </rule>
                 </rule>
 
                 <!-- historic -->
@@ -83,9 +86,11 @@
                 <xsl:call-template name="tourism_areas"/>
 
                 <rule e="way" k="natural" v="water">
-                    <area fill="#8DB0DD"/>
-                    <rule e="way" k="*" v="*" zoom-min="13">
-                        <caption k="name" font-style="bold_italic" font-size="8dp" fill="#4040ff" stroke="#ffffff" stroke-width="2dp"/>
+                   <rule e="way" k="waterway|amenity" v="~">
+                       <area fill="#8DB0DD"/>
+                       <rule e="way" k="*" v="*" zoom-min="13">
+                           <caption k="name" font-style="bold_italic" font-size="8dp" fill="#4040ff" stroke="#ffffff" stroke-width="2dp"/>
+                       </rule>
                     </rule>
                 </rule>
 
@@ -134,7 +139,7 @@
                 <xsl:call-template name="highways_no_tunnel"/>
 
                 <!-- building -->
-                <rule e="way" k="building" v="*" zoom-min="14">
+                <rule e="way" k="building" v="*" zoom-min="15">
                     <area fill="#CBCBCB" stroke="#8F8F8F" stroke-width="0.2dp"/>
                 </rule>
 

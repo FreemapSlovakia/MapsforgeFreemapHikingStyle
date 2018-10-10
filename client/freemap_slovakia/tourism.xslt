@@ -98,7 +98,7 @@
     </xsl:template>
 
     <xsl:template name="tourism_areas">
-        <rule e="way" k="tourism" v="*">
+        <rule e="way" k="tourism" v="*" zoom-min="15">
             <rule e="way" k="tourism" v="attraction">
                 <area fill="#F2CAEA"/>
                 <symbol src="file:/symbols/attraction.svg" symbol-width="18dp"/>
