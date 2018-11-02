@@ -367,6 +367,7 @@
 
             <xsl:call-template name="markedTrailsAll"/>
             <xsl:call-template name="markedTrailsAllNew"/>
+            <xsl:call-template name="sac-scale" />
             <xsl:call-template name="fixme_node"/>
         </rendertheme>
     </xsl:template>

@@ -705,7 +705,35 @@
 
 		<osm-tag key="fmrelskiref" value="x" zoom-appear="8" />
 	</ways>
-	
+
+	<ways>
+		<osm-tag key="sac_scale" value="hiking" />
+		<osm-tag key="sac_scale" value="mountain_hiking" />
+		<osm-tag key="sac_scale" value="demanding_mountain_hiking" />
+		<osm-tag key="sac_scale" value="alpine_hiking" />
+		<osm-tag key="sac_scale" value="demanding_alpine_hiking" />
+		<osm-tag key="sac_scale" value="difficult_alpine_hiking" /> 
+	</ways>
+
+	<ways>
+		<osm-tag key="mtb:scale" value="0" />
+		<osm-tag key="mtb:scale" value="1" />
+		<osm-tag key="mtb:scale" value="2" />
+		<osm-tag key="mtb:scale" value="3" />
+		<osm-tag key="mtb:scale" value="4" />
+		<osm-tag key="mtb:scale" value="5" />
+		<osm-tag key="mtb:scale" value="6" />
+	</ways>
+
+	<ways>
+		<osm-tag key="mtb:scale:uphill" value="0" />
+		<osm-tag key="mtb:scale:uphill" value="1" />
+		<osm-tag key="mtb:scale:uphill" value="2" />
+		<osm-tag key="mtb:scale:uphill" value="3" />
+		<osm-tag key="mtb:scale:uphill" value="4" />
+		<osm-tag key="mtb:scale:uphill" value="5" />
+	</ways>
+
 	<ways>
 		<osm-tag key="power" value="line" zoom-appear="13" />
 		<osm-tag key="power" value="minor_line" zoom-appear="16" />

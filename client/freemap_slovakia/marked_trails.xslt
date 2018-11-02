@@ -658,4 +658,18 @@
         </rule>
 
     </xsl:template>
+
+<xsl:template name="sac-scale">
+  <rule cat="sac-scale" e="way" k="sac_scale" v="*" zoom-min="13">
+    <rule e="way" k="sac_scale" v="hiking">
+      <line stroke="#50FFFF00" stroke-width="4dp" stroke-linecap="butt" />
+    </rule>
+    <rule e="way" k="sac_scale" v="mountain_hiking|demanding_mountain_hiking">
+      <line stroke="#50FF0000" stroke-width="4dp" stroke-linecap="butt" />
+    </rule>
+    <rule e="way" k="sac_scale" v="alpine_hiking|demandig_alpine_hiking">
+      <line stroke="#500000FF" stroke-width="4dp" stroke-linecap="butt" />
+    </rule>
+  </rule>
+</xsl:template>
 </xsl:stylesheet>

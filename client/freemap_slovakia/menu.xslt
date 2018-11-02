@@ -31,6 +31,11 @@
             <name lang="sk" value="Lyžiarske značky" />
             <cat id="ski" />
         </layer>
+        <layer id="sac-scale" enabled="false" visible="false">
+            <name lang="en" value="SAC scale" />
+            <name lang="sk" value="SAC" />
+            <cat id="sac-scale" />
+        </layer>
         <layer id="topo" visible="true">
             <name lang="en" value="Topo" />
             <name lang="sk" value="Topo" />
@@ -38,6 +43,7 @@
             <cat id="topo_common" />
             <overlay id="contours" />
             <overlay id="hiking" />
+            <overlay id="sac-scale" />
             <overlay id="cycle" />
             <overlay id="ski" />
             <overlay id="osmmapper" />
