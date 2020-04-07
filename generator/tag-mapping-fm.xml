@@ -550,6 +550,7 @@
 		<osm-tag key="historic" value="castle" zoom-appear="14" />
 
 		<osm-tag key="man_made" value="pier" zoom-appear="15" />
+		<osm-tag key="man_made" value="clearcut" zoom-appear="12" />
 
 		<osm-tag key="military" value="airfield" zoom-appear="12" />
 		<osm-tag key="military" value="barracks" zoom-appear="12" />
